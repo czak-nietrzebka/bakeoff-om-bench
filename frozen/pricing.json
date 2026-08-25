@@ -1,0 +1,15 @@
+{
+  "_komentarz": "Cennik IMPUTACJI (PRD R5): subskrypcja nie billinguje per-token — $ sa imputowane stawkami API. DWUDATOWY: intro-pricing claude-sonnet-5 konczy sie 2026-08-31 (w srodku potencjalnego okna benchu) — imputacja wybiera stawke po dacie wall_start runu. Zrodlo: skill claude-api (tabela cached 2026-06-24) + standardowe mnozniki cache (write 5m=1.25x input, write 1h=2x input, read=0.1x input). Thinking-tokeny billowane jak output.",
+  "model_id": "claude-sonnet-5",
+  "stawki_per_mtok": [
+    {"obowiazuje_do": "2026-08-31", "input": 2.00, "output": 10.00,
+     "cache_read": 0.20, "cache_creation_5m": 2.50, "cache_creation_1h": 4.00,
+     "thinking": 10.00},
+    {"obowiazuje_od": "2026-09-01", "input": 3.00, "output": 15.00,
+     "cache_read": 0.30, "cache_creation_5m": 3.75, "cache_creation_1h": 6.00,
+     "thinking": 15.00}
+  ],
+  "mapowanie_klas": {"in": "input", "out": "output", "cache_read": "cache_read",
+                     "cache_creation_5m": "cache_creation_5m", "cache_creation_1h": "cache_creation_1h",
+                     "thinking": "thinking (podzbior out — NIE liczyc podwojnie: thinking raportowane OSOBNO informacyjnie, w $ juz zawarte w out)"}
+}

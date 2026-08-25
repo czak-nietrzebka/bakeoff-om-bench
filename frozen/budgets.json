@@ -1,0 +1,9 @@
+{
+  "_komentarz": "Budzety per task — WARTOSCI STARTOWE (draft), kalibruje pilotaz R10c przez amendment. Metryka DNF-tokenowego (TDD par.5 K5): tokeny ROBOCZE = in + out + cache_creation_1h + cache_creation_5m (BEZ cache_read — tanie re-ready zdominowalyby metryke i karaly metode z duzym promptem niezaleznie od realnej roboty; decyzja jawna, symetryczna dla obu ramion). Budzet $ dla schedulera = imputacja stawkami intro.",
+  "token_budget_robocze": {"S": 300000, "M": 800000, "L": 1500000},
+  "task_budget_usd": {"S": 1.5, "M": 3.0, "L": 6.0},
+  "przypisanie": {"T1": "M", "T2": "S", "T3": "M", "T4": "S", "T5": "M", "T6": "M",
+                  "T7": "L", "T8": "M", "T9": "S", "T10": "L", "T11": "S", "T12": "L"},
+  "window_cap_usd_per_konto": 25.0,
+  "dnf_max_iterations": 5
+}
