@@ -1,0 +1,3891 @@
+{
+  "_what_this_is": "What was removed from the files in this repository before publication, and the evidence that nothing was left behind. This edition was regenerated as the LAST step of the build over the FINAL bytes of every published file, so every hash below is the hash of the file as shipped. data/README.md, section 'What was removed before publication', says what each removal costs a reader.",
+  "_two_builds_read_this_first": "This report has two provenances and they are not interchangeable. The HASHES, the FILE LIST and the CONTENT CHECKS under `content_checks_re_run_at_republication` were re-derived over the final bytes; any reader can reproduce the hashes with `shasum -a 256`. The SCRUB FINDINGS - the field policy, the pattern scrubber, the explicit secret list and the comparison against the source records - come from the run-host pass at 2026-08-27T07:35:01Z and were NOT re-run, because the secret list and the source records never left the run host. 12 files were edited after that pass; they are named under `republication` and marked file by file rather than being handed the older verdict.",
+  "generated_at_utc": "2026-08-28T08:36:07Z",
+  "generated_by": "regenerated over final bytes at republication",
+  "run_host_scrub_pass_at_utc": "2026-08-27T07:35:01Z",
+  "scope": {
+    "root": "the whole published repository, not just data/",
+    "files_in_repository": 144,
+    "files_hashed": 143,
+    "arithmetic": "files_in_repository = files_hashed + 1; the one not hashed is this report, which is written last and cannot hash itself.",
+    "excluded": [
+      ".git/",
+      "macOS resource forks",
+      "this file itself"
+    ],
+    "note": "(recovered) scope note re-created during the 2026-08-28 rebuild — the original did not survive; see RECOVERY-NOTE.md"
+  },
+  "republication": {
+    "_what_happened": "Publication was halted and files were corrected after the run-host scrub pass. The corrections: the three archive directories under data/runs/ renamed out of the operator's language into English; data/usage_summary.py made read-only unless --write is passed, because the documented command rewrote data/usage-summary.json and so broke this package's own hash chain; the arm-B burdened archive stated as the four records it holds rather than five; frozen/WITHHELD.md given a file-by-file accounting of the 32 withheld paths; and the prose in the documents those changes touch.",
+    "files_edited_after_the_run_host_pass": [
+      "LOGBOOK.md",
+      "README.md",
+      "REPORT.md",
+      "data-emaint/runs/em-M5-A.jsonl",
+      "data-emaint/runs/em-M6-A.jsonl",
+      "data/README.md",
+      "data/runs/burdened-node22/README.md",
+      "data/usage-summary.json",
+      "data/usage_summary.py",
+      "frozen/AMENDMENTS.md",
+      "frozen/WITHHELD.md",
+      "gen/regen_scrub_report.py"
+    ],
+    "files_edited_count": 12,
+    "files_whose_bytes_the_run_host_oracle_saw": 131,
+    "renamed_with_identical_bytes": [
+      "data/runs/burdened-node22/p1-T1-B.jsonl",
+      "data/runs/burdened-node22/p1-T2-B.jsonl",
+      "data/runs/burdened-node22/p1-T3-B.jsonl",
+      "data/runs/burdened-node22/p1-T4-B.jsonl",
+      "data/runs/calibration-pilot/README.md",
+      "data/runs/calibration-pilot/p1-T1-A.jsonl",
+      "data/runs/calibration-pilot/p1-T1-B.jsonl"
+    ],
+    "renamed_with_identical_bytes_count": 7,
+    "_what_the_rename_did_not_do": "Every file listed above moved when its archive directory was renamed, and each hashes to exactly what it hashed before the move. That is the evidence for the claim in data/README.md that only the directory names changed. The one file inside a renamed directory whose bytes did change is that directory's README, edited on purpose and listed among the edited files. The names the directories carried before the rename are not reprinted here: they were in the operator's language, and putting them back into the package would undo the point of renaming them.",
+    "re_run_at_republication": [
+      "SHA-256 of every published file, over final bytes",
+      "the file list and the file counts",
+      "a language check in two forms: the operator's diacritics, and a word list that also catches that language written in plain ASCII",
+      "a check for absolute filesystem paths",
+      "a check for common secret shapes (provider keys, forge tokens, bearer headers, cloud key ids, private-key blocks)"
+    ],
+    "NOT_re_run_at_republication": [
+      "the explicit list of 239 secret values - it never left the run host, so it cannot be applied off it",
+      "the 15 pattern classes of the project's scrubber",
+      "the field-by-field comparison against the source records the instrument wrote - those records are on the run host and are not published"
+    ],
+    "_the_residual_risk_stated_plainly": "For the edited files the strongest true statement is: they pass the narrower checks listed above, and the full scrubber has not seen these bytes. That is weaker than what can be said about the files the run-host oracle did see, and it is stated as weaker. The edited files are prose, one script and one generated summary; none is a run record, and no numeric, structural or outcome field in any record was touched.",
+    "republication_language_check": {
+      "method": "two passes: any character of the operator's alphabet outside ASCII, and a 48-word list of that language's common words matched after folding accents, which also catches it written in plain ASCII",
+      "files_flagged": [
+        "data-e2/runs/p2-T1-A.jsonl",
+        "data-e2/runs/p2-T1-B.jsonl",
+        "data-e2/runs/p2-T10-A.jsonl",
+        "data-e2/runs/p2-T10-B.jsonl",
+        "data-e2/runs/p2-T11-A.jsonl",
+        "data-e2/runs/p2-T11-B.jsonl",
+        "data-e2/runs/p2-T12-A.jsonl",
+        "data-e2/runs/p2-T12-B.jsonl",
+        "data-e2/runs/p2-T2-A.jsonl",
+        "data-e2/runs/p2-T2-B.jsonl",
+        "data-e2/runs/p2-T3-A.jsonl",
+        "data-e2/runs/p2-T3-B.jsonl",
+        "data-e2/runs/p2-T4-A.jsonl",
+        "data-e2/runs/p2-T4-B.jsonl",
+        "data-e2/runs/p2-T5-A.jsonl",
+        "data-e2/runs/p2-T5-B.jsonl",
+        "data-e2/runs/p2-T6-A.jsonl",
+        "data-e2/runs/p2-T6-B.jsonl",
+        "data-e2/runs/p2-T7-A.jsonl",
+        "data-e2/runs/p2-T7-B.jsonl",
+        "data-e2/runs/p2-T8-A.jsonl",
+        "data-e2/runs/p2-T8-B.jsonl",
+        "data-e2/runs/p2-T9-A.jsonl",
+        "data-e2/runs/p2-T9-B.jsonl",
+        "data-e2/runs/pilot-kalibracja-e2/p2-T1-A.jsonl",
+        "data-e2/runs/pilot-kalibracja-e2/p2-T1-B.jsonl",
+        "data-emaint/runs/em-M1-A.jsonl",
+        "data-emaint/runs/em-M1-B.jsonl",
+        "data-emaint/runs/em-M2-A.jsonl",
+        "data-emaint/runs/em-M2-B.jsonl",
+        "data-emaint/runs/em-M3-B.jsonl",
+        "data-emaint/runs/em-M4-A.jsonl",
+        "data-emaint/runs/em-M4-B.jsonl",
+        "data-emaint/runs/em-M5-A.jsonl",
+        "data-emaint/runs/em-M5-B.jsonl",
+        "data-emaint/runs/em-M6-A.jsonl",
+        "data-emaint/runs/em-M6-B.jsonl",
+        "data/README.md",
+        "data/journal/p1.jsonl",
+        "data/journal/p2.jsonl",
+        "data/journal/pilot-kalibracja/README.md",
+        "data/judge/e1-judge.jsonl",
+        "data/judge/e2-judge.jsonl",
+        "data/judge/emaint-judge.jsonl",
+        "data/runs/burdened-node22/README.md",
+        "data/runs/burdened-node22/p1-T1-B.jsonl",
+        "data/runs/calibration-pilot/README.md",
+        "data/runs/calibration-pilot/p1-T1-A.jsonl",
+        "data/runs/calibration-pilot/p1-T1-B.jsonl",
+        "data/runs/falstart-bez-tozsamosci/README.md",
+        "data/runs/p1-T1-A.jsonl",
+        "data/runs/p1-T10-A.jsonl",
+        "data/runs/p1-T11-A.jsonl",
+        "data/runs/p1-T12-A.jsonl",
+        "data/runs/p1-T2-A.jsonl",
+        "data/runs/p1-T3-A.jsonl",
+        "data/runs/p1-T4-A.jsonl",
+        "data/runs/p1-T5-A.jsonl",
+        "data/runs/p1-T6-A.jsonl",
+        "data/runs/p1-T7-A.jsonl",
+        "data/runs/p1-T8-A.jsonl",
+        "data/runs/p1-T9-B.jsonl",
+        "e2/MANIFEST-E2.sha256",
+        "e2/NOTATKI-RUNNERA.md",
+        "e2/SYMETRIA-E2.md",
+        "e2/pricing-e2.json",
+        "emaint/specs/M1-scoring.md",
+        "emaint/specs/M1-spec.md",
+        "emaint/specs/M2-scoring.md",
+        "emaint/specs/M2-spec.md",
+        "emaint/specs/M3-scoring.md",
+        "emaint/specs/M3-spec.md",
+        "emaint/specs/M4-scoring.md",
+        "emaint/specs/M4-spec.md",
+        "emaint/specs/M5-scoring.md",
+        "emaint/specs/M5-spec.md",
+        "emaint/specs/M6-scoring.md",
+        "emaint/specs/M6-spec.md",
+        "frozen/adjudications.md",
+        "frozen/budgets.json",
+        "frozen/checklists.md",
+        "frozen/feedback-format.md",
+        "frozen/judge-prompt.md",
+        "frozen/pricing.json",
+        "frozen/scenario/T1/spec.md",
+        "frozen/scenario/T10/spec.md",
+        "frozen/scenario/T11/spec.md",
+        "frozen/scenario/T12/spec.md",
+        "frozen/scenario/T2/spec.md",
+        "frozen/scenario/T3/spec.md",
+        "frozen/scenario/T4/spec.md",
+        "frozen/scenario/T5/spec.md",
+        "frozen/scenario/T6/spec.md",
+        "frozen/scenario/T7/spec.md",
+        "frozen/scenario/T8/spec.md",
+        "frozen/scenario/T9/spec.md",
+        "gen/audit_scan.py",
+        "gen/regen_scrub_report.py"
+      ],
+      "files_flagged_count": 98,
+      "flagged_in_frozen_count": 18,
+      "flagged_outside_frozen": [
+        {
+          "file": "data-e2/runs/p2-T1-A.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data-e2/runs/p2-T1-B.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data-e2/runs/p2-T10-A.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data-e2/runs/p2-T10-B.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data-e2/runs/p2-T11-A.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data-e2/runs/p2-T11-B.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data-e2/runs/p2-T12-A.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data-e2/runs/p2-T12-B.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data-e2/runs/p2-T2-A.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data-e2/runs/p2-T2-B.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data-e2/runs/p2-T3-A.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data-e2/runs/p2-T3-B.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data-e2/runs/p2-T4-A.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data-e2/runs/p2-T4-B.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data-e2/runs/p2-T5-A.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data-e2/runs/p2-T5-B.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data-e2/runs/p2-T6-A.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data-e2/runs/p2-T6-B.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data-e2/runs/p2-T7-A.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data-e2/runs/p2-T7-B.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data-e2/runs/p2-T8-A.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data-e2/runs/p2-T8-B.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data-e2/runs/p2-T9-A.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data-e2/runs/p2-T9-B.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data-e2/runs/pilot-kalibracja-e2/p2-T1-A.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data-e2/runs/pilot-kalibracja-e2/p2-T1-B.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data-emaint/runs/em-M1-A.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data-emaint/runs/em-M1-B.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data-emaint/runs/em-M2-A.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data-emaint/runs/em-M2-B.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data-emaint/runs/em-M3-B.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data-emaint/runs/em-M4-A.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data-emaint/runs/em-M4-B.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data-emaint/runs/em-M5-A.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data-emaint/runs/em-M5-B.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data-emaint/runs/em-M6-A.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data-emaint/runs/em-M6-B.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data/README.md",
+          "why_it_stands": "the field dictionary quoting that `dnf_reason` value in order to gloss it"
+        },
+        {
+          "file": "data/journal/p1.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data/journal/p2.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data/journal/pilot-kalibracja/README.md",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data/judge/e1-judge.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data/judge/e2-judge.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data/judge/emaint-judge.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data/runs/burdened-node22/README.md",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data/runs/burdened-node22/p1-T1-B.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data/runs/calibration-pilot/README.md",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data/runs/calibration-pilot/p1-T1-A.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data/runs/calibration-pilot/p1-T1-B.jsonl",
+          "why_it_stands": "the record's own `dnf_reason` value, glossed in data/README.md's field dictionary"
+        },
+        {
+          "file": "data/runs/falstart-bez-tozsamosci/README.md",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data/runs/p1-T1-A.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data/runs/p1-T10-A.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data/runs/p1-T11-A.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data/runs/p1-T12-A.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data/runs/p1-T2-A.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data/runs/p1-T3-A.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data/runs/p1-T4-A.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data/runs/p1-T5-A.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data/runs/p1-T6-A.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data/runs/p1-T7-A.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data/runs/p1-T8-A.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "data/runs/p1-T9-B.jsonl",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "e2/MANIFEST-E2.sha256",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "e2/NOTATKI-RUNNERA.md",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "e2/SYMETRIA-E2.md",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "e2/pricing-e2.json",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "emaint/specs/M1-scoring.md",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "emaint/specs/M1-spec.md",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "emaint/specs/M2-scoring.md",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "emaint/specs/M2-spec.md",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "emaint/specs/M3-scoring.md",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "emaint/specs/M3-spec.md",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "emaint/specs/M4-scoring.md",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "emaint/specs/M4-spec.md",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "emaint/specs/M5-scoring.md",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "emaint/specs/M5-spec.md",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "emaint/specs/M6-scoring.md",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "emaint/specs/M6-spec.md",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "gen/audit_scan.py",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        },
+        {
+          "file": "gen/regen_scrub_report.py",
+          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
+        }
+      ],
+      "agreement_with_the_run_host_check": "The run-host check flagged 0 files, all under frozen/. This check flags the same 18, and the diacritics pass alone would have found only 14 of them - which is why the word list exists. Every frozen file flagged is hash-committed in frozen/MANIFEST.sha256 and cannot be translated without breaking its manifest line."
+    },
+    "republication_absolute_path_check": {
+      "files_flagged": [
+        "data/runs/burdened-node22/README.md",
+        "gen/audit_scan.py",
+        "gen/regen_scrub_report.py"
+      ],
+      "files_flagged_count": 3
+    },
+    "republication_secret_shape_check": {
+      "files_flagged": [],
+      "files_flagged_count": 0,
+      "note": "Shape-based only. It is not a substitute for the explicit value list and is not claimed to be one."
+    }
+  },
+  "policy": "Where a value would expose the operator's infrastructure, the VALUE was replaced and the KEY was kept. No field was dropped: dropping keys breaks reproducibility. Every numeric, structural and outcome field is byte-for-byte what the instrument wrote.",
+  "layers": [
+    {
+      "layer": 1,
+      "name": "field policy",
+      "what": "Per-field rules applied to the parsed JSON: the host name replaced with a marker; session identifiers and private-tree revisions replaced with stable pseudonyms (distinct values keep distinct labels, list lengths preserved); free-text fields rewritten in English with internal tool and ticket names replaced by what they are.",
+      "fail_closed": "The rewrite map is exhaustive by construction: any free-text value not in it aborts the build rather than passing through unreviewed."
+    },
+    {
+      "layer": 2,
+      "name": "pattern scrubber with an explicit secret list",
+      "what": "Every published file passed through the project's scrubber, which strips a closed list of pattern classes (internal paths, host names, branch and ticket references, agent identifiers and secret shapes) and, in addition, an EXPLICIT list of secret values read from the operator's private environment file on the run host.",
+      "explicit_secret_values_loaded": 240,
+      "explicit_secret_values_distinct": 202,
+      "secret_values_left_the_run_host": false,
+      "explicit_secret_literal_hits": {},
+      "note": "The check ran on the run host itself, so no secret value was ever copied to another machine; this report carries counts only, never a value. No published file contained any of them."
+    }
+  ],
+  "oracle": {
+    "name": "verify_zero_matches",
+    "contract": "Returns every remaining match of every pattern class. An empty list is the only passing result.",
+    "files_checked": 50,
+    "files_clean": 50,
+    "files_the_scrubber_had_to_change": [],
+    "interpretation": "The scrubber changed zero bytes, so the files were already clean when they reached it: the oracle is confirming a property of the published bytes rather than describing a last-minute rewrite. The published files were then verified byte-identical to the ones that passed.",
+    "_scope_note": "This is the run-host pass at 2026-08-27T07:35:01Z. It checked 50 files as they stood then. 12 of those files have since been edited; for them the result below does NOT describe the published bytes, and each is marked in `files`."
+  },
+  "known_residue": {
+    "note": "(recovered) see RECOVERY-NOTE.md"
+  },
+  "language_check": {
+    "files_flagged": [],
+    "_note": "(recovered seed) re-derived by the generator",
+    "_scope_note": "The run-host pass. Every file it flagged is unchanged since, so this result still describes the published bytes. See `republication.republication_language_check` for the check re-run over the whole package."
+  },
+  "fields_scrubbed_file_counts": {
+    "host": 42,
+    "nie_umiem_zmierzyc.powod": 42,
+    "notes": 16,
+    "payload.spawn.uuid": 1,
+    "payload.tool_use_id": 1,
+    "session_ids": 15,
+    "sha_czak": 42,
+    "sha_skills": 1
+  },
+  "verified_against_source": {
+    "_what_this_is": "A field-by-field comparison of every published record against the record the instrument wrote, run at publication time. The source records are not published, so this is an assertion with a stated method rather than something a reader can re-run; the method is simple enough to audit if the source is ever disclosed.",
+    "records_compared": 581,
+    "line_counts_preserved_in_every_file": true,
+    "key_sets_identical_in_every_record": true,
+    "records_in_which_a_field_differs": {
+      "host": 63,
+      "nie_umiem_zmierzyc": 63,
+      "notes": 19,
+      "payload": 27,
+      "session_ids": 28,
+      "sha_czak": 63,
+      "sha_skills": 3
+    },
+    "fields_that_differ_anywhere": [
+      "host",
+      "nie_umiem_zmierzyc",
+      "notes",
+      "payload",
+      "session_ids",
+      "sha_czak",
+      "sha_skills"
+    ],
+    "fields_verified_byte_identical": [
+      "tokens",
+      "usd_imputed",
+      "wall_start",
+      "wall_end",
+      "compute_active_s",
+      "gate_time_s",
+      "build_time_s",
+      "rework_iterations",
+      "token_budget",
+      "gate_runs",
+      "load_avg",
+      "verdict",
+      "disposition",
+      "compact_boundary_count",
+      "frozen_hash",
+      "sha_om",
+      "ts",
+      "run_id",
+      "pair",
+      "task",
+      "arm",
+      "base_branch",
+      "model_id",
+      "cli_version",
+      "dnf_reason",
+      "context_rebuild",
+      "rate_limit_events",
+      "human_touch",
+      "t5_trigger_at",
+      "t5_delivered_at",
+      "step",
+      "phase"
+    ],
+    "conclusion": "No field was added or removed anywhere. Only the seven fields declared above differ, and no number, timestamp, verdict or gate result differs at all.",
+    "_scope_note": "Run on the run host at 2026-08-27T07:35:01Z against the records the instrument wrote. Not re-run at republication, and unaffected by the republication edits: no run record was edited, and every record file under data/runs/ hashes to what it hashed at that pass."
+  },
+  "pseudonyms": {
+    "sessions": 25,
+    "private_tree_revisions": 9,
+    "mapping_published": false,
+    "note": "The mapping is one-way and is not published. Pseudonyms are stable across every file, so identity and change over time stay readable."
+  },
+  "files": [
+    {
+      "file": "LICENSE",
+      "sha256_published": "9acb2dc57ca96e6a9d6d6b2c624367434e2661397efdf0adcce6e35e7bc94a27",
+      "sha256_at_run_host_pass": "9acb2dc57ca96e6a9d6d6b2c624367434e2661397efdf0adcce6e35e7bc94a27",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "LOGBOOK.md",
+      "sha256_published": "4798bc0c623189aceff45e6c3faef57678c0c94057d8eb243b113248d243ecc8",
+      "sha256_at_run_host_pass": null,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
+    },
+    {
+      "file": "README.md",
+      "sha256_published": "2a7184fa388d185eb63b2874c6b45ca025403476fd0f48e91be3a2b0cbbaf8d2",
+      "sha256_at_run_host_pass": null,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
+    },
+    {
+      "file": "RECOVERY-NOTE.md",
+      "sha256_published": "7cd3570b5454b7e6dac0e2b7c2f3beb7a4ba76a76720392c05992feb22626af1",
+      "sha256_at_run_host_pass": "7cd3570b5454b7e6dac0e2b7c2f3beb7a4ba76a76720392c05992feb22626af1",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "REPORT.md",
+      "sha256_published": "64870ed25ba5cdd0c844ac6a2ce0d396d11cef36f8016754e931b089de96222b",
+      "sha256_at_run_host_pass": null,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
+    },
+    {
+      "file": "analyze.py",
+      "sha256_published": "79fab2f5fe3a835d7491083cc2d9c2fc99d30ec9c9d12de877635a61dc49e186",
+      "sha256_at_run_host_pass": "79fab2f5fe3a835d7491083cc2d9c2fc99d30ec9c9d12de877635a61dc49e186",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data-e2/runs/p2-T1-A.jsonl",
+      "sha256_published": "f1f89fd1c04085a0b1ae7e6c05cf978bba0473528b45bc741254dc0af1a2aefa",
+      "sha256_at_run_host_pass": "f1f89fd1c04085a0b1ae7e6c05cf978bba0473528b45bc741254dc0af1a2aefa",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "bylo",
+          "nie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data-e2/runs/p2-T1-B.jsonl",
+      "sha256_published": "edb834fea6bed41bd69872d8bbc299fa7ff955539c83f9c29ee6c47f5e4f06eb",
+      "sha256_at_run_host_pass": "edb834fea6bed41bd69872d8bbc299fa7ff955539c83f9c29ee6c47f5e4f06eb",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "bylo",
+          "jako",
+          "nie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data-e2/runs/p2-T10-A.jsonl",
+      "sha256_published": "a0c38c98c3a13c2745d1cc88f63c6d282e6b2120461cf32fe2aa67f252fbc35f",
+      "sha256_at_run_host_pass": "a0c38c98c3a13c2745d1cc88f63c6d282e6b2120461cf32fe2aa67f252fbc35f",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "bylo",
+          "nie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data-e2/runs/p2-T10-B.jsonl",
+      "sha256_published": "90758cb6438b1f7c38bcfec682607d9c0421592c38cd384444e41a8e27cf3045",
+      "sha256_at_run_host_pass": "90758cb6438b1f7c38bcfec682607d9c0421592c38cd384444e41a8e27cf3045",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "bylo",
+          "nie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data-e2/runs/p2-T11-A.jsonl",
+      "sha256_published": "37d00ef9a9594f8fd1bc571827f04e33fb1602600e505d8c5d41c35985635298",
+      "sha256_at_run_host_pass": "37d00ef9a9594f8fd1bc571827f04e33fb1602600e505d8c5d41c35985635298",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "bylo",
+          "nie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data-e2/runs/p2-T11-B.jsonl",
+      "sha256_published": "615c369167c93bdb203e3bb6820df4ae26c3a5dab6542fa90864ed7e969142e9",
+      "sha256_at_run_host_pass": "615c369167c93bdb203e3bb6820df4ae26c3a5dab6542fa90864ed7e969142e9",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "bylo",
+          "nie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data-e2/runs/p2-T12-A.jsonl",
+      "sha256_published": "3bf83206a6dd5a1e9b0172c23b19ed7609f0bccde0ccc0428575863ed25efa7b",
+      "sha256_at_run_host_pass": "3bf83206a6dd5a1e9b0172c23b19ed7609f0bccde0ccc0428575863ed25efa7b",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "bylo",
+          "nie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data-e2/runs/p2-T12-B.jsonl",
+      "sha256_published": "32f1224eb96c7cd29a526ac7dbaf94d05ed48e441ff2eb8c6991901bfbf447ad",
+      "sha256_at_run_host_pass": "32f1224eb96c7cd29a526ac7dbaf94d05ed48e441ff2eb8c6991901bfbf447ad",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "bylo",
+          "nie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data-e2/runs/p2-T2-A.jsonl",
+      "sha256_published": "d6ddd365dfe4d6572f547a5ab4a8bd626ec194786868295f939b2f88f65ec14a",
+      "sha256_at_run_host_pass": "d6ddd365dfe4d6572f547a5ab4a8bd626ec194786868295f939b2f88f65ec14a",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "bylo",
+          "nie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data-e2/runs/p2-T2-B.jsonl",
+      "sha256_published": "bb44fc2b982713d676d42602caaa48abdac5400503da83273a2bd7735941ba40",
+      "sha256_at_run_host_pass": "bb44fc2b982713d676d42602caaa48abdac5400503da83273a2bd7735941ba40",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "bylo",
+          "nie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data-e2/runs/p2-T3-A.jsonl",
+      "sha256_published": "8b6f3034f2d304909d466efa136a16e06ea5ef82eb85d90d54d4efb49b0c3a5b",
+      "sha256_at_run_host_pass": "8b6f3034f2d304909d466efa136a16e06ea5ef82eb85d90d54d4efb49b0c3a5b",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "bylo",
+          "nie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data-e2/runs/p2-T3-B.jsonl",
+      "sha256_published": "d5ffd6b4f2459ad97a09e9267a177fcae8db2a50c40db40391b964d9bd9c444e",
+      "sha256_at_run_host_pass": "d5ffd6b4f2459ad97a09e9267a177fcae8db2a50c40db40391b964d9bd9c444e",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "bylo",
+          "nie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data-e2/runs/p2-T4-A.jsonl",
+      "sha256_published": "b19c9aee7651eeb6f726141faca81156a89d43b637fe4b1788574c3f78a6dfa4",
+      "sha256_at_run_host_pass": "b19c9aee7651eeb6f726141faca81156a89d43b637fe4b1788574c3f78a6dfa4",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "bylo",
+          "nie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data-e2/runs/p2-T4-B.jsonl",
+      "sha256_published": "2ad577c3cf732d42e9591e8e84898f6f19849965c791f8f5eb437f49a0954042",
+      "sha256_at_run_host_pass": "2ad577c3cf732d42e9591e8e84898f6f19849965c791f8f5eb437f49a0954042",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "bylo",
+          "nie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data-e2/runs/p2-T5-A.jsonl",
+      "sha256_published": "fb11cf36cb32431034c381bee34b594457ae223e8ea55de37125faa792592931",
+      "sha256_at_run_host_pass": "fb11cf36cb32431034c381bee34b594457ae223e8ea55de37125faa792592931",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "bylo",
+          "nie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data-e2/runs/p2-T5-B.jsonl",
+      "sha256_published": "90ecf6c0086051fe05b05761300b98c8b09a5de10b0a7710ce55ce96368cb92c",
+      "sha256_at_run_host_pass": "90ecf6c0086051fe05b05761300b98c8b09a5de10b0a7710ce55ce96368cb92c",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "bylo",
+          "dla",
+          "nie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data-e2/runs/p2-T6-A.jsonl",
+      "sha256_published": "b6d7c4c32b96f4f74b186cc919d4045efa90e87a906a790e6f243f8bc65ecc50",
+      "sha256_at_run_host_pass": "b6d7c4c32b96f4f74b186cc919d4045efa90e87a906a790e6f243f8bc65ecc50",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "bylo",
+          "nie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data-e2/runs/p2-T6-B.jsonl",
+      "sha256_published": "3834870175d3306957164bd73efca2eb68dcde8e84b12029e847b96f99613dca",
+      "sha256_at_run_host_pass": "3834870175d3306957164bd73efca2eb68dcde8e84b12029e847b96f99613dca",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "bylo",
+          "nie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data-e2/runs/p2-T7-A.jsonl",
+      "sha256_published": "1cb3db120b2849b4c9c2d2abec89c8430e0f883b0b1711da8fa5961ab0678ec9",
+      "sha256_at_run_host_pass": "1cb3db120b2849b4c9c2d2abec89c8430e0f883b0b1711da8fa5961ab0678ec9",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "bylo",
+          "nie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data-e2/runs/p2-T7-B.jsonl",
+      "sha256_published": "9d810c554f7d954909c4203e36b73966a2c9a2ffceec5f352ea522c42e56cbeb",
+      "sha256_at_run_host_pass": "9d810c554f7d954909c4203e36b73966a2c9a2ffceec5f352ea522c42e56cbeb",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "bylo",
+          "nie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data-e2/runs/p2-T8-A.jsonl",
+      "sha256_published": "cb3172f10729e4571429c8e648351e6187fbdeb7b69917bf7b4ee85fc36420fa",
+      "sha256_at_run_host_pass": "cb3172f10729e4571429c8e648351e6187fbdeb7b69917bf7b4ee85fc36420fa",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "bylo",
+          "nie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data-e2/runs/p2-T8-B.jsonl",
+      "sha256_published": "c8777521003895f7dc7494a0cfec41a1cb54989cb4ad0cc34aa58e98af85f5e2",
+      "sha256_at_run_host_pass": "c8777521003895f7dc7494a0cfec41a1cb54989cb4ad0cc34aa58e98af85f5e2",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "bylo",
+          "nie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data-e2/runs/p2-T9-A.jsonl",
+      "sha256_published": "0348c39de16c0fe4a1555aa186dfecd7ab23acb6dc4d80e3ecf69f1fb1b2c43b",
+      "sha256_at_run_host_pass": "0348c39de16c0fe4a1555aa186dfecd7ab23acb6dc4d80e3ecf69f1fb1b2c43b",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "bylo",
+          "nie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data-e2/runs/p2-T9-B.jsonl",
+      "sha256_published": "57e7f8da18f045cea99327102778b6f54c8e8db524626070a9d63a5eb5ffc846",
+      "sha256_at_run_host_pass": "57e7f8da18f045cea99327102778b6f54c8e8db524626070a9d63a5eb5ffc846",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "bylo",
+          "nie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data-e2/runs/pilot-kalibracja-e2/p2-T1-A.jsonl",
+      "sha256_published": "d63ab7b9b566147b0a506f82138664f4fb0291832d0c1b85e6cbc230d5b24992",
+      "sha256_at_run_host_pass": "d63ab7b9b566147b0a506f82138664f4fb0291832d0c1b85e6cbc230d5b24992",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "bylo",
+          "nie",
+          "sie",
+          "wiec"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data-e2/runs/pilot-kalibracja-e2/p2-T1-B.jsonl",
+      "sha256_published": "00f318a3b7d767346c9c6a55870a7b4e9fcb8858eb1f9258d437074e48fa8304",
+      "sha256_at_run_host_pass": "00f318a3b7d767346c9c6a55870a7b4e9fcb8858eb1f9258d437074e48fa8304",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "bylo",
+          "jako",
+          "jeden",
+          "jest",
+          "nie",
+          "sie",
+          "tego",
+          "wiec",
+          "wymaga",
+          "zadania"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data-emaint/runs/em-M1-A.jsonl",
+      "sha256_published": "36b809f1256a27a256ae73c77b3baeef51143189463b5c328c76dc100b1828da",
+      "sha256_at_run_host_pass": "36b809f1256a27a256ae73c77b3baeef51143189463b5c328c76dc100b1828da",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "dla",
+          "jest",
+          "liczba",
+          "nie",
+          "przez",
+          "sie",
+          "tego",
+          "wiec",
+          "wynik",
+          "zadanie",
+          "zostal"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data-emaint/runs/em-M1-B.jsonl",
+      "sha256_published": "65139dfdaddbd88e324abccc6c9a766acac75096ce3333cc8e6a036ead06ab0d",
+      "sha256_at_run_host_pass": "65139dfdaddbd88e324abccc6c9a766acac75096ce3333cc8e6a036ead06ab0d",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "jest",
+          "nie",
+          "sie",
+          "wiec",
+          "wynik",
+          "zadania",
+          "zostal"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data-emaint/runs/em-M2-A.jsonl",
+      "sha256_published": "4c4d1093dc58e85c3ac353e5d5212a5e692461c1646769ae12523361e06df0a0",
+      "sha256_at_run_host_pass": "4c4d1093dc58e85c3ac353e5d5212a5e692461c1646769ae12523361e06df0a0",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "nie",
+          "przez",
+          "sie",
+          "tylko",
+          "wiec",
+          "wynik",
+          "zostal"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data-emaint/runs/em-M2-B.jsonl",
+      "sha256_published": "2b002cf82d034c1b6c86b9bb2b3642eb134a29076bb64970707fd73d5871916f",
+      "sha256_at_run_host_pass": "2b002cf82d034c1b6c86b9bb2b3642eb134a29076bb64970707fd73d5871916f",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "jest",
+          "ktorego",
+          "sie",
+          "tego"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data-emaint/runs/em-M3-A.jsonl",
+      "sha256_published": "2e81b68363ad07f4a455456e915aa85c282f2b1f446188aa640a1c754fa8d2a7",
+      "sha256_at_run_host_pass": "2e81b68363ad07f4a455456e915aa85c282f2b1f446188aa640a1c754fa8d2a7",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data-emaint/runs/em-M3-B.jsonl",
+      "sha256_published": "becd72e3fd6ce3bec8d2c52b7523e967cabf2c503b94e5115ba68e640583a7df",
+      "sha256_at_run_host_pass": "becd72e3fd6ce3bec8d2c52b7523e967cabf2c503b94e5115ba68e640583a7df",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "jest",
+          "tego",
+          "wszystkie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data-emaint/runs/em-M4-A.jsonl",
+      "sha256_published": "cec460d10808be77f712c7fa043320191e0a3bec898346558be6a40120730ce8",
+      "sha256_at_run_host_pass": "cec460d10808be77f712c7fa043320191e0a3bec898346558be6a40120730ce8",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "albo",
+          "brak"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data-emaint/runs/em-M4-B.jsonl",
+      "sha256_published": "fe0e8c95292673b6470bd30ea6493d225c3c22d840839c07e8d6b1757f2de71b",
+      "sha256_at_run_host_pass": "fe0e8c95292673b6470bd30ea6493d225c3c22d840839c07e8d6b1757f2de71b",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "albo",
+          "jest",
+          "tego",
+          "wszystkie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data-emaint/runs/em-M5-A.jsonl",
+      "sha256_published": "db944812add1a57c9fa4bd43bc18217934e82b6838fd7af22f4da3bda43cbc18",
+      "sha256_at_run_host_pass": "8cfc31e4589292aa8f80a9dcaacf920c37ed9537ba90d834865ad8ed0c8c51a4",
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "jest",
+          "nie",
+          "przez",
+          "tego",
+          "zostal"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
+    },
+    {
+      "file": "data-emaint/runs/em-M5-B.jsonl",
+      "sha256_published": "0437864e457d0dcd9a1cc01abb0215abf1d4bb30d3b14b273c63f9eab6e6ef00",
+      "sha256_at_run_host_pass": "0437864e457d0dcd9a1cc01abb0215abf1d4bb30d3b14b273c63f9eab6e6ef00",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "jest",
+          "tego",
+          "wszystkie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data-emaint/runs/em-M6-A.jsonl",
+      "sha256_published": "20d18373507960bb76f5b87bbb189601f766b43751a482cac2fd2cd508bc453e",
+      "sha256_at_run_host_pass": "d072c3a1f274f330ae4af5c6fd23ac8a3da0880d955c0e30a19b30f0d0b3e7e4",
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "jest",
+          "tego",
+          "wszystkie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
+    },
+    {
+      "file": "data-emaint/runs/em-M6-B.jsonl",
+      "sha256_published": "57fa7b9607c8c0c4e393578e3c5c6d2f76253234a9ad16df0f374cbe7e0a7bf9",
+      "sha256_at_run_host_pass": "57fa7b9607c8c0c4e393578e3c5c6d2f76253234a9ad16df0f374cbe7e0a7bf9",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "jest",
+          "tego",
+          "wszystkie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/README.md",
+      "sha256_published": "b0b45aab4bf3526478d5685031859e9cc184cb8ee09eb038a0d5367c412e7bbe",
+      "sha256_at_run_host_pass": null,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "jeden"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
+    },
+    {
+      "file": "data/journal/p0.jsonl",
+      "sha256_published": "93ef1edc8caa9e879173dc3d7658b9854f91fa2f775d257c84a56440dcfe022a",
+      "sha256_at_run_host_pass": "93ef1edc8caa9e879173dc3d7658b9854f91fa2f775d257c84a56440dcfe022a",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/journal/p1.jsonl",
+      "sha256_published": "0c567bb4306edb6c97960b1dab304826742c52adb2c2784cd040c5062d910ea3",
+      "sha256_at_run_host_pass": "0c567bb4306edb6c97960b1dab304826742c52adb2c2784cd040c5062d910ea3",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "jest",
+          "nie",
+          "sie",
+          "wiec"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/journal/p2.jsonl",
+      "sha256_published": "cc5af3593dd0519f9d9f86dbef7388207cb65db4f00194c1f4428351741b6d7a",
+      "sha256_at_run_host_pass": "cc5af3593dd0519f9d9f86dbef7388207cb65db4f00194c1f4428351741b6d7a",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "dla",
+          "nie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/journal/pilot-kalibracja/README.md",
+      "sha256_published": "5844607522e86cc642ef0500e0d4571bbe62f4b4316e0594dce1132b37ac3ba3",
+      "sha256_at_run_host_pass": "5844607522e86cc642ef0500e0d4571bbe62f4b4316e0594dce1132b37ac3ba3",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "zeby"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/journal/pilot-kalibracja/p1.jsonl",
+      "sha256_published": "caecbc1a023ac4b11377a7076b9182e684d21f502926918ed3e36ea3cdd3fe4d",
+      "sha256_at_run_host_pass": "caecbc1a023ac4b11377a7076b9182e684d21f502926918ed3e36ea3cdd3fe4d",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/judge/e1-judge.jsonl",
+      "sha256_published": "2ed715a745272c0702b50e5a329224db4925754e31dd4429e9c89ca401d6a741",
+      "sha256_at_run_host_pass": "2ed715a745272c0702b50e5a329224db4925754e31dd4429e9c89ca401d6a741",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [
+          "ó",
+          "ą",
+          "ć",
+          "ę",
+          "ł",
+          "ń",
+          "ś",
+          "ż"
+        ],
+        "operator_language_words": [
+          "brak",
+          "dla",
+          "jednak",
+          "jest",
+          "ktore",
+          "nie",
+          "oraz",
+          "przez",
+          "sie",
+          "wszystkie",
+          "wymaga"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/judge/e2-judge.jsonl",
+      "sha256_published": "50102a7ca15930f4cb74dc722055c77789c4e0555846bc9ab240fdf5dfd56ea3",
+      "sha256_at_run_host_pass": "50102a7ca15930f4cb74dc722055c77789c4e0555846bc9ab240fdf5dfd56ea3",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [
+          "ó",
+          "ą",
+          "ć",
+          "ę",
+          "ł",
+          "ń",
+          "ś",
+          "ż"
+        ],
+        "operator_language_words": [
+          "brak",
+          "jednak",
+          "jest",
+          "nie",
+          "oraz",
+          "przez",
+          "sie",
+          "zostaly"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/judge/emaint-judge.jsonl",
+      "sha256_published": "4dad90d61b3613277b3d74ac551e5a8d3a83bc84043c55b85f43eb96eadaddc7",
+      "sha256_at_run_host_pass": "4dad90d61b3613277b3d74ac551e5a8d3a83bc84043c55b85f43eb96eadaddc7",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [
+          "ó",
+          "ą",
+          "ć",
+          "ę",
+          "ł",
+          "ń",
+          "ś",
+          "ż"
+        ],
+        "operator_language_words": [
+          "brak",
+          "dla",
+          "jako",
+          "jednak",
+          "jest",
+          "ktorego",
+          "nie",
+          "oraz",
+          "pliki",
+          "przez",
+          "tego",
+          "tylko",
+          "zadania"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/burdened-node22/README.md",
+      "sha256_published": "8610da018c62936afacec63e6d9aea0d1f4b79128b1462b79f3518a5293506df",
+      "sha256_at_run_host_pass": null,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "bylo",
+          "czyli",
+          "dla",
+          "gdy",
+          "jest",
+          "nawet",
+          "nie",
+          "wiec"
+        ],
+        "absolute_paths": [
+          "/home/"
+        ],
+        "secret_shapes": []
+      },
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
+    },
+    {
+      "file": "data/runs/burdened-node22/p1-T1-B.jsonl",
+      "sha256_published": "98e5532cf6467d3fa3485aff8ea5f1424aaba5acce19c46225cd3ae0266116c5",
+      "sha256_at_run_host_pass": "98e5532cf6467d3fa3485aff8ea5f1424aaba5acce19c46225cd3ae0266116c5",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "byla",
+          "dla",
+          "liczba",
+          "nie",
+          "przez",
+          "wiec"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/burdened-node22/p1-T2-B.jsonl",
+      "sha256_published": "30ab49efc11ce22b044da3575258baf4b76af1dcc1c9bc128674ac2469f75228",
+      "sha256_at_run_host_pass": "30ab49efc11ce22b044da3575258baf4b76af1dcc1c9bc128674ac2469f75228",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/burdened-node22/p1-T3-B.jsonl",
+      "sha256_published": "9c138ee058ea32ba53c56428ce4ff9365e626084e9e996c9721f4406600f3b93",
+      "sha256_at_run_host_pass": "9c138ee058ea32ba53c56428ce4ff9365e626084e9e996c9721f4406600f3b93",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/burdened-node22/p1-T4-B.jsonl",
+      "sha256_published": "334a8c62f6812b000d68b8cfca0f82f2c5f695a0c8b12523542327421e78c1d8",
+      "sha256_at_run_host_pass": "334a8c62f6812b000d68b8cfca0f82f2c5f695a0c8b12523542327421e78c1d8",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/calibration-pilot/README.md",
+      "sha256_published": "5844607522e86cc642ef0500e0d4571bbe62f4b4316e0594dce1132b37ac3ba3",
+      "sha256_at_run_host_pass": "5844607522e86cc642ef0500e0d4571bbe62f4b4316e0594dce1132b37ac3ba3",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "zeby"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/calibration-pilot/p1-T1-A.jsonl",
+      "sha256_published": "e84ee5e53f7ec6c365aae68e6925b3ad1921837bc39f035e91149503c3432f74",
+      "sha256_at_run_host_pass": "e84ee5e53f7ec6c365aae68e6925b3ad1921837bc39f035e91149503c3432f74",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "brak",
+          "jako",
+          "nie",
+          "przez"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/calibration-pilot/p1-T1-B.jsonl",
+      "sha256_published": "dfb2fd7823fd5e78960a62652794ccc6ae41a7a5fa5fc67b7e13544148dad9df",
+      "sha256_at_run_host_pass": "dfb2fd7823fd5e78960a62652794ccc6ae41a7a5fa5fc67b7e13544148dad9df",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "jeden",
+          "przez"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/falstart-bez-tozsamosci/README.md",
+      "sha256_published": "609d1abcc3c249781e9c244e7b1c519409df82adb463c03bc2a74ead131d7925",
+      "sha256_at_run_host_pass": "609d1abcc3c249781e9c244e7b1c519409df82adb463c03bc2a74ead131d7925",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "brak",
+          "jako",
+          "ktory",
+          "nie",
+          "przez",
+          "sie",
+          "tego",
+          "zostal"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/falstart-bez-tozsamosci/p1-T1-B.jsonl",
+      "sha256_published": "c5a45f88bec5b91c82fe47c0192c69d9c8b61871a82afe2d3ed17b809f3980fe",
+      "sha256_at_run_host_pass": "c5a45f88bec5b91c82fe47c0192c69d9c8b61871a82afe2d3ed17b809f3980fe",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/falstart-bez-tozsamosci/p1-T10-B.jsonl",
+      "sha256_published": "c82cbf5a14af7cfd6ac653ee42638f7c1b091c2e490a69de6048c82412e5cb4f",
+      "sha256_at_run_host_pass": "c82cbf5a14af7cfd6ac653ee42638f7c1b091c2e490a69de6048c82412e5cb4f",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/falstart-bez-tozsamosci/p1-T11-B.jsonl",
+      "sha256_published": "7b195f63ef292647c38fd994bfc2f8d1b27a03f39e9812e57569a0d5aaf186f5",
+      "sha256_at_run_host_pass": "7b195f63ef292647c38fd994bfc2f8d1b27a03f39e9812e57569a0d5aaf186f5",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/falstart-bez-tozsamosci/p1-T12-B.jsonl",
+      "sha256_published": "1a491f0a9e5e0f5dec25604700ab76456a2e7034216cca76a6a53b7d34735430",
+      "sha256_at_run_host_pass": "1a491f0a9e5e0f5dec25604700ab76456a2e7034216cca76a6a53b7d34735430",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/falstart-bez-tozsamosci/p1-T2-B.jsonl",
+      "sha256_published": "d86d2864d9bde6c3064cb7ceac5049df5aad7c2d65c2a785e94d137e668ca858",
+      "sha256_at_run_host_pass": "d86d2864d9bde6c3064cb7ceac5049df5aad7c2d65c2a785e94d137e668ca858",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/falstart-bez-tozsamosci/p1-T3-B.jsonl",
+      "sha256_published": "8bfa72242d00097069adc5a2beb60d03093830bf71418bd97efcd8a38812fe01",
+      "sha256_at_run_host_pass": "8bfa72242d00097069adc5a2beb60d03093830bf71418bd97efcd8a38812fe01",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/falstart-bez-tozsamosci/p1-T4-B.jsonl",
+      "sha256_published": "b1283ab35fde77e16586b3066ac3cf790af7be59b80de66550ad0ace74be9fe2",
+      "sha256_at_run_host_pass": "b1283ab35fde77e16586b3066ac3cf790af7be59b80de66550ad0ace74be9fe2",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/falstart-bez-tozsamosci/p1-T5-B.jsonl",
+      "sha256_published": "cc6a3a3fccccf5a1a7f593ec7ad296b5ebbcc5a9e002607abdc14d82b9676dab",
+      "sha256_at_run_host_pass": "cc6a3a3fccccf5a1a7f593ec7ad296b5ebbcc5a9e002607abdc14d82b9676dab",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/falstart-bez-tozsamosci/p1-T6-B.jsonl",
+      "sha256_published": "fadf2ac9d2c7a6c450e5efb43bb04b068b0534ed2ff89979bc8f90be7858fd29",
+      "sha256_at_run_host_pass": "fadf2ac9d2c7a6c450e5efb43bb04b068b0534ed2ff89979bc8f90be7858fd29",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/falstart-bez-tozsamosci/p1-T7-B.jsonl",
+      "sha256_published": "0436d477560dca1f290ebe6023358a9f4817bbbe8ea9ad114b9ef8929a9a5f9c",
+      "sha256_at_run_host_pass": "0436d477560dca1f290ebe6023358a9f4817bbbe8ea9ad114b9ef8929a9a5f9c",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/falstart-bez-tozsamosci/p1-T8-B.jsonl",
+      "sha256_published": "4c5654543da28dbc4211fb99e1a7ccf6094b89087f9d42b785268cae5cb93a55",
+      "sha256_at_run_host_pass": "4c5654543da28dbc4211fb99e1a7ccf6094b89087f9d42b785268cae5cb93a55",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/falstart-bez-tozsamosci/p1-T9-B.jsonl",
+      "sha256_published": "41ccee283d215e6c47f3908777673499ee5c702f0182ba9695f7cbd5cf136b1d",
+      "sha256_at_run_host_pass": "41ccee283d215e6c47f3908777673499ee5c702f0182ba9695f7cbd5cf136b1d",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/p1-T1-A.jsonl",
+      "sha256_published": "60da8d3dc9de40607e0d6557fcf3a64f9ad847783c6c50008d663b1291dbcccb",
+      "sha256_at_run_host_pass": "60da8d3dc9de40607e0d6557fcf3a64f9ad847783c6c50008d663b1291dbcccb",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "liczba",
+          "wiec"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/p1-T1-B.jsonl",
+      "sha256_published": "86ce91a952ff90e474fb5014c715549693663854555cc80a705ad396da204d4b",
+      "sha256_at_run_host_pass": "86ce91a952ff90e474fb5014c715549693663854555cc80a705ad396da204d4b",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/p1-T10-A.jsonl",
+      "sha256_published": "45f4012bb0ffbc0d02ca4a26025e4fb624a146b9ddc0fdb979bf8888f9b33849",
+      "sha256_at_run_host_pass": "45f4012bb0ffbc0d02ca4a26025e4fb624a146b9ddc0fdb979bf8888f9b33849",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "liczba",
+          "wiec"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/p1-T10-B.jsonl",
+      "sha256_published": "54a6cef13c7f784115403ea7f81781be8d683e1a9ee39a03c2a391f01229098d",
+      "sha256_at_run_host_pass": "54a6cef13c7f784115403ea7f81781be8d683e1a9ee39a03c2a391f01229098d",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/p1-T11-A.jsonl",
+      "sha256_published": "149f996c2a74bfcd592bc1beeed395dec7f2f129f3c94873038cb40103cf58d3",
+      "sha256_at_run_host_pass": "149f996c2a74bfcd592bc1beeed395dec7f2f129f3c94873038cb40103cf58d3",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "liczba",
+          "wiec"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/p1-T11-B.jsonl",
+      "sha256_published": "6b98ade2728ec4333f75e1b21c465ded3810e3cd88d6ad40ac00734ee6a65c1a",
+      "sha256_at_run_host_pass": "6b98ade2728ec4333f75e1b21c465ded3810e3cd88d6ad40ac00734ee6a65c1a",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/p1-T12-A.jsonl",
+      "sha256_published": "fcdca541f0caf57cdb5d1d19da00f6db380dd311c044ef1cfacc7748032f7b7e",
+      "sha256_at_run_host_pass": "fcdca541f0caf57cdb5d1d19da00f6db380dd311c044ef1cfacc7748032f7b7e",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "liczba",
+          "wiec"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/p1-T12-B.jsonl",
+      "sha256_published": "9ab7c153aba8b466590fb18ab736d504840ca4a585c88088ac8ddae8e2e4bd89",
+      "sha256_at_run_host_pass": "9ab7c153aba8b466590fb18ab736d504840ca4a585c88088ac8ddae8e2e4bd89",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/p1-T2-A.jsonl",
+      "sha256_published": "e59763e8bfee26b08063adf31837caf586df7cc91fbf3bf46e18cd37ee699091",
+      "sha256_at_run_host_pass": "e59763e8bfee26b08063adf31837caf586df7cc91fbf3bf46e18cd37ee699091",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "liczba",
+          "wiec"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/p1-T2-B.jsonl",
+      "sha256_published": "f06db20dbee214392365c2f9f0839709fc4340983b2b5e2016ba3f182069a67f",
+      "sha256_at_run_host_pass": "f06db20dbee214392365c2f9f0839709fc4340983b2b5e2016ba3f182069a67f",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/p1-T3-A.jsonl",
+      "sha256_published": "ec460b5f5bfa28e96d31086b5a29630e0c6fd0f5a58c6d3e10ac23845277e093",
+      "sha256_at_run_host_pass": "ec460b5f5bfa28e96d31086b5a29630e0c6fd0f5a58c6d3e10ac23845277e093",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "liczba",
+          "wiec"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/p1-T3-B.jsonl",
+      "sha256_published": "71d34afa250bb97adb6ced88141e3548cb15d4caebb181e152c9ef3b609d4aa4",
+      "sha256_at_run_host_pass": "71d34afa250bb97adb6ced88141e3548cb15d4caebb181e152c9ef3b609d4aa4",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/p1-T4-A.jsonl",
+      "sha256_published": "88b1f7264ed7325408cc6df40aef5200967c6a3e44cb40327c7d8d2345cf045e",
+      "sha256_at_run_host_pass": "88b1f7264ed7325408cc6df40aef5200967c6a3e44cb40327c7d8d2345cf045e",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "liczba",
+          "wiec"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/p1-T4-B.jsonl",
+      "sha256_published": "05f609643a89dc9f6b1ea1195991b3ad10c4bbd45c881c1e11fdf196f45253b0",
+      "sha256_at_run_host_pass": "05f609643a89dc9f6b1ea1195991b3ad10c4bbd45c881c1e11fdf196f45253b0",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/p1-T5-A.jsonl",
+      "sha256_published": "00dfa6de95ee565bda5183a8e2f79307bd24213ff9ad16e29747bbc2c6a26b1d",
+      "sha256_at_run_host_pass": "00dfa6de95ee565bda5183a8e2f79307bd24213ff9ad16e29747bbc2c6a26b1d",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "liczba",
+          "wiec"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/p1-T5-B.jsonl",
+      "sha256_published": "ecc0856107d121e6c8d6d8630d74e4b4c624102c041f4bbbcaa43a95d9adf31d",
+      "sha256_at_run_host_pass": "ecc0856107d121e6c8d6d8630d74e4b4c624102c041f4bbbcaa43a95d9adf31d",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/p1-T6-A.jsonl",
+      "sha256_published": "018cb72f7b05cd94b9ca696f8d5ecfe6cabe4e1dfe8ee64a186e47301e0e4210",
+      "sha256_at_run_host_pass": "018cb72f7b05cd94b9ca696f8d5ecfe6cabe4e1dfe8ee64a186e47301e0e4210",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "liczba",
+          "wiec"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/p1-T6-B.jsonl",
+      "sha256_published": "1ccd8780a2542396c0f8c4f5e97a6849e2cd293c30e562fb9c2d5ea6f4c793bc",
+      "sha256_at_run_host_pass": "1ccd8780a2542396c0f8c4f5e97a6849e2cd293c30e562fb9c2d5ea6f4c793bc",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/p1-T7-A.jsonl",
+      "sha256_published": "f9007903273e3940bcfb8b3d642c72e20c07b61033d6365aca7e4c58c2ad78e9",
+      "sha256_at_run_host_pass": "f9007903273e3940bcfb8b3d642c72e20c07b61033d6365aca7e4c58c2ad78e9",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "liczba",
+          "wiec"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/p1-T7-B.jsonl",
+      "sha256_published": "bba962b29ebb33aeb58d6c6f97687037bc2ec95983d8b161188ecb3d181c3afe",
+      "sha256_at_run_host_pass": "bba962b29ebb33aeb58d6c6f97687037bc2ec95983d8b161188ecb3d181c3afe",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/p1-T8-A.jsonl",
+      "sha256_published": "a0a30ce398c38b5c93c00baf7f061239d6330ab996e8ec1dc62b824a1d9e94c1",
+      "sha256_at_run_host_pass": "a0a30ce398c38b5c93c00baf7f061239d6330ab996e8ec1dc62b824a1d9e94c1",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "liczba",
+          "wiec"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/p1-T8-B.jsonl",
+      "sha256_published": "ec4b0d629af8c4468d36a211dd5dc7f45f914facfc86cb37776d099e795c3497",
+      "sha256_at_run_host_pass": "ec4b0d629af8c4468d36a211dd5dc7f45f914facfc86cb37776d099e795c3497",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/p1-T9-A.jsonl",
+      "sha256_published": "e4111f65df3f28c668345c8e53031fd9bf82638f62f74e7bb9831262a3ab88b2",
+      "sha256_at_run_host_pass": "e4111f65df3f28c668345c8e53031fd9bf82638f62f74e7bb9831262a3ab88b2",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/runs/p1-T9-B.jsonl",
+      "sha256_published": "167fbcb3d6b674a15c02a5e4d106544b061a6e71d8dd40971c6da50ad5e4e042",
+      "sha256_at_run_host_pass": "167fbcb3d6b674a15c02a5e4d106544b061a6e71d8dd40971c6da50ad5e4e042",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "byla",
+          "nie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "data/usage-summary.json",
+      "sha256_published": "ebcdd064e709c57c12d3a7465d20f3eb90d8df0101f2f2e761825548eccab37a",
+      "sha256_at_run_host_pass": null,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
+    },
+    {
+      "file": "data/usage_summary.py",
+      "sha256_published": "6d5a2d5b876e6cdeff8b2a406e923d99b7c2a6c71244eb2d6cad548c11d58200",
+      "sha256_at_run_host_pass": null,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
+    },
+    {
+      "file": "derived.py",
+      "sha256_published": "b3df40105ce14649e878876aaed608b2f25119c853d1a6d15d75759faf1cdea2",
+      "sha256_at_run_host_pass": "b3df40105ce14649e878876aaed608b2f25119c853d1a6d15d75759faf1cdea2",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "e2/MANIFEST-E2.sha256",
+      "sha256_published": "e57d70e21c14731c535f370c52a4f37cd953d49074fe259ed3a7f0cd0314155c",
+      "sha256_at_run_host_pass": "e57d70e21c14731c535f370c52a4f37cd953d49074fe259ed3a7f0cd0314155c",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "zostal"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "e2/NOTATKI-RUNNERA.md",
+      "sha256_published": "69788fc391874a9401cbdc9e54acb8ac6708edf1b79e511fe7c86b878c2dc22d",
+      "sha256_at_run_host_pass": "69788fc391874a9401cbdc9e54acb8ac6708edf1b79e511fe7c86b878c2dc22d",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "jesli",
+          "jest",
+          "moze",
+          "musi",
+          "nie",
+          "sie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "e2/PROTOCOL-E2.md",
+      "sha256_published": "da7e21ae2cc524b134ecbb34108500b613dfb18b53319e30d23311a8708cfc39",
+      "sha256_at_run_host_pass": "da7e21ae2cc524b134ecbb34108500b613dfb18b53319e30d23311a8708cfc39",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "e2/SYMETRIA-E2.md",
+      "sha256_published": "f87ba5a8dc99791887f91a1b201bb3b03dcb32de421dcce02200f2a8e5e257e6",
+      "sha256_at_run_host_pass": "f87ba5a8dc99791887f91a1b201bb3b03dcb32de421dcce02200f2a8e5e257e6",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "nie",
+          "przez",
+          "tego"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "e2/pricing-e2.json",
+      "sha256_published": "a16d7edd877d1efe8851699f0b5519e53ad9c7ed57f22821f51e0bec5b460147",
+      "sha256_at_run_host_pass": "a16d7edd877d1efe8851699f0b5519e53ad9c7ed57f22821f51e0bec5b460147",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "gdy",
+          "jako",
+          "jeden",
+          "nie",
+          "sie",
+          "wiec"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "emaint/PROTOCOL.md",
+      "sha256_published": "749180ebdad41d1aa8f338717f0dd924a81ce4a5f16e4193e2f586e4aaa31775",
+      "sha256_at_run_host_pass": "749180ebdad41d1aa8f338717f0dd924a81ce4a5f16e4193e2f586e4aaa31775",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "emaint/specs/M1-scoring.md",
+      "sha256_published": "5540ed1b144fd19111d0852af0cb64abcffa655c0cc6208552457b6fce1eab9e",
+      "sha256_at_run_host_pass": "5540ed1b144fd19111d0852af0cb64abcffa655c0cc6208552457b6fce1eab9e",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "albo",
+          "brak",
+          "byla",
+          "bylo",
+          "dla",
+          "jako",
+          "jest",
+          "ktora",
+          "ktore",
+          "ktory",
+          "ktorych",
+          "liczba",
+          "moze",
+          "nie",
+          "oraz",
+          "plik",
+          "pliki",
+          "przez",
+          "sie",
+          "takze",
+          "tego",
+          "wiec",
+          "wszystkie",
+          "wymaga",
+          "wynik",
+          "zadanie",
+          "zeby"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "emaint/specs/M1-spec.md",
+      "sha256_published": "50ba53502e1bc6bef658268c017a2759c5971f3a854165f500353ff65e303282",
+      "sha256_at_run_host_pass": "50ba53502e1bc6bef658268c017a2759c5971f3a854165f500353ff65e303282",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "albo",
+          "brak",
+          "bylo",
+          "dla",
+          "gdy",
+          "jako",
+          "jest",
+          "kazdy",
+          "ktora",
+          "ktore",
+          "ktory",
+          "ktorych",
+          "liczba",
+          "moze",
+          "musi",
+          "nie",
+          "oraz",
+          "przez",
+          "sie",
+          "takze",
+          "tego",
+          "wiec",
+          "wszystkie",
+          "wymaga",
+          "wynik",
+          "zadania",
+          "zadanie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "emaint/specs/M2-scoring.md",
+      "sha256_published": "bd4f60a8a06386066c2af35276b093a21d2a0d71371589532ca15e1dbd264b77",
+      "sha256_at_run_host_pass": "bd4f60a8a06386066c2af35276b093a21d2a0d71371589532ca15e1dbd264b77",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "brak",
+          "byla",
+          "dla",
+          "jako",
+          "jest",
+          "kazdy",
+          "ktore",
+          "liczba",
+          "nie",
+          "plik",
+          "sie",
+          "wiec",
+          "wszystkie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "emaint/specs/M2-spec.md",
+      "sha256_published": "b54ba7c95d9b40ef1b0e160b9b7f4e697ba60469dff7d7b1415113027ac2c6ea",
+      "sha256_at_run_host_pass": "b54ba7c95d9b40ef1b0e160b9b7f4e697ba60469dff7d7b1415113027ac2c6ea",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "dla",
+          "jest",
+          "kazdy",
+          "ktora",
+          "ktore",
+          "ktorego",
+          "ktory",
+          "moze",
+          "musi",
+          "nie",
+          "oraz",
+          "przez",
+          "sie",
+          "takze",
+          "wszystkie",
+          "wymaga",
+          "zadania",
+          "zadanie",
+          "zeby"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "emaint/specs/M3-scoring.md",
+      "sha256_published": "57104764ed2d7cc95f18895bc3b856521a2cbcee6cfa8dee027d5f4482b6cf58",
+      "sha256_at_run_host_pass": "57104764ed2d7cc95f18895bc3b856521a2cbcee6cfa8dee027d5f4482b6cf58",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "albo",
+          "brak",
+          "czyli",
+          "dla",
+          "gdy",
+          "jako",
+          "jeden",
+          "jest",
+          "kazdy",
+          "ktora",
+          "ktore",
+          "ktorego",
+          "ktory",
+          "ktorych",
+          "liczba",
+          "moze",
+          "musi",
+          "nie",
+          "oraz",
+          "plik",
+          "pliki",
+          "przez",
+          "sie",
+          "takze",
+          "tego",
+          "tylko",
+          "wiec",
+          "wszystkie",
+          "wymaga",
+          "wynik",
+          "zadania",
+          "zadanie",
+          "zeby",
+          "zostal"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "emaint/specs/M3-spec.md",
+      "sha256_published": "cad962f56f9535c4a78ce118e39dd37ff9085a49c78bbcb92765860e7330304d",
+      "sha256_at_run_host_pass": "cad962f56f9535c4a78ce118e39dd37ff9085a49c78bbcb92765860e7330304d",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "albo",
+          "brak",
+          "bylo",
+          "dla",
+          "gdy",
+          "jako",
+          "jeden",
+          "jest",
+          "kazdy",
+          "ktora",
+          "lub",
+          "musi",
+          "nalezy",
+          "nie",
+          "oraz",
+          "pliki",
+          "przez",
+          "sie",
+          "takze",
+          "tego",
+          "wszystkie",
+          "wymaga",
+          "wynik",
+          "zadania",
+          "zadanie",
+          "zostal"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "emaint/specs/M4-scoring.md",
+      "sha256_published": "8d2de9225303010a2146e05b3d0c4ec9a63c888551930cde8d6269a12d879c1d",
+      "sha256_at_run_host_pass": "8d2de9225303010a2146e05b3d0c4ec9a63c888551930cde8d6269a12d879c1d",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "albo",
+          "brak",
+          "byla",
+          "bylo",
+          "czyli",
+          "dla",
+          "gdy",
+          "jako",
+          "jeden",
+          "jest",
+          "kazdy",
+          "ktora",
+          "ktore",
+          "ktorego",
+          "ktory",
+          "ktorych",
+          "liczba",
+          "moze",
+          "musi",
+          "nazwa",
+          "nie",
+          "opis",
+          "oraz",
+          "plik",
+          "przez",
+          "sie",
+          "takze",
+          "tego",
+          "tylko",
+          "wiec",
+          "wszystkie",
+          "wymaga",
+          "zadania",
+          "zadanie",
+          "zeby"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "emaint/specs/M4-spec.md",
+      "sha256_published": "4c05c605622bb14a83a2ddb994047f918879eba50f93d5c35313d01773e9c95e",
+      "sha256_at_run_host_pass": "4c05c605622bb14a83a2ddb994047f918879eba50f93d5c35313d01773e9c95e",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "albo",
+          "brak",
+          "czyli",
+          "dla",
+          "gdy",
+          "jako",
+          "jeden",
+          "jest",
+          "kazdy",
+          "ktora",
+          "ktore",
+          "ktory",
+          "ktorych",
+          "musi",
+          "nazwa",
+          "nie",
+          "oraz",
+          "plik",
+          "pliki",
+          "przez",
+          "sie",
+          "takze",
+          "tego",
+          "tylko",
+          "wszystkie",
+          "wymaga",
+          "zadanie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "emaint/specs/M5-scoring.md",
+      "sha256_published": "4e4bea91d654dd6214b5b57a5ad8436b743782e7507ff5201fa11e79e3181970",
+      "sha256_at_run_host_pass": "4e4bea91d654dd6214b5b57a5ad8436b743782e7507ff5201fa11e79e3181970",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "albo",
+          "brak",
+          "byla",
+          "czyli",
+          "dla",
+          "gdy",
+          "jako",
+          "jednak",
+          "jesli",
+          "jest",
+          "kazdy",
+          "ktora",
+          "ktore",
+          "ktorego",
+          "ktory",
+          "ktorych",
+          "liczba",
+          "moze",
+          "musi",
+          "nie",
+          "oraz",
+          "plik",
+          "pliki",
+          "przez",
+          "sie",
+          "takze",
+          "tego",
+          "tylko",
+          "wiec",
+          "wszystkie",
+          "wymaga",
+          "wynik",
+          "zadania",
+          "zadanie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "emaint/specs/M5-spec.md",
+      "sha256_published": "0933cd89f04c464478ca188c6a05771ccffce6e91abe95756402703b835e08e9",
+      "sha256_at_run_host_pass": "0933cd89f04c464478ca188c6a05771ccffce6e91abe95756402703b835e08e9",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "albo",
+          "brak",
+          "bylo",
+          "dla",
+          "dodaj",
+          "jako",
+          "jest",
+          "kazdy",
+          "ktora",
+          "ktore",
+          "ktorego",
+          "ktory",
+          "moze",
+          "nalezy",
+          "nazwa",
+          "nie",
+          "oraz",
+          "pliki",
+          "sie",
+          "tego",
+          "wiec",
+          "wymaga",
+          "wynik",
+          "zadanie",
+          "zeby"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "emaint/specs/M6-scoring.md",
+      "sha256_published": "3871e6a6ba244c29712c46387dc87a5cae6638c32cd105c1403feaf2e25bf3f4",
+      "sha256_at_run_host_pass": "3871e6a6ba244c29712c46387dc87a5cae6638c32cd105c1403feaf2e25bf3f4",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "albo",
+          "brak",
+          "dla",
+          "gdy",
+          "jako",
+          "jesli",
+          "jest",
+          "kazdy",
+          "liczba",
+          "nie",
+          "oraz",
+          "plik",
+          "pliki",
+          "przez",
+          "sie",
+          "tego",
+          "tylko",
+          "wiec",
+          "wszystkie",
+          "wynik",
+          "zadania",
+          "zadanie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "emaint/specs/M6-spec.md",
+      "sha256_published": "a2aac9f29ddb7caf3c76e50d6a1387d5b742727436b0e4cf794ab81f4b943bb7",
+      "sha256_at_run_host_pass": "a2aac9f29ddb7caf3c76e50d6a1387d5b742727436b0e4cf794ab81f4b943bb7",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "albo",
+          "brak",
+          "gdy",
+          "jako",
+          "jest",
+          "kazdy",
+          "ktore",
+          "liczba",
+          "nazwa",
+          "nie",
+          "oraz",
+          "przez",
+          "sie",
+          "tego",
+          "tylko",
+          "wynik",
+          "zadania",
+          "zadanie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "frozen/AMENDMENTS.md",
+      "sha256_published": "0c47f276c7a83da2a48bda7e8ba2fe62608d40afd9b18ed49621134750cfc939",
+      "sha256_at_run_host_pass": null,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
+    },
+    {
+      "file": "frozen/MANIFEST.sha256",
+      "sha256_published": "815b87b2be1f583e151c7ecb0889fb7a7cbd33e2642998b305513462d6fee968",
+      "sha256_at_run_host_pass": "815b87b2be1f583e151c7ecb0889fb7a7cbd33e2642998b305513462d6fee968",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "frozen/WITHHELD.md",
+      "sha256_published": "7f18e384b567c7a995f7157c1167279645f870722e25722cde9393f9f5d8e6f6",
+      "sha256_at_run_host_pass": null,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
+    },
+    {
+      "file": "frozen/adjudications.md",
+      "sha256_published": "2e5800fc37e0c6632e709658b701aa94899c1874c2a8c8050d98d8389348e816",
+      "sha256_at_run_host_pass": "2e5800fc37e0c6632e709658b701aa94899c1874c2a8c8050d98d8389348e816",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [
+          "ó",
+          "ę",
+          "ł",
+          "ś",
+          "ż"
+        ],
+        "operator_language_words": [
+          "jako",
+          "jest",
+          "nie",
+          "sie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "frozen/budgets.json",
+      "sha256_published": "ea0c670b51057e21bf28271bf72d22ce6516414c2970c62b93e2841810563885",
+      "sha256_at_run_host_pass": "ea0c670b51057e21bf28271bf72d22ce6516414c2970c62b93e2841810563885",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "dla",
+          "przez"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "frozen/checklists.md",
+      "sha256_published": "ded530201f8313c3c87b194b4ee68718d6de505e0bda14dc84ba870472a361cc",
+      "sha256_at_run_host_pass": "ded530201f8313c3c87b194b4ee68718d6de505e0bda14dc84ba870472a361cc",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [
+          "ó",
+          "ą",
+          "Ę",
+          "ł",
+          "ż"
+        ],
+        "operator_language_words": [
+          "kazdy"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "frozen/feedback-format.md",
+      "sha256_published": "ef63f71057c26ecacaa3415795d68146f560bbe6935e3b4308676678971cf8a8",
+      "sha256_at_run_host_pass": "ef63f71057c26ecacaa3415795d68146f560bbe6935e3b4308676678971cf8a8",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [
+          "ó",
+          "Ą",
+          "ę",
+          "Ł",
+          "ś",
+          "Ż",
+          "ż"
+        ],
+        "operator_language_words": [
+          "dla"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "frozen/judge-prompt.md",
+      "sha256_published": "43314e4185c0b2a70abf6f7c616cb917bcf811c43c6d21826ad63298b379de6e",
+      "sha256_at_run_host_pass": "43314e4185c0b2a70abf6f7c616cb917bcf811c43c6d21826ad63298b379de6e",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [
+          "ó",
+          "ą",
+          "ć",
+          "Ę",
+          "ę",
+          "ł",
+          "Ś",
+          "ś",
+          "ź",
+          "ż"
+        ],
+        "operator_language_words": [
+          "ktore",
+          "moze",
+          "nie",
+          "zadania"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "frozen/pricing.json",
+      "sha256_published": "e198fbfe52762ee48c1e6664e57b8e5d80ffe5bf7ce6f37675b664e2a7fc47fe",
+      "sha256_at_run_host_pass": "e198fbfe52762ee48c1e6664e57b8e5d80ffe5bf7ce6f37675b664e2a7fc47fe",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "nie",
+          "sie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "frozen/scenario/T1/spec.md",
+      "sha256_published": "c4fa3995853e58b6320be0c88c676da435a214e46470e76249aebc46498be5f5",
+      "sha256_at_run_host_pass": "c4fa3995853e58b6320be0c88c676da435a214e46470e76249aebc46498be5f5",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "albo",
+          "brak",
+          "dla",
+          "jest",
+          "kazdy",
+          "musi",
+          "nazwa",
+          "nie",
+          "oraz",
+          "plik",
+          "przez",
+          "sie",
+          "wszystkie",
+          "wymaga",
+          "zadania",
+          "zadanie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "frozen/scenario/T10/spec.md",
+      "sha256_published": "2b9e38b51f13a13efe5c9c448e66bad3ec6c42f38ffabd0f3ffb2b165b08fc55",
+      "sha256_at_run_host_pass": "2b9e38b51f13a13efe5c9c448e66bad3ec6c42f38ffabd0f3ffb2b165b08fc55",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "albo",
+          "dla",
+          "gdy",
+          "jako",
+          "jeden",
+          "jest",
+          "kazdy",
+          "ktore",
+          "liczba",
+          "moze",
+          "musi",
+          "nazwa",
+          "nie",
+          "plik",
+          "przez",
+          "sie",
+          "takze",
+          "tylko",
+          "wiec",
+          "wymaga",
+          "wynik",
+          "zadania",
+          "zadanie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "frozen/scenario/T11/spec.md",
+      "sha256_published": "9a1f8060a29b41cb30f67832916d3eacdc0098d6e17751cb4401c8f3b327d3da",
+      "sha256_at_run_host_pass": "9a1f8060a29b41cb30f67832916d3eacdc0098d6e17751cb4401c8f3b327d3da",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "dla",
+          "jako",
+          "jesli",
+          "jest",
+          "kazdy",
+          "ktorego",
+          "moze",
+          "nazwa",
+          "nie",
+          "oraz",
+          "przez",
+          "sie",
+          "tylko",
+          "wszystkie",
+          "wymaga",
+          "zadanie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "frozen/scenario/T12/spec.md",
+      "sha256_published": "14af4615e8941c6cbf22f839f769061feb952600ed9ab3073acfc743799395ae",
+      "sha256_at_run_host_pass": "14af4615e8941c6cbf22f839f769061feb952600ed9ab3073acfc743799395ae",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "albo",
+          "dla",
+          "gdy",
+          "jako",
+          "jeden",
+          "jest",
+          "kazdy",
+          "liczba",
+          "musi",
+          "nie",
+          "oraz",
+          "plik",
+          "przez",
+          "sie",
+          "takze",
+          "wiec",
+          "wszystkie",
+          "wynik",
+          "zadania",
+          "zadanie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "frozen/scenario/T2/spec.md",
+      "sha256_published": "e13ef65664e0d4f8808667ac341f6324907494e99ddd6a105a2697ef572bcecb",
+      "sha256_at_run_host_pass": "e13ef65664e0d4f8808667ac341f6324907494e99ddd6a105a2697ef572bcecb",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "albo",
+          "brak",
+          "dodaj",
+          "jest",
+          "kazdy",
+          "ktory",
+          "liczba",
+          "lub",
+          "musi",
+          "nazwa",
+          "nie",
+          "oraz",
+          "pliki",
+          "przez",
+          "sie",
+          "wszystkie",
+          "wynik",
+          "zadania",
+          "zadanie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "frozen/scenario/T3/spec.md",
+      "sha256_published": "9adf001e38b9abcda7c63267b759435b587cb4ad2407585c008f6a28d64ed4c8",
+      "sha256_at_run_host_pass": "9adf001e38b9abcda7c63267b759435b587cb4ad2407585c008f6a28d64ed4c8",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [
+          "ó",
+          "ą",
+          "ć",
+          "ę",
+          "Ł",
+          "ł",
+          "ń",
+          "ś",
+          "ź",
+          "Ż",
+          "ż"
+        ],
+        "operator_language_words": [
+          "albo",
+          "brak",
+          "dla",
+          "dodaj",
+          "gdy",
+          "jeden",
+          "jest",
+          "kazdy",
+          "ktory",
+          "liczba",
+          "musi",
+          "nie",
+          "oraz",
+          "plik",
+          "powinien",
+          "przez",
+          "sie",
+          "takze",
+          "tego",
+          "uzyj",
+          "zadania",
+          "zadanie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "frozen/scenario/T4/spec.md",
+      "sha256_published": "70c60083924ab190a00b3f3c081f05af17fd26fff4abba85033ff641edd493c3",
+      "sha256_at_run_host_pass": "70c60083924ab190a00b3f3c081f05af17fd26fff4abba85033ff641edd493c3",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [
+          "ó",
+          "ą",
+          "ć",
+          "ę",
+          "ł",
+          "ń",
+          "ś",
+          "ź",
+          "ż"
+        ],
+        "operator_language_words": [
+          "brak",
+          "dla",
+          "dodaj",
+          "jako",
+          "jest",
+          "liczba",
+          "moze",
+          "nie",
+          "oraz",
+          "pliki",
+          "przez",
+          "wynik",
+          "zadania",
+          "zadanie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "frozen/scenario/T5/spec.md",
+      "sha256_published": "86c5f47abb7ab5e78dc227903682578288acc02172b8495f3a69ff1528437b0d",
+      "sha256_at_run_host_pass": "86c5f47abb7ab5e78dc227903682578288acc02172b8495f3a69ff1528437b0d",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [
+          "ł"
+        ],
+        "operator_language_words": [
+          "brak",
+          "dla",
+          "jako",
+          "jeden",
+          "jest",
+          "kazdy",
+          "liczba",
+          "lub",
+          "musi",
+          "nazwa",
+          "nie",
+          "oraz",
+          "przez",
+          "sie",
+          "tego",
+          "wynik",
+          "zadania",
+          "zadanie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "frozen/scenario/T6/spec.md",
+      "sha256_published": "1f55b38bc59d47bdf7e18eb3a116e9fb79ac568db9a458e6a0a999e154be074e",
+      "sha256_at_run_host_pass": "1f55b38bc59d47bdf7e18eb3a116e9fb79ac568db9a458e6a0a999e154be074e",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "brak",
+          "dla",
+          "jest",
+          "ktora",
+          "ktory",
+          "liczba",
+          "moze",
+          "musi",
+          "nazwa",
+          "nie",
+          "oraz",
+          "plik",
+          "pliki",
+          "przez",
+          "sie",
+          "tego",
+          "wszystkie",
+          "wynik",
+          "zadania",
+          "zadanie",
+          "zeby"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "frozen/scenario/T7/spec.md",
+      "sha256_published": "1f37371632b55a5700847d990d1c758ebd2ac6eb17f004824fba61de600dfdf5",
+      "sha256_at_run_host_pass": "1f37371632b55a5700847d990d1c758ebd2ac6eb17f004824fba61de600dfdf5",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "brak",
+          "dla",
+          "gdy",
+          "jako",
+          "jeden",
+          "jest",
+          "kazdy",
+          "ktory",
+          "lub",
+          "moze",
+          "nazwa",
+          "nie",
+          "oraz",
+          "plik",
+          "przez",
+          "sie",
+          "takze",
+          "tego",
+          "uzyj",
+          "wynik",
+          "zadania",
+          "zadanie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "frozen/scenario/T8/spec.md",
+      "sha256_published": "fa9ef7988685f8486105997d550a1ed59df2cb7436a9c09692bda017f4726855",
+      "sha256_at_run_host_pass": "fa9ef7988685f8486105997d550a1ed59df2cb7436a9c09692bda017f4726855",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [
+          "ó",
+          "Ą",
+          "ą",
+          "ć",
+          "ę",
+          "Ł",
+          "ł",
+          "ń",
+          "Ś",
+          "ś",
+          "ź",
+          "Ż",
+          "ż"
+        ],
+        "operator_language_words": [
+          "albo",
+          "brak",
+          "dla",
+          "gdy",
+          "jako",
+          "jeden",
+          "jednak",
+          "jest",
+          "kazdy",
+          "ktora",
+          "ktore",
+          "liczba",
+          "moze",
+          "musi",
+          "nazwa",
+          "nie",
+          "oraz",
+          "przez",
+          "sie",
+          "tego",
+          "wszystkie",
+          "wymaga",
+          "wynik",
+          "zadania",
+          "zadanie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "frozen/scenario/T9/spec.md",
+      "sha256_published": "3a29f66f63320f234d55c2ef58bd7e72a3d19df6d13c1ce800c5f293e1ad5347",
+      "sha256_at_run_host_pass": "3a29f66f63320f234d55c2ef58bd7e72a3d19df6d13c1ce800c5f293e1ad5347",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [
+          "ó",
+          "Ą",
+          "ą",
+          "ć",
+          "Ę",
+          "ę",
+          "Ł",
+          "ł",
+          "ń",
+          "ś",
+          "ź",
+          "ż"
+        ],
+        "operator_language_words": [
+          "albo",
+          "brak",
+          "dla",
+          "gdy",
+          "jest",
+          "kazdy",
+          "lub",
+          "moze",
+          "nie",
+          "oraz",
+          "przez",
+          "sie",
+          "tylko",
+          "uzyj",
+          "wynik",
+          "zadania",
+          "zadanie"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "frozen/symmetry-table.md",
+      "sha256_published": "071598d4c7bb8ae26079babcc062ee6ce50d90aeeec53c616800e2904c17559c",
+      "sha256_at_run_host_pass": "071598d4c7bb8ae26079babcc062ee6ce50d90aeeec53c616800e2904c17559c",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "gen/audit_scan.py",
+      "sha256_published": "53886b857a0dd4bb919e125792cef3ae215c8ce799f3bbfd6f6fc4f3f668c85c",
+      "sha256_at_run_host_pass": "53886b857a0dd4bb919e125792cef3ae215c8ce799f3bbfd6f6fc4f3f668c85c",
+      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [
+          "Ó",
+          "ó",
+          "Ą",
+          "ą",
+          "Ć",
+          "ć",
+          "Ę",
+          "ę",
+          "Ł",
+          "ł",
+          "Ń",
+          "ń",
+          "Ś",
+          "ś",
+          "Ź",
+          "ź",
+          "Ż",
+          "ż"
+        ],
+        "operator_language_words": [
+          "aby",
+          "albo",
+          "brak",
+          "byla",
+          "bylo",
+          "czyli",
+          "dla",
+          "dodaj",
+          "gdy",
+          "jako",
+          "jeden",
+          "jednak",
+          "jesli",
+          "jest",
+          "kazdy",
+          "ktora",
+          "ktore",
+          "ktorego",
+          "ktory",
+          "ktorych",
+          "liczba",
+          "lub",
+          "moze",
+          "musi",
+          "nalezy",
+          "nawet",
+          "nazwa",
+          "nie",
+          "opis",
+          "oraz",
+          "plik",
+          "pliki",
+          "powinien",
+          "przez",
+          "sie",
+          "takze",
+          "tego",
+          "tylko",
+          "uzyj",
+          "wiec",
+          "wszystkie",
+          "wymaga",
+          "wynik",
+          "zadania",
+          "zadanie",
+          "zeby",
+          "zostal",
+          "zostaly"
+        ],
+        "absolute_paths": [
+          "/Users/",
+          "/home/",
+          "/opt/",
+          "/private/tmp",
+          "/var/folders"
+        ],
+        "secret_shapes": []
+      },
+      "verify_zero_matches": [],
+      "oracle_clean": null,
+      "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "gen/regen_scrub_report.py",
+      "sha256_published": "755ff42581842650271147541c4e890eb99f504f7fd0cfd46f2d3fc7e49c7eca",
+      "sha256_at_run_host_pass": "12dca18b229e97a3643d5a62b0567e0805253408612609f95f272b9d41304c4b",
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [
+          "Ó",
+          "ó",
+          "Ą",
+          "ą",
+          "Ć",
+          "ć",
+          "Ę",
+          "ę",
+          "Ł",
+          "ł",
+          "Ń",
+          "ń",
+          "Ś",
+          "ś",
+          "Ź",
+          "ź",
+          "Ż",
+          "ż"
+        ],
+        "operator_language_words": [
+          "aby",
+          "albo",
+          "brak",
+          "byla",
+          "bylo",
+          "czyli",
+          "dla",
+          "dodaj",
+          "gdy",
+          "jako",
+          "jeden",
+          "jednak",
+          "jesli",
+          "jest",
+          "kazdy",
+          "ktora",
+          "ktore",
+          "ktorego",
+          "ktory",
+          "ktorych",
+          "liczba",
+          "lub",
+          "moze",
+          "musi",
+          "nalezy",
+          "nawet",
+          "nazwa",
+          "nie",
+          "opis",
+          "oraz",
+          "plik",
+          "pliki",
+          "powinien",
+          "przez",
+          "sie",
+          "takze",
+          "tego",
+          "tylko",
+          "uzyj",
+          "wiec",
+          "wszystkie",
+          "wymaga",
+          "wynik",
+          "zadania",
+          "zadanie",
+          "zeby",
+          "zostal",
+          "zostaly"
+        ],
+        "absolute_paths": [
+          "/Users/",
+          "/home/",
+          "/opt/",
+          "/private/tmp",
+          "/var/folders"
+        ],
+        "secret_shapes": []
+      },
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
+    }
+  ],
+  "self": {
+    "file": "data/SCRUB-REPORT.json",
+    "note": "This file cannot carry its own hash. It was checked in a second pass, under the same two layers and the same oracle, with the same result: zero matches, zero bytes changed.",
+    "content_checks_re_run_at_republication": "written last; it cannot hash itself, and it is the one file the run-host oracle checked in a second pass",
+    "verify_zero_matches": [],
+    "explicit_secret_literal_hits": 0
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_komentarz": "Cennik E2 zamrozony 2026-08-27 ze strony developers.openai.com/api/docs/models/gpt-5.6-sol. Stawki promocyjne obowiazuja co najmniej do 2026-11-21 (seria E2 konczy sie na dlugo przed ta data, wiec jeden przedzial wystarcza). reasoning_output_tokens bilingowane jako output (podzbior raportowany osobno, NIE dodawany drugi raz). cache_write_input_tokens: OpenAI nie ma osobnej stawki za zapis cache — klasa raportowana w rekordzie, imputowana stawka input (czesc input_tokens). Doplata long-context: request z input > 272000 tokenow placi x2 input i x1.5 output ZA CALY REQUEST — imputacja liczy ja per turn z listy per_turn.",
+  "model": "gpt-5.6-sol",
+  "przedzialy": [
+    {"do": "2026-11-21",
+     "in_usd_per_mtok": 4.0,
+     "cached_in_usd_per_mtok": 0.4,
+     "out_usd_per_mtok": 20.0,
+     "long_context": {"prog_input_tokens": 272000, "in_mult": 2.0, "out_mult": 1.5}}
+  ],
+  "formula": "per turn: nc=(in-cached_in); usd = nc*IN + cached_in*CACHED + (out)*OUT; gdy in>prog: usd = nc*IN*in_mult + cached_in*CACHED + out*OUT*out_mult; suma po turnach",
+  "zrodlo": "https://developers.openai.com/api/docs/models/gpt-5.6-sol (odczyt 2026-08-27)"
+}

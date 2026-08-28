@@ -1,0 +1,2739 @@
+{
+ "_what_this_is": "Per-run usage summary for Experiment 1, computed from the raw records in data/runs/ - not transcribed from any report. Regenerate with `python3 data/usage_summary.py`.",
+ "_how_cost_is_imputed": "The runs were made on a subscription, which does not bill per token. Dollar figures are IMPUTED: token counts read from the records, multiplied by the rate card frozen in frozen/pricing.json before the runs. `thinking` tokens are a subset of `out` and are reported separately for information only - they are NOT added to the cost a second time.",
+ "_read_the_caveats": "data/README.md, frozen/AMENDMENTS.md",
+ "generated_utc": "2026-08-27T06:32:47Z",
+ "generator": "data/usage_summary.py",
+ "inputs": {
+  "records_glob": "data/runs/**/*.jsonl",
+  "pricing_file": "frozen/pricing.json",
+  "pricing_sha256": "e198fbfe52762ee48c1e6664e57b8e5d80ffe5bf7ce6f37675b664e2a7fc47fe",
+  "record_files_read": 42
+ },
+ "series_runs": [
+  {
+   "run_id": "p1-T1-A",
+   "task": "T1",
+   "arm": "a",
+   "arm_label": "A - naive baseline",
+   "source": "runs/p1-T1-A.jsonl",
+   "record_lines": 2,
+   "amended_after_the_fact": true,
+   "model_id": "claude-sonnet-5",
+   "cli_version": "2.1.126 (Claude Code)",
+   "counts_towards_series": true,
+   "excluded_because": null,
+   "verdict": "verified",
+   "disposition": "complete",
+   "rework_iterations": 0,
+   "compact_boundary_count": 0,
+   "sessions_recorded": 1,
+   "tokens": {
+    "in": 241,
+    "out": 32265,
+    "thinking": 0,
+    "cache_creation_5m": 87656,
+    "cache_creation_1h": 219384,
+    "cache_read": 6200517
+   },
+   "tokens_working": 339546,
+   "tokens_billed_total": 6540063,
+   "token_budget_working": 800000,
+   "usd_imputed": 2.6599,
+   "usd_in_record": 2.6599,
+   "usd_recompute_delta": 1.1e-05,
+   "rate_card": {
+    "per_mtok": {
+     "obowiazuje_do": "2026-08-31",
+     "input": 2.0,
+     "output": 10.0,
+     "cache_read": 0.2,
+     "cache_creation_5m": 2.5,
+     "cache_creation_1h": 4.0,
+     "thinking": 10.0
+    },
+    "selected_by_wall_start_date": "2026-08-26"
+   },
+   "wall_start": "2026-08-26T08:52:35",
+   "wall_end": "2026-08-26T09:00:22",
+   "wall_clock_s": 467.0,
+   "compute_active_s": 460.4,
+   "gate_time_s": 6.7,
+   "build_time_s": 0,
+   "unmeasurable": [
+    {
+     "pole": "context_rebuild",
+     "powod": "post-hoc decomposition"
+    }
+   ]
+  },
+  {
+   "run_id": "p1-T1-B",
+   "task": "T1",
+   "arm": "b",
+   "arm_label": "B - agent with process",
+   "source": "runs/p1-T1-B.jsonl",
+   "record_lines": 1,
+   "amended_after_the_fact": false,
+   "model_id": "claude-sonnet-5",
+   "cli_version": "2.1.126 (Claude Code)",
+   "counts_towards_series": true,
+   "excluded_because": null,
+   "verdict": "verified",
+   "disposition": "complete",
+   "rework_iterations": 0,
+   "compact_boundary_count": 0,
+   "sessions_recorded": 0,
+   "tokens": {
+    "in": 236,
+    "out": 38944,
+    "thinking": 0,
+    "cache_creation_5m": 0,
+    "cache_creation_1h": 249687,
+    "cache_read": 11104604
+   },
+   "tokens_working": 288867,
+   "tokens_billed_total": 11393471,
+   "token_budget_working": 800000,
+   "usd_imputed": 3.6096,
+   "usd_in_record": 3.6096,
+   "usd_recompute_delta": -1.9e-05,
+   "rate_card": {
+    "per_mtok": {
+     "obowiazuje_do": "2026-08-31",
+     "input": 2.0,
+     "output": 10.0,
+     "cache_read": 0.2,
+     "cache_creation_5m": 2.5,
+     "cache_creation_1h": 4.0,
+     "thinking": 10.0
+    },
+    "selected_by_wall_start_date": "2026-08-26"
+   },
+   "wall_start": "2026-08-26T16:53:59",
+   "wall_end": "2026-08-26T17:14:16",
+   "wall_clock_s": 1217.0,
+   "compute_active_s": 1166.0,
+   "gate_time_s": 50.9,
+   "build_time_s": 0,
+   "unmeasurable": [
+    {
+     "pole": "context_rebuild",
+     "powod": "post-hoc decomposition"
+    }
+   ]
+  },
+  {
+   "run_id": "p1-T2-A",
+   "task": "T2",
+   "arm": "a",
+   "arm_label": "A - naive baseline",
+   "source": "runs/p1-T2-A.jsonl",
+   "record_lines": 2,
+   "amended_after_the_fact": true,
+   "model_id": "claude-sonnet-5",
+   "cli_version": "2.1.126 (Claude Code)",
+   "counts_towards_series": true,
+   "excluded_because": null,
+   "verdict": "verified",
+   "disposition": "complete",
+   "rework_iterations": 0,
+   "compact_boundary_count": 1,
+   "sessions_recorded": 1,
+   "tokens": {
+    "in": 321,
+    "out": 27169,
+    "thinking": 0,
+    "cache_creation_5m": 0,
+    "cache_creation_1h": 221199,
+    "cache_read": 7628663
+   },
+   "tokens_working": 248689,
+   "tokens_billed_total": 7877352,
+   "token_budget_working": 300000,
+   "usd_imputed": 2.6829,
+   "usd_in_record": 2.6829,
+   "usd_recompute_delta": -3.9e-05,
+   "rate_card": {
+    "per_mtok": {
+     "obowiazuje_do": "2026-08-31",
+     "input": 2.0,
+     "output": 10.0,
+     "cache_read": 0.2,
+     "cache_creation_5m": 2.5,
+     "cache_creation_1h": 4.0,
+     "thinking": 10.0
+    },
+    "selected_by_wall_start_date": "2026-08-26"
+   },
+   "wall_start": "2026-08-26T12:16:00",
+   "wall_end": "2026-08-26T12:40:29",
+   "wall_clock_s": 1469.0,
+   "compute_active_s": 1457.8,
+   "gate_time_s": 10.5,
+   "build_time_s": 0,
+   "unmeasurable": [
+    {
+     "pole": "context_rebuild",
+     "powod": "post-hoc decomposition"
+    }
+   ]
+  },
+  {
+   "run_id": "p1-T2-B",
+   "task": "T2",
+   "arm": "b",
+   "arm_label": "B - agent with process",
+   "source": "runs/p1-T2-B.jsonl",
+   "record_lines": 1,
+   "amended_after_the_fact": false,
+   "model_id": "claude-sonnet-5",
+   "cli_version": "2.1.126 (Claude Code)",
+   "counts_towards_series": true,
+   "excluded_because": null,
+   "verdict": "verified",
+   "disposition": "complete",
+   "rework_iterations": 0,
+   "compact_boundary_count": 1,
+   "sessions_recorded": 0,
+   "tokens": {
+    "in": 176,
+    "out": 25827,
+    "thinking": 0,
+    "cache_creation_5m": 0,
+    "cache_creation_1h": 226664,
+    "cache_read": 8586272
+   },
+   "tokens_working": 252667,
+   "tokens_billed_total": 8838939,
+   "token_budget_working": 300000,
+   "usd_imputed": 2.8825,
+   "usd_in_record": 2.8825,
+   "usd_recompute_delta": 3.2e-05,
+   "rate_card": {
+    "per_mtok": {
+     "obowiazuje_do": "2026-08-31",
+     "input": 2.0,
+     "output": 10.0,
+     "cache_read": 0.2,
+     "cache_creation_5m": 2.5,
+     "cache_creation_1h": 4.0,
+     "thinking": 10.0
+    },
+    "selected_by_wall_start_date": "2026-08-26"
+   },
+   "wall_start": "2026-08-26T17:14:16",
+   "wall_end": "2026-08-26T17:41:57",
+   "wall_clock_s": 1661.0,
+   "compute_active_s": 1628.8,
+   "gate_time_s": 32.4,
+   "build_time_s": 0,
+   "unmeasurable": [
+    {
+     "pole": "context_rebuild",
+     "powod": "post-hoc decomposition"
+    }
+   ]
+  },
+  {
+   "run_id": "p1-T3-A",
+   "task": "T3",
+   "arm": "a",
+   "arm_label": "A - naive baseline",
+   "source": "runs/p1-T3-A.jsonl",
+   "record_lines": 2,
+   "amended_after_the_fact": true,
+   "model_id": "claude-sonnet-5",
+   "cli_version": "2.1.126 (Claude Code)",
+   "counts_towards_series": true,
+   "excluded_because": null,
+   "verdict": "verified",
+   "disposition": "complete",
+   "rework_iterations": 0,
+   "compact_boundary_count": 0,
+   "sessions_recorded": 1,
+   "tokens": {
+    "in": 103,
+    "out": 20169,
+    "thinking": 0,
+    "cache_creation_5m": 0,
+    "cache_creation_1h": 118286,
+    "cache_read": 5650777
+   },
+   "tokens_working": 138558,
+   "tokens_billed_total": 5789335,
+   "token_budget_working": 800000,
+   "usd_imputed": 1.8052,
+   "usd_in_record": 1.8052,
+   "usd_recompute_delta": -5e-06,
+   "rate_card": {
+    "per_mtok": {
+     "obowiazuje_do": "2026-08-31",
+     "input": 2.0,
+     "output": 10.0,
+     "cache_read": 0.2,
+     "cache_creation_5m": 2.5,
+     "cache_creation_1h": 4.0,
+     "thinking": 10.0
+    },
+    "selected_by_wall_start_date": "2026-08-26"
+   },
+   "wall_start": "2026-08-26T12:57:38",
+   "wall_end": "2026-08-26T13:02:16",
+   "wall_clock_s": 278.0,
+   "compute_active_s": 272.0,
+   "gate_time_s": 5.6,
+   "build_time_s": 0,
+   "unmeasurable": [
+    {
+     "pole": "context_rebuild",
+     "powod": "post-hoc decomposition"
+    }
+   ]
+  },
+  {
+   "run_id": "p1-T3-B",
+   "task": "T3",
+   "arm": "b",
+   "arm_label": "B - agent with process",
+   "source": "runs/p1-T3-B.jsonl",
+   "record_lines": 1,
+   "amended_after_the_fact": false,
+   "model_id": "claude-sonnet-5",
+   "cli_version": "2.1.126 (Claude Code)",
+   "counts_towards_series": true,
+   "excluded_because": null,
+   "verdict": "verified",
+   "disposition": "complete",
+   "rework_iterations": 0,
+   "compact_boundary_count": 0,
+   "sessions_recorded": 0,
+   "tokens": {
+    "in": 162,
+    "out": 34815,
+    "thinking": 0,
+    "cache_creation_5m": 0,
+    "cache_creation_1h": 158678,
+    "cache_read": 6894114
+   },
+   "tokens_working": 193655,
+   "tokens_billed_total": 7087769,
+   "token_budget_working": 800000,
+   "usd_imputed": 2.362,
+   "usd_in_record": 2.362,
+   "usd_recompute_delta": 9e-06,
+   "rate_card": {
+    "per_mtok": {
+     "obowiazuje_do": "2026-08-31",
+     "input": 2.0,
+     "output": 10.0,
+     "cache_read": 0.2,
+     "cache_creation_5m": 2.5,
+     "cache_creation_1h": 4.0,
+     "thinking": 10.0
+    },
+    "selected_by_wall_start_date": "2026-08-26"
+   },
+   "wall_start": "2026-08-26T17:41:58",
+   "wall_end": "2026-08-26T18:01:35",
+   "wall_clock_s": 1177.0,
+   "compute_active_s": 1121.7,
+   "gate_time_s": 56.0,
+   "build_time_s": 0,
+   "unmeasurable": [
+    {
+     "pole": "context_rebuild",
+     "powod": "post-hoc decomposition"
+    }
+   ]
+  },
+  {
+   "run_id": "p1-T4-A",
+   "task": "T4",
+   "arm": "a",
+   "arm_label": "A - naive baseline",
+   "source": "runs/p1-T4-A.jsonl",
+   "record_lines": 2,
+   "amended_after_the_fact": true,
+   "model_id": "claude-sonnet-5",
+   "cli_version": "2.1.126 (Claude Code)",
+   "counts_towards_series": true,
+   "excluded_because": null,
+   "verdict": "verified",
+   "disposition": "complete",
+   "rework_iterations": 0,
+   "compact_boundary_count": 0,
+   "sessions_recorded": 1,
+   "tokens": {
+    "in": 101,
+    "out": 31355,
+    "thinking": 0,
+    "cache_creation_5m": 0,
+    "cache_creation_1h": 105992,
+    "cache_read": 5137351
+   },
+   "tokens_working": 137448,
+   "tokens_billed_total": 5274799,
+   "token_budget_working": 300000,
+   "usd_imputed": 1.7652,
+   "usd_in_record": 1.7652,
+   "usd_recompute_delta": -1e-05,
+   "rate_card": {
+    "per_mtok": {
+     "obowiazuje_do": "2026-08-31",
+     "input": 2.0,
+     "output": 10.0,
+     "cache_read": 0.2,
+     "cache_creation_5m": 2.5,
+     "cache_creation_1h": 4.0,
+     "thinking": 10.0
+    },
+    "selected_by_wall_start_date": "2026-08-26"
+   },
+   "wall_start": "2026-08-26T13:15:41",
+   "wall_end": "2026-08-26T13:22:17",
+   "wall_clock_s": 396.0,
+   "compute_active_s": 385.8,
+   "gate_time_s": 10.2,
+   "build_time_s": 0,
+   "unmeasurable": [
+    {
+     "pole": "context_rebuild",
+     "powod": "post-hoc decomposition"
+    }
+   ]
+  },
+  {
+   "run_id": "p1-T4-B",
+   "task": "T4",
+   "arm": "b",
+   "arm_label": "B - agent with process",
+   "source": "runs/p1-T4-B.jsonl",
+   "record_lines": 1,
+   "amended_after_the_fact": false,
+   "model_id": "claude-sonnet-5",
+   "cli_version": "2.1.126 (Claude Code)",
+   "counts_towards_series": true,
+   "excluded_because": null,
+   "verdict": "verified",
+   "disposition": "complete",
+   "rework_iterations": 0,
+   "compact_boundary_count": 1,
+   "sessions_recorded": 0,
+   "tokens": {
+    "in": 180,
+    "out": 34596,
+    "thinking": 0,
+    "cache_creation_5m": 0,
+    "cache_creation_1h": 258098,
+    "cache_read": 9354642
+   },
+   "tokens_working": 292874,
+   "tokens_billed_total": 9647516,
+   "token_budget_working": 300000,
+   "usd_imputed": 3.2496,
+   "usd_in_record": 3.2496,
+   "usd_recompute_delta": 4e-05,
+   "rate_card": {
+    "per_mtok": {
+     "obowiazuje_do": "2026-08-31",
+     "input": 2.0,
+     "output": 10.0,
+     "cache_read": 0.2,
+     "cache_creation_5m": 2.5,
+     "cache_creation_1h": 4.0,
+     "thinking": 10.0
+    },
+    "selected_by_wall_start_date": "2026-08-26"
+   },
+   "wall_start": "2026-08-26T18:01:36",
+   "wall_end": "2026-08-26T18:28:07",
+   "wall_clock_s": 1591.0,
+   "compute_active_s": 1545.5,
+   "gate_time_s": 45.9,
+   "build_time_s": 0,
+   "unmeasurable": [
+    {
+     "pole": "context_rebuild",
+     "powod": "post-hoc decomposition"
+    }
+   ]
+  },
+  {
+   "run_id": "p1-T5-A",
+   "task": "T5",
+   "arm": "a",
+   "arm_label": "A - naive baseline",
+   "source": "runs/p1-T5-A.jsonl",
+   "record_lines": 2,
+   "amended_after_the_fact": true,
+   "model_id": "claude-sonnet-5",
+   "cli_version": "2.1.126 (Claude Code)",
+   "counts_towards_series": true,
+   "excluded_because": null,
+   "verdict": "verified",
+   "disposition": "complete",
+   "rework_iterations": 1,
+   "compact_boundary_count": 0,
+   "sessions_recorded": 2,
+   "tokens": {
+    "in": 172,
+    "out": 50908,
+    "thinking": 0,
+    "cache_creation_5m": 0,
+    "cache_creation_1h": 207628,
+    "cache_read": 8168435
+   },
+   "tokens_working": 258708,
+   "tokens_billed_total": 8427143,
+   "token_budget_working": 800000,
+   "usd_imputed": 2.9736,
+   "usd_in_record": 2.9736,
+   "usd_recompute_delta": 2.3e-05,
+   "rate_card": {
+    "per_mtok": {
+     "obowiazuje_do": "2026-08-31",
+     "input": 2.0,
+     "output": 10.0,
+     "cache_read": 0.2,
+     "cache_creation_5m": 2.5,
+     "cache_creation_1h": 4.0,
+     "thinking": 10.0
+    },
+    "selected_by_wall_start_date": "2026-08-26"
+   },
+   "wall_start": "2026-08-26T13:59:36",
+   "wall_end": "2026-08-26T14:10:12",
+   "wall_clock_s": 636.0,
+   "compute_active_s": 629.4,
+   "gate_time_s": 6.7,
+   "build_time_s": 0,
+   "unmeasurable": [
+    {
+     "pole": "context_rebuild",
+     "powod": "post-hoc decomposition"
+    }
+   ]
+  },
+  {
+   "run_id": "p1-T5-B",
+   "task": "T5",
+   "arm": "b",
+   "arm_label": "B - agent with process",
+   "source": "runs/p1-T5-B.jsonl",
+   "record_lines": 1,
+   "amended_after_the_fact": false,
+   "model_id": "claude-sonnet-5",
+   "cli_version": "2.1.126 (Claude Code)",
+   "counts_towards_series": true,
+   "excluded_because": null,
+   "verdict": "verified",
+   "disposition": "complete",
+   "rework_iterations": 1,
+   "compact_boundary_count": 0,
+   "sessions_recorded": 0,
+   "tokens": {
+    "in": 2190,
+    "out": 67593,
+    "thinking": 0,
+    "cache_creation_5m": 62786,
+    "cache_creation_1h": 350446,
+    "cache_read": 12537580
+   },
+   "tokens_working": 483015,
+   "tokens_billed_total": 13020595,
+   "token_budget_working": 800000,
+   "usd_imputed": 4.7466,
+   "usd_in_record": 4.7466,
+   "usd_recompute_delta": -2.5e-05,
+   "rate_card": {
+    "per_mtok": {
+     "obowiazuje_do": "2026-08-31",
+     "input": 2.0,
+     "output": 10.0,
+     "cache_read": 0.2,
+     "cache_creation_5m": 2.5,
+     "cache_creation_1h": 4.0,
+     "thinking": 10.0
+    },
+    "selected_by_wall_start_date": "2026-08-26"
+   },
+   "wall_start": "2026-08-26T18:28:08",
+   "wall_end": "2026-08-26T19:09:03",
+   "wall_clock_s": 2455.0,
+   "compute_active_s": 2374.0,
+   "gate_time_s": 73.7,
+   "build_time_s": 0,
+   "unmeasurable": [
+    {
+     "pole": "context_rebuild",
+     "powod": "post-hoc decomposition"
+    }
+   ]
+  },
+  {
+   "run_id": "p1-T6-A",
+   "task": "T6",
+   "arm": "a",
+   "arm_label": "A - naive baseline",
+   "source": "runs/p1-T6-A.jsonl",
+   "record_lines": 2,
+   "amended_after_the_fact": true,
+   "model_id": "claude-sonnet-5",
+   "cli_version": "2.1.126 (Claude Code)",
+   "counts_towards_series": true,
+   "excluded_because": null,
+   "verdict": "verified",
+   "disposition": "complete",
+   "rework_iterations": 0,
+   "compact_boundary_count": 0,
+   "sessions_recorded": 1,
+   "tokens": {
+    "in": 155,
+    "out": 41306,
+    "thinking": 0,
+    "cache_creation_5m": 0,
+    "cache_creation_1h": 217983,
+    "cache_read": 8852611
+   },
+   "tokens_working": 259444,
+   "tokens_billed_total": 9112055,
+   "token_budget_working": 800000,
+   "usd_imputed": 3.0558,
+   "usd_in_record": 3.0558,
+   "usd_recompute_delta": 2.4e-05,
+   "rate_card": {
+    "per_mtok": {
+     "obowiazuje_do": "2026-08-31",
+     "input": 2.0,
+     "output": 10.0,
+     "cache_read": 0.2,
+     "cache_creation_5m": 2.5,
+     "cache_creation_1h": 4.0,
+     "thinking": 10.0
+    },
+    "selected_by_wall_start_date": "2026-08-26"
+   },
+   "wall_start": "2026-08-26T15:40:54",
+   "wall_end": "2026-08-26T15:58:24",
+   "wall_clock_s": 1050.0,
+   "compute_active_s": 1037.1,
+   "gate_time_s": 13.1,
+   "build_time_s": 0,
+   "unmeasurable": [
+    {
+     "pole": "context_rebuild",
+     "powod": "post-hoc decomposition"
+    }
+   ]
+  },
+  {
+   "run_id": "p1-T6-B",
+   "task": "T6",
+   "arm": "b",
+   "arm_label": "B - agent with process",
+   "source": "runs/p1-T6-B.jsonl",
+   "record_lines": 1,
+   "amended_after_the_fact": false,
+   "model_id": "claude-sonnet-5",
+   "cli_version": "2.1.126 (Claude Code)",
+   "counts_towards_series": true,
+   "excluded_because": null,
+   "verdict": "verified",
+   "disposition": "complete",
+   "rework_iterations": 0,
+   "compact_boundary_count": 0,
+   "sessions_recorded": 0,
+   "tokens": {
+    "in": 186,
+    "out": 37277,
+    "thinking": 0,
+    "cache_creation_5m": 0,
+    "cache_creation_1h": 189249,
+    "cache_read": 8584407
+   },
+   "tokens_working": 226712,
+   "tokens_billed_total": 8811119,
+   "token_budget_working": 800000,
+   "usd_imputed": 2.847,
+   "usd_in_record": 2.847,
+   "usd_recompute_delta": 1.9e-05,
+   "rate_card": {
+    "per_mtok": {
+     "obowiazuje_do": "2026-08-31",
+     "input": 2.0,
+     "output": 10.0,
+     "cache_read": 0.2,
+     "cache_creation_5m": 2.5,
+     "cache_creation_1h": 4.0,
+     "thinking": 10.0
+    },
+    "selected_by_wall_start_date": "2026-08-26"
+   },
+   "wall_start": "2026-08-26T19:09:04",
+   "wall_end": "2026-08-26T19:28:04",
+   "wall_clock_s": 1140.0,
+   "compute_active_s": 1105.1,
+   "gate_time_s": 35.3,
+   "build_time_s": 0,
+   "unmeasurable": [
+    {
+     "pole": "context_rebuild",
+     "powod": "post-hoc decomposition"
+    }
+   ]
+  },
+  {
+   "run_id": "p1-T7-A",
+   "task": "T7",
+   "arm": "a",
+   "arm_label": "A - naive baseline",
+   "source": "runs/p1-T7-A.jsonl",
+   "record_lines": 2,
+   "amended_after_the_fact": true,
+   "model_id": "claude-sonnet-5",
+   "cli_version": "2.1.126 (Claude Code)",
+   "counts_towards_series": true,
+   "excluded_because": null,
+   "verdict": "verified",
+   "disposition": "complete",
+   "rework_iterations": 0,
+   "compact_boundary_count": 1,
+   "sessions_recorded": 1,
+   "tokens": {
+    "in": 324,
+    "out": 87026,
+    "thinking": 0,
+    "cache_creation_5m": 0,
+    "cache_creation_1h": 504374,
+    "cache_read": 19403876
+   },
+   "tokens_working": 591724,
+   "tokens_billed_total": 19995600,
+   "token_budget_working": 1500000,
+   "usd_imputed": 6.7692,
+   "usd_in_record": 6.7692,
+   "usd_recompute_delta": -2.1e-05,
+   "rate_card": {
+    "per_mtok": {
+     "obowiazuje_do": "2026-08-31",
+     "input": 2.0,
+     "output": 10.0,
+     "cache_read": 0.2,
+     "cache_creation_5m": 2.5,
+     "cache_creation_1h": 4.0,
+     "thinking": 10.0
+    },
+    "selected_by_wall_start_date": "2026-08-26"
+   },
+   "wall_start": "2026-08-26T15:58:24",
+   "wall_end": "2026-08-26T16:11:18",
+   "wall_clock_s": 774.0,
+   "compute_active_s": 761.0,
+   "gate_time_s": 12.6,
+   "build_time_s": 0,
+   "unmeasurable": [
+    {
+     "pole": "context_rebuild",
+     "powod": "post-hoc decomposition"
+    }
+   ]
+  },
+  {
+   "run_id": "p1-T7-B",
+   "task": "T7",
+   "arm": "b",
+   "arm_label": "B - agent with process",
+   "source": "runs/p1-T7-B.jsonl",
+   "record_lines": 1,
+   "amended_after_the_fact": false,
+   "model_id": "claude-sonnet-5",
+   "cli_version": "2.1.126 (Claude Code)",
+   "counts_towards_series": true,
+   "excluded_because": null,
+   "verdict": "verified",
+   "disposition": "complete",
+   "rework_iterations": 0,
+   "compact_boundary_count": 1,
+   "sessions_recorded": 0,
+   "tokens": {
+    "in": 208,
+    "out": 44340,
+    "thinking": 0,
+    "cache_creation_5m": 0,
+    "cache_creation_1h": 263353,
+    "cache_read": 11190667
+   },
+   "tokens_working": 307901,
+   "tokens_billed_total": 11498568,
+   "token_budget_working": 1500000,
+   "usd_imputed": 3.7354,
+   "usd_in_record": 3.7354,
+   "usd_recompute_delta": -3.9e-05,
+   "rate_card": {
+    "per_mtok": {
+     "obowiazuje_do": "2026-08-31",
+     "input": 2.0,
+     "output": 10.0,
+     "cache_read": 0.2,
+     "cache_creation_5m": 2.5,
+     "cache_creation_1h": 4.0,
+     "thinking": 10.0
+    },
+    "selected_by_wall_start_date": "2026-08-26"
+   },
+   "wall_start": "2026-08-26T19:28:04",
+   "wall_end": "2026-08-26T19:57:08",
+   "wall_clock_s": 1744.0,
+   "compute_active_s": 1700.8,
+   "gate_time_s": 42.7,
+   "build_time_s": 0,
+   "unmeasurable": [
+    {
+     "pole": "context_rebuild",
+     "powod": "post-hoc decomposition"
+    }
+   ]
+  },
+  {
+   "run_id": "p1-T8-A",
+   "task": "T8",
+   "arm": "a",
+   "arm_label": "A - naive baseline",
+   "source": "runs/p1-T8-A.jsonl",
+   "record_lines": 2,
+   "amended_after_the_fact": true,
+   "model_id": "claude-sonnet-5",
+   "cli_version": "2.1.126 (Claude Code)",
+   "counts_towards_series": true,
+   "excluded_because": null,
+   "verdict": "verified",
+   "disposition": "complete",
+   "rework_iterations": 0,
+   "compact_boundary_count": 1,
+   "sessions_recorded": 1,
+   "tokens": {
+    "in": 234,
+    "out": 67434,
+    "thinking": 0,
+    "cache_creation_5m": 0,
+    "cache_creation_1h": 485511,
+    "cache_read": 13547479
+   },
+   "tokens_working": 553179,
+   "tokens_billed_total": 14100658,
+   "token_budget_working": 800000,
+   "usd_imputed": 5.3263,
+   "usd_in_record": 5.3263,
+   "usd_recompute_delta": 4.8e-05,
+   "rate_card": {
+    "per_mtok": {
+     "obowiazuje_do": "2026-08-31",
+     "input": 2.0,
+     "output": 10.0,
+     "cache_read": 0.2,
+     "cache_creation_5m": 2.5,
+     "cache_creation_1h": 4.0,
+     "thinking": 10.0
+    },
+    "selected_by_wall_start_date": "2026-08-26"
+   },
+   "wall_start": "2026-08-26T16:11:18",
+   "wall_end": "2026-08-26T16:19:31",
+   "wall_clock_s": 493.0,
+   "compute_active_s": 486.5,
+   "gate_time_s": 6.7,
+   "build_time_s": 0,
+   "unmeasurable": [
+    {
+     "pole": "context_rebuild",
+     "powod": "post-hoc decomposition"
+    }
+   ]
+  },
+  {
+   "run_id": "p1-T8-B",
+   "task": "T8",
+   "arm": "b",
+   "arm_label": "B - agent with process",
+   "source": "runs/p1-T8-B.jsonl",
+   "record_lines": 1,
+   "amended_after_the_fact": false,
+   "model_id": "claude-sonnet-5",
+   "cli_version": "2.1.126 (Claude Code)",
+   "counts_towards_series": true,
+   "excluded_because": null,
+   "verdict": "verified",
+   "disposition": "complete",
+   "rework_iterations": 1,
+   "compact_boundary_count": 0,
+   "sessions_recorded": 0,
+   "tokens": {
+    "in": 266,
+    "out": 70373,
+    "thinking": 0,
+    "cache_creation_5m": 0,
+    "cache_creation_1h": 372343,
+    "cache_read": 10280769
+   },
+   "tokens_working": 442982,
+   "tokens_billed_total": 10723751,
+   "token_budget_working": 800000,
+   "usd_imputed": 4.2498,
+   "usd_in_record": 4.2498,
+   "usd_recompute_delta": -1.2e-05,
+   "rate_card": {
+    "per_mtok": {
+     "obowiazuje_do": "2026-08-31",
+     "input": 2.0,
+     "output": 10.0,
+     "cache_read": 0.2,
+     "cache_creation_5m": 2.5,
+     "cache_creation_1h": 4.0,
+     "thinking": 10.0
+    },
+    "selected_by_wall_start_date": "2026-08-26"
+   },
+   "wall_start": "2026-08-26T19:57:08",
+   "wall_end": "2026-08-26T20:34:15",
+   "wall_clock_s": 2227.0,
+   "compute_active_s": 2165.8,
+   "gate_time_s": 61.0,
+   "build_time_s": 0,
+   "unmeasurable": [
+    {
+     "pole": "context_rebuild",
+     "powod": "post-hoc decomposition"
+    }
+   ]
+  },
+  {
+   "run_id": "p1-T9-A",
+   "task": "T9",
+   "arm": "a",
+   "arm_label": "A - naive baseline",
+   "source": "runs/p1-T9-A.jsonl",
+   "record_lines": 1,
+   "amended_after_the_fact": false,
+   "model_id": "claude-sonnet-5",
+   "cli_version": "2.1.126 (Claude Code)",
+   "counts_towards_series": true,
+   "excluded_because": null,
+   "verdict": "verified",
+   "disposition": "complete",
+   "rework_iterations": 1,
+   "compact_boundary_count": 0,
+   "sessions_recorded": 2,
+   "tokens": {
+    "in": 189,
+    "out": 37819,
+    "thinking": 0,
+    "cache_creation_5m": 0,
+    "cache_creation_1h": 181658,
+    "cache_read": 8772075
+   },
+   "tokens_working": 219666,
+   "tokens_billed_total": 8991741,
+   "token_budget_working": 300000,
+   "usd_imputed": 2.8596,
+   "usd_in_record": 2.8596,
+   "usd_recompute_delta": 1.5e-05,
+   "rate_card": {
+    "per_mtok": {
+     "obowiazuje_do": "2026-08-31",
+     "input": 2.0,
+     "output": 10.0,
+     "cache_read": 0.2,
+     "cache_creation_5m": 2.5,
+     "cache_creation_1h": 4.0,
+     "thinking": 10.0
+    },
+    "selected_by_wall_start_date": "2026-08-26"
+   },
+   "wall_start": "2026-08-26T17:24:52",
+   "wall_end": "2026-08-26T17:41:31",
+   "wall_clock_s": 999.0,
+   "compute_active_s": 975.1,
+   "gate_time_s": 23.7,
+   "build_time_s": 0,
+   "unmeasurable": [
+    {
+     "pole": "context_rebuild",
+     "powod": "post-hoc decomposition"
+    }
+   ]
+  },
+  {
+   "run_id": "p1-T9-B",
+   "task": "T9",
+   "arm": "b",
+   "arm_label": "B - agent with process",
+   "source": "runs/p1-T9-B.jsonl",
+   "record_lines": 2,
+   "amended_after_the_fact": true,
+   "model_id": "claude-sonnet-5",
+   "cli_version": "2.1.126 (Claude Code)",
+   "counts_towards_series": false,
+   "excluded_because": {
+    "code": "infra-void",
+    "note": "record's own disposition is not `complete`; the last line of the record carries the adjudication that voided it"
+   },
+   "verdict": "failed",
+   "disposition": "infra-void",
+   "rework_iterations": 5,
+   "compact_boundary_count": 1,
+   "sessions_recorded": 0,
+   "tokens": {
+    "in": 200,
+    "out": 44376,
+    "thinking": 0,
+    "cache_creation_5m": 152689,
+    "cache_creation_1h": 254943,
+    "cache_read": 10434667
+   },
+   "tokens_working": 452208,
+   "tokens_billed_total": 10886875,
+   "token_budget_working": 300000,
+   "usd_imputed": 3.9326,
+   "usd_in_record": 3.9326,
+   "usd_recompute_delta": -1.2e-05,
+   "rate_card": {
+    "per_mtok": {
+     "obowiazuje_do": "2026-08-31",
+     "input": 2.0,
+     "output": 10.0,
+     "cache_read": 0.2,
+     "cache_creation_5m": 2.5,
+     "cache_creation_1h": 4.0,
+     "thinking": 10.0
+    },
+    "selected_by_wall_start_date": "2026-08-26"
+   },
+   "wall_start": "2026-08-26T20:34:15",
+   "wall_end": "2026-08-26T20:53:18",
+   "wall_clock_s": 1143.0,
+   "compute_active_s": 1044.1,
+   "gate_time_s": 98.4,
+   "build_time_s": 0,
+   "unmeasurable": [
+    {
+     "pole": "context_rebuild",
+     "powod": "post-hoc decomposition"
+    }
+   ]
+  },
+  {
+   "run_id": "p1-T10-A",
+   "task": "T10",
+   "arm": "a",
+   "arm_label": "A - naive baseline",
+   "source": "runs/p1-T10-A.jsonl",
+   "record_lines": 2,
+   "amended_after_the_fact": true,
+   "model_id": "claude-sonnet-5",
+   "cli_version": "2.1.126 (Claude Code)",
+   "counts_towards_series": true,
+   "excluded_because": null,
+   "verdict": "verified",
+   "disposition": "complete",
+   "rework_iterations": 0,
+   "compact_boundary_count": 0,
+   "sessions_recorded": 1,
+   "tokens": {
+    "in": 195,
+    "out": 51343,
+    "thinking": 0,
+    "cache_creation_5m": 0,
+    "cache_creation_1h": 213345,
+    "cache_read": 9738833
+   },
+   "tokens_working": 264883,
+   "tokens_billed_total": 10003716,
+   "token_budget_working": 1500000,
+   "usd_imputed": 3.315,
+   "usd_in_record": 3.315,
+   "usd_recompute_delta": -3.3e-05,
+   "rate_card": {
+    "per_mtok": {
+     "obowiazuje_do": "2026-08-31",
+     "input": 2.0,
+     "output": 10.0,
+     "cache_read": 0.2,
+     "cache_creation_5m": 2.5,
+     "cache_creation_1h": 4.0,
+     "thinking": 10.0
+    },
+    "selected_by_wall_start_date": "2026-08-26"
+   },
+   "wall_start": "2026-08-26T17:41:31",
+   "wall_end": "2026-08-26T18:06:30",
+   "wall_clock_s": 1499.0,
+   "compute_active_s": 1486.1,
+   "gate_time_s": 12.7,
+   "build_time_s": 0,
+   "unmeasurable": [
+    {
+     "pole": "context_rebuild",
+     "powod": "post-hoc decomposition"
+    }
+   ]
+  },
+  {
+   "run_id": "p1-T10-B",
+   "task": "T10",
+   "arm": "b",
+   "arm_label": "B - agent with process",
+   "source": "runs/p1-T10-B.jsonl",
+   "record_lines": 1,
+   "amended_after_the_fact": false,
+   "model_id": "claude-sonnet-5",
+   "cli_version": "2.1.126 (Claude Code)",
+   "counts_towards_series": true,
+   "excluded_because": null,
+   "verdict": "verified",
+   "disposition": "complete",
+   "rework_iterations": 0,
+   "compact_boundary_count": 0,
+   "sessions_recorded": 0,
+   "tokens": {
+    "in": 619,
+    "out": 26752,
+    "thinking": 0,
+    "cache_creation_5m": 68746,
+    "cache_creation_1h": 148039,
+    "cache_read": 6147234
+   },
+   "tokens_working": 244156,
+   "tokens_billed_total": 6391390,
+   "token_budget_working": 1500000,
+   "usd_imputed": 2.2622,
+   "usd_in_record": 2.2622,
+   "usd_recompute_delta": 2.6e-05,
+   "rate_card": {
+    "per_mtok": {
+     "obowiazuje_do": "2026-08-31",
+     "input": 2.0,
+     "output": 10.0,
+     "cache_read": 0.2,
+     "cache_creation_5m": 2.5,
+     "cache_creation_1h": 4.0,
+     "thinking": 10.0
+    },
+    "selected_by_wall_start_date": "2026-08-26"
+   },
+   "wall_start": "2026-08-26T20:53:18",
+   "wall_end": "2026-08-26T21:08:41",
+   "wall_clock_s": 923.0,
+   "compute_active_s": 911.3,
+   "gate_time_s": 11.8,
+   "build_time_s": 0,
+   "unmeasurable": [
+    {
+     "pole": "context_rebuild",
+     "powod": "post-hoc decomposition"
+    }
+   ]
+  },
+  {
+   "run_id": "p1-T11-A",
+   "task": "T11",
+   "arm": "a",
+   "arm_label": "A - naive baseline",
+   "source": "runs/p1-T11-A.jsonl",
+   "record_lines": 2,
+   "amended_after_the_fact": true,
+   "model_id": "claude-sonnet-5",
+   "cli_version": "2.1.126 (Claude Code)",
+   "counts_towards_series": true,
+   "excluded_because": null,
+   "verdict": "verified",
+   "disposition": "complete",
+   "rework_iterations": 0,
+   "compact_boundary_count": 1,
+   "sessions_recorded": 1,
+   "tokens": {
+    "in": 228,
+    "out": 50667,
+    "thinking": 0,
+    "cache_creation_5m": 0,
+    "cache_creation_1h": 432763,
+    "cache_read": 11992628
+   },
+   "tokens_working": 483658,
+   "tokens_billed_total": 12476286,
+   "token_budget_working": 300000,
+   "usd_imputed": 4.6367,
+   "usd_in_record": 4.6367,
+   "usd_recompute_delta": 4e-06,
+   "rate_card": {
+    "per_mtok": {
+     "obowiazuje_do": "2026-08-31",
+     "input": 2.0,
+     "output": 10.0,
+     "cache_read": 0.2,
+     "cache_creation_5m": 2.5,
+     "cache_creation_1h": 4.0,
+     "thinking": 10.0
+    },
+    "selected_by_wall_start_date": "2026-08-26"
+   },
+   "wall_start": "2026-08-26T18:06:31",
+   "wall_end": "2026-08-26T18:32:03",
+   "wall_clock_s": 1532.0,
+   "compute_active_s": 1517.1,
+   "gate_time_s": 15.8,
+   "build_time_s": 0,
+   "unmeasurable": [
+    {
+     "pole": "context_rebuild",
+     "powod": "post-hoc decomposition"
+    }
+   ]
+  },
+  {
+   "run_id": "p1-T11-B",
+   "task": "T11",
+   "arm": "b",
+   "arm_label": "B - agent with process",
+   "source": "runs/p1-T11-B.jsonl",
+   "record_lines": 1,
+   "amended_after_the_fact": false,
+   "model_id": "claude-sonnet-5",
+   "cli_version": "2.1.126 (Claude Code)",
+   "counts_towards_series": true,
+   "excluded_because": null,
+   "verdict": "verified",
+   "disposition": "complete",
+   "rework_iterations": 0,
+   "compact_boundary_count": 1,
+   "sessions_recorded": 0,
+   "tokens": {
+    "in": 1411,
+    "out": 62611,
+    "thinking": 0,
+    "cache_creation_5m": 0,
+    "cache_creation_1h": 439643,
+    "cache_read": 14624606
+   },
+   "tokens_working": 503665,
+   "tokens_billed_total": 15128271,
+   "token_budget_working": 300000,
+   "usd_imputed": 5.3124,
+   "usd_in_record": 5.3124,
+   "usd_recompute_delta": 2.5e-05,
+   "rate_card": {
+    "per_mtok": {
+     "obowiazuje_do": "2026-08-31",
+     "input": 2.0,
+     "output": 10.0,
+     "cache_read": 0.2,
+     "cache_creation_5m": 2.5,
+     "cache_creation_1h": 4.0,
+     "thinking": 10.0
+    },
+    "selected_by_wall_start_date": "2026-08-26"
+   },
+   "wall_start": "2026-08-26T21:08:41",
+   "wall_end": "2026-08-26T21:48:21",
+   "wall_clock_s": 2380.0,
+   "compute_active_s": 2339.2,
+   "gate_time_s": 41.1,
+   "build_time_s": 0,
+   "unmeasurable": [
+    {
+     "pole": "context_rebuild",
+     "powod": "post-hoc decomposition"
+    }
+   ]
+  },
+  {
+   "run_id": "p1-T12-A",
+   "task": "T12",
+   "arm": "a",
+   "arm_label": "A - naive baseline",
+   "source": "runs/p1-T12-A.jsonl",
+   "record_lines": 2,
+   "amended_after_the_fact": true,
+   "model_id": "claude-sonnet-5",
+   "cli_version": "2.1.126 (Claude Code)",
+   "counts_towards_series": true,
+   "excluded_because": null,
+   "verdict": "verified",
+   "disposition": "complete",
+   "rework_iterations": 0,
+   "compact_boundary_count": 2,
+   "sessions_recorded": 1,
+   "tokens": {
+    "in": 268,
+    "out": 50270,
+    "thinking": 0,
+    "cache_creation_5m": 0,
+    "cache_creation_1h": 570726,
+    "cache_read": 14708509
+   },
+   "tokens_working": 621264,
+   "tokens_billed_total": 15329773,
+   "token_budget_working": 1500000,
+   "usd_imputed": 5.7278,
+   "usd_in_record": 5.7278,
+   "usd_recompute_delta": 4.2e-05,
+   "rate_card": {
+    "per_mtok": {
+     "obowiazuje_do": "2026-08-31",
+     "input": 2.0,
+     "output": 10.0,
+     "cache_read": 0.2,
+     "cache_creation_5m": 2.5,
+     "cache_creation_1h": 4.0,
+     "thinking": 10.0
+    },
+    "selected_by_wall_start_date": "2026-08-26"
+   },
+   "wall_start": "2026-08-26T18:32:04",
+   "wall_end": "2026-08-26T18:54:27",
+   "wall_clock_s": 1343.0,
+   "compute_active_s": 1327.7,
+   "gate_time_s": 15.7,
+   "build_time_s": 0,
+   "unmeasurable": [
+    {
+     "pole": "context_rebuild",
+     "powod": "post-hoc decomposition"
+    }
+   ]
+  },
+  {
+   "run_id": "p1-T12-B",
+   "task": "T12",
+   "arm": "b",
+   "arm_label": "B - agent with process",
+   "source": "runs/p1-T12-B.jsonl",
+   "record_lines": 1,
+   "amended_after_the_fact": false,
+   "model_id": "claude-sonnet-5",
+   "cli_version": "2.1.126 (Claude Code)",
+   "counts_towards_series": true,
+   "excluded_because": null,
+   "verdict": "verified",
+   "disposition": "complete",
+   "rework_iterations": 0,
+   "compact_boundary_count": 0,
+   "sessions_recorded": 0,
+   "tokens": {
+    "in": 162,
+    "out": 22239,
+    "thinking": 0,
+    "cache_creation_5m": 0,
+    "cache_creation_1h": 149217,
+    "cache_read": 8683420
+   },
+   "tokens_working": 171618,
+   "tokens_billed_total": 8855038,
+   "token_budget_working": 1500000,
+   "usd_imputed": 2.5563,
+   "usd_in_record": 2.5563,
+   "usd_recompute_delta": -3.4e-05,
+   "rate_card": {
+    "per_mtok": {
+     "obowiazuje_do": "2026-08-31",
+     "input": 2.0,
+     "output": 10.0,
+     "cache_read": 0.2,
+     "cache_creation_5m": 2.5,
+     "cache_creation_1h": 4.0,
+     "thinking": 10.0
+    },
+    "selected_by_wall_start_date": "2026-08-26"
+   },
+   "wall_start": "2026-08-26T21:48:22",
+   "wall_end": "2026-08-26T22:02:49",
+   "wall_clock_s": 867.0,
+   "compute_active_s": 825.6,
+   "gate_time_s": 41.4,
+   "build_time_s": 0,
+   "unmeasurable": [
+    {
+     "pole": "context_rebuild",
+     "powod": "post-hoc decomposition"
+    }
+   ]
+  }
+ ],
+ "archive_runs": [
+  {
+   "run_id": "p1-T1-B",
+   "task": "T1",
+   "arm": "b",
+   "arm_label": "B - agent with process",
+   "source": "runs/falstart-bez-tozsamosci/p1-T1-B.jsonl",
+   "record_lines": 1,
+   "amended_after_the_fact": false,
+   "model_id": "claude-sonnet-5",
+   "cli_version": "2.1.126 (Claude Code)",
+   "counts_towards_series": false,
+   "excluded_because": {
+    "code": "archived",
+    "archive": "falstart-bez-tozsamosci",
+    "note": "see runs/falstart-bez-tozsamosci/README.md - excluded from every statistic"
+   },
+   "verdict": "failed",
+   "disposition": "DNF",
+   "rework_iterations": 5,
+   "compact_boundary_count": 0,
+   "sessions_recorded": 0,
+   "tokens": {
+    "in": 0,
+    "out": 0,
+    "thinking": 0,
+    "cache_creation_5m": 0,
+    "cache_creation_1h": 0,
+    "cache_read": 0
+   },
+   "tokens_working": 0,
+   "tokens_billed_total": 0,
+   "token_budget_working": 800000,
+   "usd_imputed": 0.0,
+   "usd_in_record": 0.0,
+   "usd_recompute_delta": 0.0,
+   "rate_card": {
+    "per_mtok": {
+     "obowiazuje_do": "2026-08-31",
+     "input": 2.0,
+     "output": 10.0,
+     "cache_read": 0.2,
+     "cache_creation_5m": 2.5,
+     "cache_creation_1h": 4.0,
+     "thinking": 10.0
+    },
+    "selected_by_wall_start_date": "2026-08-26"
+   },
+   "wall_start": "2026-08-26T15:08:09",
+   "wall_end": "2026-08-26T15:08:12",
+   "wall_clock_s": 3.0,
+   "compute_active_s": 3.2,
+   "gate_time_s": 0.2,
+   "build_time_s": 0,
+   "unmeasurable": [
+    {
+     "pole": "context_rebuild",
+     "powod": "post-hoc decomposition"
+    }
+   ]
+  },
+  {
+   "run_id": "p1-T10-B",
+   "task": "T10",
+   "arm": "b",
+   "arm_label": "B - agent with process",
+   "source": "runs/falstart-bez-tozsamosci/p1-T10-B.jsonl",
+   "record_lines": 1,
+   "amended_after_the_fact": false,
+   "model_id": "claude-sonnet-5",
+   "cli_version": "2.1.126 (Claude Code)",
+   "counts_towards_series": false,
+   "excluded_because": {
+    "code": "archived",
+    "archive": "falstart-bez-tozsamosci",
+    "note": "see runs/falstart-bez-tozsamosci/README.md - excluded from every statistic"
+   },
+   "verdict": "failed",
+   "disposition": "DNF",
+   "rework_iterations": 5,
+   "compact_boundary_count": 0,
+   "sessions_recorded": 0,
+   "tokens": {
+    "in": 0,
+    "out": 0,
+    "thinking": 0,
+    "cache_creation_5m": 0,
+    "cache_creation_1h": 0,
+    "cache_read": 0
+   },
+   "tokens_working": 0,
+   "tokens_billed_total": 0,
+   "token_budget_working": 1500000,
+   "usd_imputed": 0.0,
+   "usd_in_record": 0.0,
+   "usd_recompute_delta": 0.0,
+   "rate_card": {
+    "per_mtok": {
+     "obowiazuje_do": "2026-08-31",
+     "input": 2.0,
+     "output": 10.0,
+     "cache_read": 0.2,
+     "cache_creation_5m": 2.5,
+     "cache_creation_1h": 4.0,
+     "thinking": 10.0
+    },
+    "selected_by_wall_start_date": "2026-08-26"
+   },
+   "wall_start": "2026-08-26T15:08:45",
+   "wall_end": "2026-08-26T15:08:49",
+   "wall_clock_s": 4.0,
+   "compute_active_s": 3.5,
+   "gate_time_s": 0.2,
+   "build_time_s": 0,
+   "unmeasurable": [
+    {
+     "pole": "context_rebuild",
+     "powod": "post-hoc decomposition"
+    }
+   ]
+  },
+  {
+   "run_id": "p1-T11-B",
+   "task": "T11",
+   "arm": "b",
+   "arm_label": "B - agent with process",
+   "source": "runs/falstart-bez-tozsamosci/p1-T11-B.jsonl",
+   "record_lines": 1,
+   "amended_after_the_fact": false,
+   "model_id": "claude-sonnet-5",
+   "cli_version": "2.1.126 (Claude Code)",
+   "counts_towards_series": false,
+   "excluded_because": {
+    "code": "archived",
+    "archive": "falstart-bez-tozsamosci",
+    "note": "see runs/falstart-bez-tozsamosci/README.md - excluded from every statistic"
+   },
+   "verdict": "failed",
+   "disposition": "DNF",
+   "rework_iterations": 5,
+   "compact_boundary_count": 0,
+   "sessions_recorded": 0,
+   "tokens": {
+    "in": 0,
+    "out": 0,
+    "thinking": 0,
+    "cache_creation_5m": 0,
+    "cache_creation_1h": 0,
+    "cache_read": 0
+   },
+   "tokens_working": 0,
+   "tokens_billed_total": 0,
+   "token_budget_working": 300000,
+   "usd_imputed": 0.0,
+   "usd_in_record": 0.0,
+   "usd_recompute_delta": 0.0,
+   "rate_card": {
+    "per_mtok": {
+     "obowiazuje_do": "2026-08-31",
+     "input": 2.0,
+     "output": 10.0,
+     "cache_read": 0.2,
+     "cache_creation_5m": 2.5,
+     "cache_creation_1h": 4.0,
+     "thinking": 10.0
+    },
+    "selected_by_wall_start_date": "2026-08-26"
+   },
+   "wall_start": "2026-08-26T15:08:49",
+   "wall_end": "2026-08-26T15:08:53",
+   "wall_clock_s": 4.0,
+   "compute_active_s": 3.7,
+   "gate_time_s": 0.2,
+   "build_time_s": 0,
+   "unmeasurable": [
+    {
+     "pole": "context_rebuild",
+     "powod": "post-hoc decomposition"
+    }
+   ]
+  },
+  {
+   "run_id": "p1-T12-B",
+   "task": "T12",
+   "arm": "b",
+   "arm_label": "B - agent with process",
+   "source": "runs/falstart-bez-tozsamosci/p1-T12-B.jsonl",
+   "record_lines": 1,
+   "amended_after_the_fact": false,
+   "model_id": "claude-sonnet-5",
+   "cli_version": "2.1.126 (Claude Code)",
+   "counts_towards_series": false,
+   "excluded_because": {
+    "code": "archived",
+    "archive": "falstart-bez-tozsamosci",
+    "note": "see runs/falstart-bez-tozsamosci/README.md - excluded from every statistic"
+   },
+   "verdict": "failed",
+   "disposition": "DNF",
+   "rework_iterations": 5,
+   "compact_boundary_count": 0,
+   "sessions_recorded": 0,
+   "tokens": {
+    "in": 0,
+    "out": 0,
+    "thinking": 0,
+    "cache_creation_5m": 0,
+    "cache_creation_1h": 0,
+    "cache_read": 0
+   },
+   "tokens_working": 0,
+   "tokens_billed_total": 0,
+   "token_budget_working": 1500000,
+   "usd_imputed": 0.0,
+   "usd_in_record": 0.0,
+   "usd_recompute_delta": 0.0,
+   "rate_card": {
+    "per_mtok": {
+     "obowiazuje_do": "2026-08-31",
+     "input": 2.0,
+     "output": 10.0,
+     "cache_read": 0.2,
+     "cache_creation_5m": 2.5,
+     "cache_creation_1h": 4.0,
+     "thinking": 10.0
+    },
+    "selected_by_wall_start_date": "2026-08-26"
+   },
+   "wall_start": "2026-08-26T15:08:53",
+   "wall_end": "2026-08-26T15:08:57",
+   "wall_clock_s": 4.0,
+   "compute_active_s": 3.4,
+   "gate_time_s": 0.2,
+   "build_time_s": 0,
+   "unmeasurable": [
+    {
+     "pole": "context_rebuild",
+     "powod": "post-hoc decomposition"
+    }
+   ]
+  },
+  {
+   "run_id": "p1-T2-B",
+   "task": "T2",
+   "arm": "b",
+   "arm_label": "B - agent with process",
+   "source": "runs/falstart-bez-tozsamosci/p1-T2-B.jsonl",
+   "record_lines": 1,
+   "amended_after_the_fact": false,
+   "model_id": "claude-sonnet-5",
+   "cli_version": "2.1.126 (Claude Code)",
+   "counts_towards_series": false,
+   "excluded_because": {
+    "code": "archived",
+    "archive": "falstart-bez-tozsamosci",
+    "note": "see runs/falstart-bez-tozsamosci/README.md - excluded from every statistic"
+   },
+   "verdict": "failed",
+   "disposition": "DNF",
+   "rework_iterations": 5,
+   "compact_boundary_count": 0,
+   "sessions_recorded": 0,
+   "tokens": {
+    "in": 0,
+    "out": 0,
+    "thinking": 0,
+    "cache_creation_5m": 0,
+    "cache_creation_1h": 0,
+    "cache_read": 0
+   },
+   "tokens_working": 0,
+   "tokens_billed_total": 0,
+   "token_budget_working": 300000,
+   "usd_imputed": 0.0,
+   "usd_in_record": 0.0,
+   "usd_recompute_delta": 0.0,
+   "rate_card": {
+    "per_mtok": {
+     "obowiazuje_do": "2026-08-31",
+     "input": 2.0,
+     "output": 10.0,
+     "cache_read": 0.2,
+     "cache_creation_5m": 2.5,
+     "cache_creation_1h": 4.0,
+     "thinking": 10.0
+    },
+    "selected_by_wall_start_date": "2026-08-26"
+   },
+   "wall_start": "2026-08-26T15:08:13",
+   "wall_end": "2026-08-26T15:08:16",
+   "wall_clock_s": 3.0,
+   "compute_active_s": 2.8,
+   "gate_time_s": 0.2,
+   "build_time_s": 0,
+   "unmeasurable": [
+    {
+     "pole": "context_rebuild",
+     "powod": "post-hoc decomposition"
+    }
+   ]
+  },
+  {
+   "run_id": "p1-T3-B",
+   "task": "T3",
+   "arm": "b",
+   "arm_label": "B - agent with process",
+   "source": "runs/falstart-bez-tozsamosci/p1-T3-B.jsonl",
+   "record_lines": 1,
+   "amended_after_the_fact": false,
+   "model_id": "claude-sonnet-5",
+   "cli_version": "2.1.126 (Claude Code)",
+   "counts_towards_series": false,
+   "excluded_because": {
+    "code": "archived",
+    "archive": "falstart-bez-tozsamosci",
+    "note": "see runs/falstart-bez-tozsamosci/README.md - excluded from every statistic"
+   },
+   "verdict": "failed",
+   "disposition": "DNF",
+   "rework_iterations": 5,
+   "compact_boundary_count": 0,
+   "sessions_recorded": 0,
+   "tokens": {
+    "in": 0,
+    "out": 0,
+    "thinking": 0,
+    "cache_creation_5m": 0,
+    "cache_creation_1h": 0,
+    "cache_read": 0
+   },
+   "tokens_working": 0,
+   "tokens_billed_total": 0,
+   "token_budget_working": 800000,
+   "usd_imputed": 0.0,
+   "usd_in_record": 0.0,
+   "usd_recompute_delta": 0.0,
+   "rate_card": {
+    "per_mtok": {
+     "obowiazuje_do": "2026-08-31",
+     "input": 2.0,
+     "output": 10.0,
+     "cache_read": 0.2,
+     "cache_creation_5m": 2.5,
+     "cache_creation_1h": 4.0,
+     "thinking": 10.0
+    },
+    "selected_by_wall_start_date": "2026-08-26"
+   },
+   "wall_start": "2026-08-26T15:08:16",
+   "wall_end": "2026-08-26T15:08:19",
+   "wall_clock_s": 3.0,
+   "compute_active_s": 3.0,
+   "gate_time_s": 0.2,
+   "build_time_s": 0,
+   "unmeasurable": [
+    {
+     "pole": "context_rebuild",
+     "powod": "post-hoc decomposition"
+    }
+   ]
+  },
+  {
+   "run_id": "p1-T4-B",
+   "task": "T4",
+   "arm": "b",
+   "arm_label": "B - agent with process",
+   "source": "runs/falstart-bez-tozsamosci/p1-T4-B.jsonl",
+   "record_lines": 1,
+   "amended_after_the_fact": false,
+   "model_id": "claude-sonnet-5",
+   "cli_version": "2.1.126 (Claude Code)",
+   "counts_towards_series": false,
+   "excluded_because": {
+    "code": "archived",
+    "archive": "falstart-bez-tozsamosci",
+    "note": "see runs/falstart-bez-tozsamosci/README.md - excluded from every statistic"
+   },
+   "verdict": "failed",
+   "disposition": "DNF",
+   "rework_iterations": 5,
+   "compact_boundary_count": 0,
+   "sessions_recorded": 0,
+   "tokens": {
+    "in": 0,
+    "out": 0,
+    "thinking": 0,
+    "cache_creation_5m": 0,
+    "cache_creation_1h": 0,
+    "cache_read": 0
+   },
+   "tokens_working": 0,
+   "tokens_billed_total": 0,
+   "token_budget_working": 300000,
+   "usd_imputed": 0.0,
+   "usd_in_record": 0.0,
+   "usd_recompute_delta": 0.0,
+   "rate_card": {
+    "per_mtok": {
+     "obowiazuje_do": "2026-08-31",
+     "input": 2.0,
+     "output": 10.0,
+     "cache_read": 0.2,
+     "cache_creation_5m": 2.5,
+     "cache_creation_1h": 4.0,
+     "thinking": 10.0
+    },
+    "selected_by_wall_start_date": "2026-08-26"
+   },
+   "wall_start": "2026-08-26T15:08:19",
+   "wall_end": "2026-08-26T15:08:22",
+   "wall_clock_s": 3.0,
+   "compute_active_s": 2.8,
+   "gate_time_s": 0.2,
+   "build_time_s": 0,
+   "unmeasurable": [
+    {
+     "pole": "context_rebuild",
+     "powod": "post-hoc decomposition"
+    }
+   ]
+  },
+  {
+   "run_id": "p1-T5-B",
+   "task": "T5",
+   "arm": "b",
+   "arm_label": "B - agent with process",
+   "source": "runs/falstart-bez-tozsamosci/p1-T5-B.jsonl",
+   "record_lines": 1,
+   "amended_after_the_fact": false,
+   "model_id": "claude-sonnet-5",
+   "cli_version": "2.1.126 (Claude Code)",
+   "counts_towards_series": false,
+   "excluded_because": {
+    "code": "archived",
+    "archive": "falstart-bez-tozsamosci",
+    "note": "see runs/falstart-bez-tozsamosci/README.md - excluded from every statistic"
+   },
+   "verdict": "failed",
+   "disposition": "DNF",
+   "rework_iterations": 5,
+   "compact_boundary_count": 0,
+   "sessions_recorded": 0,
+   "tokens": {
+    "in": 0,
+    "out": 0,
+    "thinking": 0,
+    "cache_creation_5m": 0,
+    "cache_creation_1h": 0,
+    "cache_read": 0
+   },
+   "tokens_working": 0,
+   "tokens_billed_total": 0,
+   "token_budget_working": 800000,
+   "usd_imputed": 0.0,
+   "usd_in_record": 0.0,
+   "usd_recompute_delta": 0.0,
+   "rate_card": {
+    "per_mtok": {
+     "obowiazuje_do": "2026-08-31",
+     "input": 2.0,
+     "output": 10.0,
+     "cache_read": 0.2,
+     "cache_creation_5m": 2.5,
+     "cache_creation_1h": 4.0,
+     "thinking": 10.0
+    },
+    "selected_by_wall_start_date": "2026-08-26"
+   },
+   "wall_start": "2026-08-26T15:08:22",
+   "wall_end": "2026-08-26T15:08:30",
+   "wall_clock_s": 8.0,
+   "compute_active_s": 2.9,
+   "gate_time_s": 0.2,
+   "build_time_s": 0,
+   "unmeasurable": [
+    {
+     "pole": "context_rebuild",
+     "powod": "post-hoc decomposition"
+    }
+   ]
+  },
+  {
+   "run_id": "p1-T6-B",
+   "task": "T6",
+   "arm": "b",
+   "arm_label": "B - agent with process",
+   "source": "runs/falstart-bez-tozsamosci/p1-T6-B.jsonl",
+   "record_lines": 1,
+   "amended_after_the_fact": false,
+   "model_id": "claude-sonnet-5",
+   "cli_version": "2.1.126 (Claude Code)",
+   "counts_towards_series": false,
+   "excluded_because": {
+    "code": "archived",
+    "archive": "falstart-bez-tozsamosci",
+    "note": "see runs/falstart-bez-tozsamosci/README.md - excluded from every statistic"
+   },
+   "verdict": "failed",
+   "disposition": "DNF",
+   "rework_iterations": 5,
+   "compact_boundary_count": 0,
+   "sessions_recorded": 0,
+   "tokens": {
+    "in": 0,
+    "out": 0,
+    "thinking": 0,
+    "cache_creation_5m": 0,
+    "cache_creation_1h": 0,
+    "cache_read": 0
+   },
+   "tokens_working": 0,
+   "tokens_billed_total": 0,
+   "token_budget_working": 800000,
+   "usd_imputed": 0.0,
+   "usd_in_record": 0.0,
+   "usd_recompute_delta": 0.0,
+   "rate_card": {
+    "per_mtok": {
+     "obowiazuje_do": "2026-08-31",
+     "input": 2.0,
+     "output": 10.0,
+     "cache_read": 0.2,
+     "cache_creation_5m": 2.5,
+     "cache_creation_1h": 4.0,
+     "thinking": 10.0
+    },
+    "selected_by_wall_start_date": "2026-08-26"
+   },
+   "wall_start": "2026-08-26T15:08:30",
+   "wall_end": "2026-08-26T15:08:34",
+   "wall_clock_s": 4.0,
+   "compute_active_s": 3.2,
+   "gate_time_s": 0.2,
+   "build_time_s": 0,
+   "unmeasurable": [
+    {
+     "pole": "context_rebuild",
+     "powod": "post-hoc decomposition"
+    }
+   ]
+  },
+  {
+   "run_id": "p1-T7-B",
+   "task": "T7",
+   "arm": "b",
+   "arm_label": "B - agent with process",
+   "source": "runs/falstart-bez-tozsamosci/p1-T7-B.jsonl",
+   "record_lines": 1,
+   "amended_after_the_fact": false,
+   "model_id": "claude-sonnet-5",
+   "cli_version": "2.1.126 (Claude Code)",
+   "counts_towards_series": false,
+   "excluded_because": {
+    "code": "archived",
+    "archive": "falstart-bez-tozsamosci",
+    "note": "see runs/falstart-bez-tozsamosci/README.md - excluded from every statistic"
+   },
+   "verdict": "failed",
+   "disposition": "DNF",
+   "rework_iterations": 5,
+   "compact_boundary_count": 0,
+   "sessions_recorded": 0,
+   "tokens": {
+    "in": 0,
+    "out": 0,
+    "thinking": 0,
+    "cache_creation_5m": 0,
+    "cache_creation_1h": 0,
+    "cache_read": 0
+   },
+   "tokens_working": 0,
+   "tokens_billed_total": 0,
+   "token_budget_working": 1500000,
+   "usd_imputed": 0.0,
+   "usd_in_record": 0.0,
+   "usd_recompute_delta": 0.0,
+   "rate_card": {
+    "per_mtok": {
+     "obowiazuje_do": "2026-08-31",
+     "input": 2.0,
+     "output": 10.0,
+     "cache_read": 0.2,
+     "cache_creation_5m": 2.5,
+     "cache_creation_1h": 4.0,
+     "thinking": 10.0
+    },
+    "selected_by_wall_start_date": "2026-08-26"
+   },
+   "wall_start": "2026-08-26T15:08:34",
+   "wall_end": "2026-08-26T15:08:37",
+   "wall_clock_s": 3.0,
+   "compute_active_s": 3.0,
+   "gate_time_s": 0.2,
+   "build_time_s": 0,
+   "unmeasurable": [
+    {
+     "pole": "context_rebuild",
+     "powod": "post-hoc decomposition"
+    }
+   ]
+  },
+  {
+   "run_id": "p1-T8-B",
+   "task": "T8",
+   "arm": "b",
+   "arm_label": "B - agent with process",
+   "source": "runs/falstart-bez-tozsamosci/p1-T8-B.jsonl",
+   "record_lines": 1,
+   "amended_after_the_fact": false,
+   "model_id": "claude-sonnet-5",
+   "cli_version": "2.1.126 (Claude Code)",
+   "counts_towards_series": false,
+   "excluded_because": {
+    "code": "archived",
+    "archive": "falstart-bez-tozsamosci",
+    "note": "see runs/falstart-bez-tozsamosci/README.md - excluded from every statistic"
+   },
+   "verdict": "failed",
+   "disposition": "DNF",
+   "rework_iterations": 5,
+   "compact_boundary_count": 0,
+   "sessions_recorded": 0,
+   "tokens": {
+    "in": 0,
+    "out": 0,
+    "thinking": 0,
+    "cache_creation_5m": 0,
+    "cache_creation_1h": 0,
+    "cache_read": 0
+   },
+   "tokens_working": 0,
+   "tokens_billed_total": 0,
+   "token_budget_working": 800000,
+   "usd_imputed": 0.0,
+   "usd_in_record": 0.0,
+   "usd_recompute_delta": 0.0,
+   "rate_card": {
+    "per_mtok": {
+     "obowiazuje_do": "2026-08-31",
+     "input": 2.0,
+     "output": 10.0,
+     "cache_read": 0.2,
+     "cache_creation_5m": 2.5,
+     "cache_creation_1h": 4.0,
+     "thinking": 10.0
+    },
+    "selected_by_wall_start_date": "2026-08-26"
+   },
+   "wall_start": "2026-08-26T15:08:37",
+   "wall_end": "2026-08-26T15:08:41",
+   "wall_clock_s": 4.0,
+   "compute_active_s": 3.4,
+   "gate_time_s": 0.3,
+   "build_time_s": 0,
+   "unmeasurable": [
+    {
+     "pole": "context_rebuild",
+     "powod": "post-hoc decomposition"
+    }
+   ]
+  },
+  {
+   "run_id": "p1-T9-B",
+   "task": "T9",
+   "arm": "b",
+   "arm_label": "B - agent with process",
+   "source": "runs/falstart-bez-tozsamosci/p1-T9-B.jsonl",
+   "record_lines": 1,
+   "amended_after_the_fact": false,
+   "model_id": "claude-sonnet-5",
+   "cli_version": "2.1.126 (Claude Code)",
+   "counts_towards_series": false,
+   "excluded_because": {
+    "code": "archived",
+    "archive": "falstart-bez-tozsamosci",
+    "note": "see runs/falstart-bez-tozsamosci/README.md - excluded from every statistic"
+   },
+   "verdict": "failed",
+   "disposition": "DNF",
+   "rework_iterations": 5,
+   "compact_boundary_count": 0,
+   "sessions_recorded": 0,
+   "tokens": {
+    "in": 0,
+    "out": 0,
+    "thinking": 0,
+    "cache_creation_5m": 0,
+    "cache_creation_1h": 0,
+    "cache_read": 0
+   },
+   "tokens_working": 0,
+   "tokens_billed_total": 0,
+   "token_budget_working": 300000,
+   "usd_imputed": 0.0,
+   "usd_in_record": 0.0,
+   "usd_recompute_delta": 0.0,
+   "rate_card": {
+    "per_mtok": {
+     "obowiazuje_do": "2026-08-31",
+     "input": 2.0,
+     "output": 10.0,
+     "cache_read": 0.2,
+     "cache_creation_5m": 2.5,
+     "cache_creation_1h": 4.0,
+     "thinking": 10.0
+    },
+    "selected_by_wall_start_date": "2026-08-26"
+   },
+   "wall_start": "2026-08-26T15:08:41",
+   "wall_end": "2026-08-26T15:08:45",
+   "wall_clock_s": 4.0,
+   "compute_active_s": 3.5,
+   "gate_time_s": 0.2,
+   "build_time_s": 0,
+   "unmeasurable": [
+    {
+     "pole": "context_rebuild",
+     "powod": "post-hoc decomposition"
+    }
+   ]
+  },
+  {
+   "run_id": "p1-T1-B",
+   "task": "T1",
+   "arm": "b",
+   "arm_label": "B - agent with process",
+   "source": "runs/obciazone-a5/p1-T1-B.jsonl",
+   "record_lines": 4,
+   "amended_after_the_fact": true,
+   "model_id": "claude-sonnet-5",
+   "cli_version": "2.1.126 (Claude Code)",
+   "counts_towards_series": false,
+   "excluded_because": {
+    "code": "archived",
+    "archive": "obciazone-a5",
+    "note": "see runs/obciazone-a5/README.md - excluded from every statistic"
+   },
+   "verdict": "verified",
+   "disposition": "complete",
+   "rework_iterations": 0,
+   "compact_boundary_count": 1,
+   "sessions_recorded": 0,
+   "tokens": {
+    "in": 140,
+    "out": 31017,
+    "thinking": 0,
+    "cache_creation_5m": 0,
+    "cache_creation_1h": 253917,
+    "cache_read": 7141978
+   },
+   "tokens_working": 285074,
+   "tokens_billed_total": 7427052,
+   "token_budget_working": 800000,
+   "usd_imputed": 2.7545,
+   "usd_in_record": 2.7545,
+   "usd_recompute_delta": 1.4e-05,
+   "rate_card": {
+    "per_mtok": {
+     "obowiazuje_do": "2026-08-31",
+     "input": 2.0,
+     "output": 10.0,
+     "cache_read": 0.2,
+     "cache_creation_5m": 2.5,
+     "cache_creation_1h": 4.0,
+     "thinking": 10.0
+    },
+    "selected_by_wall_start_date": "2026-08-26"
+   },
+   "wall_start": "2026-08-26T11:57:50",
+   "wall_end": "2026-08-26T12:15:08",
+   "wall_clock_s": 1038.0,
+   "compute_active_s": 996.8,
+   "gate_time_s": 41.1,
+   "build_time_s": 0,
+   "unmeasurable": [
+    {
+     "pole": "context_rebuild",
+     "powod": "post-hoc decomposition"
+    }
+   ]
+  },
+  {
+   "run_id": "p1-T2-B",
+   "task": "T2",
+   "arm": "b",
+   "arm_label": "B - agent with process",
+   "source": "runs/obciazone-a5/p1-T2-B.jsonl",
+   "record_lines": 1,
+   "amended_after_the_fact": false,
+   "model_id": "claude-sonnet-5",
+   "cli_version": "2.1.126 (Claude Code)",
+   "counts_towards_series": false,
+   "excluded_because": {
+    "code": "archived",
+    "archive": "obciazone-a5",
+    "note": "see runs/obciazone-a5/README.md - excluded from every statistic"
+   },
+   "verdict": "verified",
+   "disposition": "complete",
+   "rework_iterations": 0,
+   "compact_boundary_count": 1,
+   "sessions_recorded": 0,
+   "tokens": {
+    "in": 218,
+    "out": 31196,
+    "thinking": 0,
+    "cache_creation_5m": 0,
+    "cache_creation_1h": 232102,
+    "cache_read": 8504993
+   },
+   "tokens_working": 263516,
+   "tokens_billed_total": 8768509,
+   "token_budget_working": 300000,
+   "usd_imputed": 2.9418,
+   "usd_in_record": 2.9418,
+   "usd_recompute_delta": 3e-06,
+   "rate_card": {
+    "per_mtok": {
+     "obowiazuje_do": "2026-08-31",
+     "input": 2.0,
+     "output": 10.0,
+     "cache_read": 0.2,
+     "cache_creation_5m": 2.5,
+     "cache_creation_1h": 4.0,
+     "thinking": 10.0
+    },
+    "selected_by_wall_start_date": "2026-08-26"
+   },
+   "wall_start": "2026-08-26T12:40:30",
+   "wall_end": "2026-08-26T12:57:38",
+   "wall_clock_s": 1028.0,
+   "compute_active_s": 985.9,
+   "gate_time_s": 42.0,
+   "build_time_s": 0,
+   "unmeasurable": [
+    {
+     "pole": "context_rebuild",
+     "powod": "post-hoc decomposition"
+    }
+   ]
+  },
+  {
+   "run_id": "p1-T3-B",
+   "task": "T3",
+   "arm": "b",
+   "arm_label": "B - agent with process",
+   "source": "runs/obciazone-a5/p1-T3-B.jsonl",
+   "record_lines": 1,
+   "amended_after_the_fact": false,
+   "model_id": "claude-sonnet-5",
+   "cli_version": "2.1.126 (Claude Code)",
+   "counts_towards_series": false,
+   "excluded_because": {
+    "code": "archived",
+    "archive": "obciazone-a5",
+    "note": "see runs/obciazone-a5/README.md - excluded from every statistic"
+   },
+   "verdict": "verified",
+   "disposition": "complete",
+   "rework_iterations": 0,
+   "compact_boundary_count": 0,
+   "sessions_recorded": 0,
+   "tokens": {
+    "in": 198,
+    "out": 32662,
+    "thinking": 0,
+    "cache_creation_5m": 0,
+    "cache_creation_1h": 140820,
+    "cache_read": 9892904
+   },
+   "tokens_working": 173680,
+   "tokens_billed_total": 10066584,
+   "token_budget_working": 800000,
+   "usd_imputed": 2.8689,
+   "usd_in_record": 2.8689,
+   "usd_recompute_delta": -2.3e-05,
+   "rate_card": {
+    "per_mtok": {
+     "obowiazuje_do": "2026-08-31",
+     "input": 2.0,
+     "output": 10.0,
+     "cache_read": 0.2,
+     "cache_creation_5m": 2.5,
+     "cache_creation_1h": 4.0,
+     "thinking": 10.0
+    },
+    "selected_by_wall_start_date": "2026-08-26"
+   },
+   "wall_start": "2026-08-26T13:02:16",
+   "wall_end": "2026-08-26T13:15:41",
+   "wall_clock_s": 805.0,
+   "compute_active_s": 792.8,
+   "gate_time_s": 12.7,
+   "build_time_s": 0,
+   "unmeasurable": [
+    {
+     "pole": "context_rebuild",
+     "powod": "post-hoc decomposition"
+    }
+   ]
+  },
+  {
+   "run_id": "p1-T4-B",
+   "task": "T4",
+   "arm": "b",
+   "arm_label": "B - agent with process",
+   "source": "runs/obciazone-a5/p1-T4-B.jsonl",
+   "record_lines": 1,
+   "amended_after_the_fact": false,
+   "model_id": "claude-sonnet-5",
+   "cli_version": "2.1.126 (Claude Code)",
+   "counts_towards_series": false,
+   "excluded_because": {
+    "code": "archived",
+    "archive": "obciazone-a5",
+    "note": "see runs/obciazone-a5/README.md - excluded from every statistic"
+   },
+   "verdict": "verified",
+   "disposition": "complete",
+   "rework_iterations": 0,
+   "compact_boundary_count": 1,
+   "sessions_recorded": 0,
+   "tokens": {
+    "in": 300,
+    "out": 70325,
+    "thinking": 0,
+    "cache_creation_5m": 184122,
+    "cache_creation_1h": 373345,
+    "cache_read": 13291754
+   },
+   "tokens_working": 628092,
+   "tokens_billed_total": 13919846,
+   "token_budget_working": 300000,
+   "usd_imputed": 5.3159,
+   "usd_in_record": 5.3159,
+   "usd_recompute_delta": -1.4e-05,
+   "rate_card": {
+    "per_mtok": {
+     "obowiazuje_do": "2026-08-31",
+     "input": 2.0,
+     "output": 10.0,
+     "cache_read": 0.2,
+     "cache_creation_5m": 2.5,
+     "cache_creation_1h": 4.0,
+     "thinking": 10.0
+    },
+    "selected_by_wall_start_date": "2026-08-26"
+   },
+   "wall_start": "2026-08-26T13:22:18",
+   "wall_end": "2026-08-26T13:59:36",
+   "wall_clock_s": 2238.0,
+   "compute_active_s": 2227.0,
+   "gate_time_s": 11.2,
+   "build_time_s": 0,
+   "unmeasurable": [
+    {
+     "pole": "context_rebuild",
+     "powod": "post-hoc decomposition"
+    }
+   ]
+  },
+  {
+   "run_id": "p1-T1-A",
+   "task": "T1",
+   "arm": "a",
+   "arm_label": "A - naive baseline",
+   "source": "runs/pilot-kalibracja/p1-T1-A.jsonl",
+   "record_lines": 5,
+   "amended_after_the_fact": true,
+   "model_id": "claude-sonnet-5",
+   "cli_version": "2.1.126 (Claude Code)",
+   "counts_towards_series": false,
+   "excluded_because": {
+    "code": "archived",
+    "archive": "pilot-kalibracja",
+    "note": "see runs/pilot-kalibracja/README.md - excluded from every statistic"
+   },
+   "verdict": "verified",
+   "disposition": "complete",
+   "rework_iterations": 0,
+   "compact_boundary_count": 1,
+   "sessions_recorded": 1,
+   "tokens": {
+    "in": 129,
+    "out": 25543,
+    "thinking": 0,
+    "cache_creation_5m": 0,
+    "cache_creation_1h": 186119,
+    "cache_read": 7476182
+   },
+   "tokens_working": 211791,
+   "tokens_billed_total": 7687973,
+   "token_budget_working": 800000,
+   "usd_imputed": 2.4954,
+   "usd_in_record": 2.4954,
+   "usd_recompute_delta": 0.0,
+   "rate_card": {
+    "per_mtok": {
+     "obowiazuje_do": "2026-08-31",
+     "input": 2.0,
+     "output": 10.0,
+     "cache_read": 0.2,
+     "cache_creation_5m": 2.5,
+     "cache_creation_1h": 4.0,
+     "thinking": 10.0
+    },
+    "selected_by_wall_start_date": "2026-08-25"
+   },
+   "wall_start": "2026-08-25T18:25:58",
+   "wall_end": "2026-08-25T18:35:09",
+   "wall_clock_s": 551.0,
+   "compute_active_s": 548.3,
+   "gate_time_s": 3.1,
+   "build_time_s": 0,
+   "unmeasurable": [
+    {
+     "pole": "context_rebuild",
+     "powod": "split_context_rebuild not implemented (minimal scope) — axis-4 decomposition done post-hoc from transcripts"
+    },
+    {
+     "pole": "sha_skills",
+     "powod": "install-skills leaves no explicit SHA behind — to be measured separately"
+    }
+   ]
+  },
+  {
+   "run_id": "p1-T1-B",
+   "task": "T1",
+   "arm": "b",
+   "arm_label": "B - agent with process",
+   "source": "runs/pilot-kalibracja/p1-T1-B.jsonl",
+   "record_lines": 3,
+   "amended_after_the_fact": true,
+   "model_id": "claude-sonnet-5",
+   "cli_version": "2.1.126 (Claude Code)",
+   "counts_towards_series": false,
+   "excluded_because": {
+    "code": "archived",
+    "archive": "pilot-kalibracja",
+    "note": "see runs/pilot-kalibracja/README.md - excluded from every statistic"
+   },
+   "verdict": "verified",
+   "disposition": "complete",
+   "rework_iterations": 0,
+   "compact_boundary_count": 1,
+   "sessions_recorded": 0,
+   "tokens": {
+    "in": 376,
+    "out": 65530,
+    "thinking": 0,
+    "cache_creation_5m": 0,
+    "cache_creation_1h": 414537,
+    "cache_read": 16446076
+   },
+   "tokens_working": 480443,
+   "tokens_billed_total": 16926519,
+   "token_budget_working": 800000,
+   "usd_imputed": 5.6034,
+   "usd_in_record": 5.6034,
+   "usd_recompute_delta": 1.5e-05,
+   "rate_card": {
+    "per_mtok": {
+     "obowiazuje_do": "2026-08-31",
+     "input": 2.0,
+     "output": 10.0,
+     "cache_read": 0.2,
+     "cache_creation_5m": 2.5,
+     "cache_creation_1h": 4.0,
+     "thinking": 10.0
+    },
+    "selected_by_wall_start_date": "2026-08-25"
+   },
+   "wall_start": "2026-08-25T20:10:16",
+   "wall_end": "2026-08-25T20:52:01",
+   "wall_clock_s": 2505.0,
+   "compute_active_s": 2504.6,
+   "gate_time_s": 0,
+   "build_time_s": 0,
+   "unmeasurable": [
+    {
+     "pole": "context_rebuild",
+     "powod": "post-hoc split (same as arm A)"
+    },
+    {
+     "pole": "pilot",
+     "powod": "PILOT deviations: shared canonical account (unrelated workloads paused for the window), a single tick with no rework loop, runner-side merge skipped (verdict taken on FETCH_HEAD)"
+    }
+   ]
+  }
+ ],
+ "totals": {
+  "arm_a_all_counted": {
+   "tasks": [
+    "T1",
+    "T2",
+    "T3",
+    "T4",
+    "T5",
+    "T6",
+    "T7",
+    "T8",
+    "T9",
+    "T10",
+    "T11",
+    "T12"
+   ],
+   "n": 12,
+   "usd_imputed": 43.5772,
+   "tokens_working": 4116767,
+   "tokens_billed_total": 123918521,
+   "wall_clock_s": 10936.0,
+   "compute_active_s": 10796.0,
+   "rework_iterations": 2
+  },
+  "arm_b_all_counted": {
+   "tasks": [
+    "T1",
+    "T2",
+    "T3",
+    "T4",
+    "T5",
+    "T6",
+    "T7",
+    "T8",
+    "T10",
+    "T11",
+    "T12"
+   ],
+   "n": 11,
+   "usd_imputed": 37.8134,
+   "tokens_working": 3408112,
+   "tokens_billed_total": 111396427,
+   "wall_clock_s": 17382.0,
+   "compute_active_s": 16883.8,
+   "rework_iterations": 2
+  },
+  "arm_a_on_tasks_both_arms_completed": {
+   "tasks": [
+    "T1",
+    "T2",
+    "T3",
+    "T4",
+    "T5",
+    "T6",
+    "T7",
+    "T8",
+    "T10",
+    "T11",
+    "T12"
+   ],
+   "n": 11,
+   "usd_imputed": 40.7176,
+   "tokens_working": 3897101,
+   "tokens_billed_total": 114926780,
+   "wall_clock_s": 9937.0,
+   "compute_active_s": 9820.9,
+   "rework_iterations": 1
+  },
+  "arm_b_on_tasks_both_arms_completed": {
+   "tasks": [
+    "T1",
+    "T2",
+    "T3",
+    "T4",
+    "T5",
+    "T6",
+    "T7",
+    "T8",
+    "T10",
+    "T11",
+    "T12"
+   ],
+   "n": 11,
+   "usd_imputed": 37.8134,
+   "tokens_working": 3408112,
+   "tokens_billed_total": 111396427,
+   "wall_clock_s": 17382.0,
+   "compute_active_s": 16883.8,
+   "rework_iterations": 2
+  },
+  "tasks_completed_by_both_arms": [
+   "T1",
+   "T2",
+   "T3",
+   "T4",
+   "T5",
+   "T6",
+   "T7",
+   "T8",
+   "T10",
+   "T11",
+   "T12"
+  ],
+  "tasks_completed_by_arm_a_only": [
+   "T9"
+  ],
+  "archive_usd_spent_but_not_counted": 21.9799,
+  "voided_usd_spent_but_not_counted": 3.9326,
+  "like_for_like_ratio_b_over_a": 0.9287
+ },
+ "repeat_runs": {
+  "_what_this_is": "Tasks that the same arm took to a verified-green result more than once. The attempts are NOT interchangeable - they straddle amendments A1, A2, A4 and A5, so the environment and the accounting changed between them. Read this as an upper bound on run-to-run spread, not as a clean repeatability measurement. It is published because any reader comparing the two arms needs to know how wide a single number can be.",
+  "pairs": [
+   {
+    "task": "T1",
+    "arm": "a",
+    "green_attempts": 2,
+    "attempts": [
+     {
+      "source": "runs/pilot-kalibracja/p1-T1-A.jsonl",
+      "wall_start": "2026-08-25T18:25:58",
+      "usd_imputed": 2.4954,
+      "tokens_working": 211791,
+      "counts_towards_series": false
+     },
+     {
+      "source": "runs/p1-T1-A.jsonl",
+      "wall_start": "2026-08-26T08:52:35",
+      "usd_imputed": 2.6599,
+      "tokens_working": 339546,
+      "counts_towards_series": true
+     }
+    ],
+    "usd_min": 2.4954,
+    "usd_max": 2.6599,
+    "usd_spread_pct_of_min": 6.6
+   },
+   {
+    "task": "T1",
+    "arm": "b",
+    "green_attempts": 3,
+    "attempts": [
+     {
+      "source": "runs/pilot-kalibracja/p1-T1-B.jsonl",
+      "wall_start": "2026-08-25T20:10:16",
+      "usd_imputed": 5.6034,
+      "tokens_working": 480443,
+      "counts_towards_series": false
+     },
+     {
+      "source": "runs/obciazone-a5/p1-T1-B.jsonl",
+      "wall_start": "2026-08-26T11:57:50",
+      "usd_imputed": 2.7545,
+      "tokens_working": 285074,
+      "counts_towards_series": false
+     },
+     {
+      "source": "runs/p1-T1-B.jsonl",
+      "wall_start": "2026-08-26T16:53:59",
+      "usd_imputed": 3.6096,
+      "tokens_working": 288867,
+      "counts_towards_series": true
+     }
+    ],
+    "usd_min": 2.7545,
+    "usd_max": 5.6034,
+    "usd_spread_pct_of_min": 103.4
+   },
+   {
+    "task": "T2",
+    "arm": "b",
+    "green_attempts": 2,
+    "attempts": [
+     {
+      "source": "runs/obciazone-a5/p1-T2-B.jsonl",
+      "wall_start": "2026-08-26T12:40:30",
+      "usd_imputed": 2.9418,
+      "tokens_working": 263516,
+      "counts_towards_series": false
+     },
+     {
+      "source": "runs/p1-T2-B.jsonl",
+      "wall_start": "2026-08-26T17:14:16",
+      "usd_imputed": 2.8825,
+      "tokens_working": 252667,
+      "counts_towards_series": true
+     }
+    ],
+    "usd_min": 2.8825,
+    "usd_max": 2.9418,
+    "usd_spread_pct_of_min": 2.1
+   },
+   {
+    "task": "T3",
+    "arm": "b",
+    "green_attempts": 2,
+    "attempts": [
+     {
+      "source": "runs/obciazone-a5/p1-T3-B.jsonl",
+      "wall_start": "2026-08-26T13:02:16",
+      "usd_imputed": 2.8689,
+      "tokens_working": 173680,
+      "counts_towards_series": false
+     },
+     {
+      "source": "runs/p1-T3-B.jsonl",
+      "wall_start": "2026-08-26T17:41:58",
+      "usd_imputed": 2.362,
+      "tokens_working": 193655,
+      "counts_towards_series": true
+     }
+    ],
+    "usd_min": 2.362,
+    "usd_max": 2.8689,
+    "usd_spread_pct_of_min": 21.5
+   },
+   {
+    "task": "T4",
+    "arm": "b",
+    "green_attempts": 2,
+    "attempts": [
+     {
+      "source": "runs/obciazone-a5/p1-T4-B.jsonl",
+      "wall_start": "2026-08-26T13:22:18",
+      "usd_imputed": 5.3159,
+      "tokens_working": 628092,
+      "counts_towards_series": false
+     },
+     {
+      "source": "runs/p1-T4-B.jsonl",
+      "wall_start": "2026-08-26T18:01:36",
+      "usd_imputed": 3.2496,
+      "tokens_working": 292874,
+      "counts_towards_series": true
+     }
+    ],
+    "usd_min": 3.2496,
+    "usd_max": 5.3159,
+    "usd_spread_pct_of_min": 63.6
+   }
+  ],
+  "spread_pct_of_min_max": 103.4,
+  "spread_pct_of_min_min": 2.1
+ },
+ "instrument_gaps": {
+  "session_ids": {
+   "_finding": "The `session_ids` field is populated for arm A and is empty in EVERY arm-B record and EVERY arm-B session-end event, including runs that plainly did real work and spent real tokens. It is an instrument gap on one side, not a property of the runs. An empty list therefore does NOT by itself mean 'no session started' - for arm B it means nothing at all, and the adjudications that argued from it relied on the transcripts, not on this field.",
+   "per_arm_records": {
+    "a": {
+     "records": 13,
+     "records_with_at_least_one_session_id": 13,
+     "session_ids_recorded_total": 15
+    },
+    "b": {
+     "records": 29,
+     "records_with_at_least_one_session_id": 0,
+     "session_ids_recorded_total": 0
+    }
+   },
+   "per_arm_journal_session_end_events": {
+    "a": {
+     "session_end_events": 16,
+     "with_ids": 16
+    },
+    "b": {
+     "session_end_events": 89,
+     "with_ids": 0
+    }
+   }
+  },
+  "context_rebuild": {
+   "_finding": "`context_rebuild` is null in every record: the decomposition was never implemented, so it was done post-hoc from transcripts. Each record says so itself in `nie_umiem_zmierzyc`.",
+   "records_with_a_value": 0
+  }
+ },
+ "empty_slots": [
+  {
+   "slot": "T9-B",
+   "state": "record exists but does not count",
+   "usd_spent_anyway": 3.9326,
+   "why": {
+    "code": "infra-void",
+    "note": "record's own disposition is not `complete`; the last line of the record carries the adjudication that voided it"
+   },
+   "pending": "awaiting a re-run; until it lands this slot is EMPTY, and no per-arm total covering this task is like-for-like"
+  }
+ ]
+}
