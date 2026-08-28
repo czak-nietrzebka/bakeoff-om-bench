@@ -18,6 +18,9 @@ commit that predates every run — see *[Checking the pre-registration](#checkin
 | what | where |
 |---|---|
 | The analysis — result, quality, trail, and everything that went wrong on our side | [`REPORT.md`](REPORT.md) |
+| Experiment 2 (GPT-5.6 Sol / Codex) — result, quality, confounds | [`REPORT-E2.md`](REPORT-E2.md), recompute: `python3 analyze_e2.py data-e2` |
+| Maintenance phase — cost, the mechanism check, unplanned repeats | [`REPORT-EMAINT.md`](REPORT-EMAINT.md), recompute: `python3 analyze_emaint.py data-emaint` |
+| How this package was destroyed and rebuilt from the process trail | [`RECOVERY-NOTE.md`](RECOVERY-NOTE.md), logbook entry 27 |
 | The running record of the experiment: what was run, what broke, what was rewritten and when | [`LOGBOOK.md`](LOGBOOK.md) |
 | Raw per-run records (append-only JSONL), the run journal, session-usage summaries, and a field dictionary | [`data/`](data/) — start with [`data/README.md`](data/README.md) |
 | The primary instrument: recomputes every dollar from raw token counts | [`analyze.py`](analyze.py) — `python3 analyze.py data/` |

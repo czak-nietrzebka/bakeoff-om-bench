@@ -1,13 +1,13 @@
 {
   "_what_this_is": "What was removed from the files in this repository before publication, and the evidence that nothing was left behind. This edition was regenerated as the LAST step of the build over the FINAL bytes of every published file, so every hash below is the hash of the file as shipped. data/README.md, section 'What was removed before publication', says what each removal costs a reader.",
-  "_two_builds_read_this_first": "This report has two provenances and they are not interchangeable. The HASHES, the FILE LIST and the CONTENT CHECKS under `content_checks_re_run_at_republication` were re-derived over the final bytes; any reader can reproduce the hashes with `shasum -a 256`. The SCRUB FINDINGS - the field policy, the pattern scrubber, the explicit secret list and the comparison against the source records - come from the run-host pass at 2026-08-27T07:35:01Z and were NOT re-run, because the secret list and the source records never left the run host. 12 files were edited after that pass; they are named under `republication` and marked file by file rather than being handed the older verdict.",
-  "generated_at_utc": "2026-08-28T09:33:27Z",
+  "_two_builds_read_this_first": "This report has two provenances and they are not interchangeable. The HASHES, the FILE LIST and the CONTENT CHECKS under `content_checks_re_run_at_republication` were re-derived over the final bytes; any reader can reproduce the hashes with `shasum -a 256`. The SCRUB FINDINGS - the field policy, the pattern scrubber, the explicit secret list and the comparison against the source records - come from the run-host pass at 2026-08-27T07:35:01Z and were NOT re-run, because the secret list and the source records never left the run host. 16 files were edited after that pass; they are named under `republication` and marked file by file rather than being handed the older verdict.",
+  "generated_at_utc": "2026-08-28T09:49:46Z",
   "generated_by": "regenerated over final bytes at republication",
   "run_host_scrub_pass_at_utc": "2026-08-27T07:35:01Z",
   "scope": {
     "root": "the whole published repository, not just data/",
-    "files_in_repository": 144,
-    "files_hashed": 143,
+    "files_in_repository": 148,
+    "files_hashed": 147,
     "arithmetic": "files_in_repository = files_hashed + 1; the one not hashed is this report, which is written last and cannot hash itself.",
     "excluded": [
       ".git/",
@@ -21,7 +21,11 @@
     "files_edited_after_the_run_host_pass": [
       "LOGBOOK.md",
       "README.md",
+      "REPORT-E2.md",
+      "REPORT-EMAINT.md",
       "REPORT.md",
+      "analyze_e2.py",
+      "analyze_emaint.py",
       "data-emaint/runs/em-M5-A.jsonl",
       "data-emaint/runs/em-M6-A.jsonl",
       "data/README.md",
@@ -32,7 +36,7 @@
       "frozen/WITHHELD.md",
       "gen/regen_scrub_report.py"
     ],
-    "files_edited_count": 12,
+    "files_edited_count": 16,
     "files_whose_bytes_the_run_host_oracle_saw": 131,
     "renamed_with_identical_bytes": [
       "data/runs/burdened-node22/p1-T1-B.jsonl",
@@ -61,6 +65,7 @@
     "republication_language_check": {
       "method": "two passes: any character of the operator's alphabet outside ASCII, and a 48-word list of that language's common words matched after folding accents, which also catches it written in plain ASCII",
       "files_flagged": [
+        "analyze_emaint.py",
         "data-e2/runs/p2-T1-A.jsonl",
         "data-e2/runs/p2-T1-B.jsonl",
         "data-e2/runs/p2-T10-A.jsonl",
@@ -160,9 +165,13 @@
         "gen/audit_scan.py",
         "gen/regen_scrub_report.py"
       ],
-      "files_flagged_count": 98,
+      "files_flagged_count": 99,
       "flagged_in_frozen_count": 18,
       "flagged_outside_frozen": [
+        {
+          "file": "analyze_emaint.py",
+          "why_it_stands": "NOT EXPLAINED - investigate before publishing"
+        },
         {
           "file": "data-e2/runs/p2-T1-A.jsonl",
           "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
@@ -526,7 +535,7 @@
     "files_clean": 50,
     "files_the_scrubber_had_to_change": [],
     "interpretation": "The scrubber changed zero bytes, so the files were already clean when they reached it: the oracle is confirming a property of the published bytes rather than describing a last-minute rewrite. The published files were then verified byte-identical to the ones that passed.",
-    "_scope_note": "This is the run-host pass at 2026-08-27T07:35:01Z. It checked 50 files as they stood then. 12 of those files have since been edited; for them the result below does NOT describe the published bytes, and each is marked in `files`."
+    "_scope_note": "This is the run-host pass at 2026-08-27T07:35:01Z. It checked 50 files as they stood then. 16 of those files have since been edited; for them the result below does NOT describe the published bytes, and each is marked in `files`."
   },
   "known_residue": {
     "note": "(recovered) see RECOVERY-NOTE.md"
@@ -644,7 +653,7 @@
     },
     {
       "file": "README.md",
-      "sha256_published": "7ca0191d22adfb968524c1373c1b5cf18b75f59960f5821cdebeef92299009df",
+      "sha256_published": "58933beb582a9f19cd51ea420df8c8ef8f81aae4c4643ad1d6401d4e20f7d321",
       "sha256_at_run_host_pass": null,
       "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
@@ -670,6 +679,34 @@
       "verify_zero_matches": [],
       "oracle_clean": null,
       "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "REPORT-E2.md",
+      "sha256_published": "07d0358d70646edfdc184067ef31e842888d99882f599f7ea44c9400661d0c31",
+      "sha256_at_run_host_pass": null,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
+    },
+    {
+      "file": "REPORT-EMAINT.md",
+      "sha256_published": "c34c55d148f8d6c556a922ba356cc742593c7c58ac5a78baf030a77048a622da",
+      "sha256_at_run_host_pass": null,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "REPORT.md",
@@ -699,6 +736,36 @@
       "verify_zero_matches": [],
       "oracle_clean": null,
       "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "analyze_e2.py",
+      "sha256_published": "4a2f5cb448d5fa1b38b64f2fa160a17ff546a604a6e6cc035c1a02c5a094fa69",
+      "sha256_at_run_host_pass": null,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
+    },
+    {
+      "file": "analyze_emaint.py",
+      "sha256_published": "1eb22d6030cd5c02ec84780bc4ce4448a7611632b60ed9047e9aa362089198fc",
+      "sha256_at_run_host_pass": null,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [
+          "nazwa"
+        ],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data-e2/runs/p2-T1-A.jsonl",
