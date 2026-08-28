@@ -1,15 +1,13 @@
 # bakeoff-om-bench — does a czak lift *any* model?
 
-**Status: EXPERIMENT 1 IS COMPLETE — twelve tasks, twelve of twelve verified in both
-arms — AND ITS RESULTS ARE PUBLISHED HERE.**
-One pair of arms. **On the primary endpoint the two arms finish in a tie inside the noise
-band, and the pre-registered crossover prediction failed.** The maintenance phase that
-Experiment 1 could not answer is **pre-registered and running**: see
-[`emaint/PROTOCOL.md`](emaint/PROTOCOL.md), published before its first result existed.
-**Experiment 2 — the same twelve frozen tasks on GPT-5.6 Sol through the Codex CLI —
-is pre-registered** ([`e2/PROTOCOL-E2.md`](e2/PROTOCOL-E2.md), with its frozen price
-table, driver manifest and measured symmetry table) and its calibration pilot is
-running; no counted run existed when the pre-registration was committed.
+**Status: ALL THREE PHASES HAVE RUN — build (Experiment 1, Claude Sonnet), maintenance
+(E-MAINT, same model), and a second model family (Experiment 2, GPT-5.6 Sol via Codex).
+Results for all three are in this repository.** On cost the process arm ties the first
+build phase (−3.0%, inside the noise band), loses maintenance (+52%), and loses the
+second build badly (+136%, cheaper in 0 of 11 pairs) — the process overhead is roughly
+constant in tokens, so the more efficient the engine, the worse it prices. What the
+overhead measurably buys is a different question, answered further down; the honest
+one-line version is: **not code quality — organizational memory.**
 
 The full analysis is in **[`REPORT.md`](REPORT.md)**, with the raw records it is computed
 from and the two scripts that compute it. The pre-registration below is unchanged from the
@@ -103,6 +101,60 @@ in both experiments.** We publish the measurements.
 **Open Mercato is the arena here, not an opponent.** We chose it precisely because it is
 engineered to make AI agents productive — the strongest publicly available baseline we
 know of. Nothing in this benchmark measures Open Mercato itself; both arms work *on* it.
+
+## What the overhead buys — measured, both directions
+
+The 2026 backlash against AI-generated code has a specific shape: reviewers drowning
+in machine-made pull requests, codebases and team knowledge degrading, adoption imposed
+from above ("AI slop as a tragedy of the commons", arXiv:2603.27249). This benchmark
+accidentally measured both sides of that argument on its own subjects, and the results
+do not flatter either camp.
+
+**What the process arm's extra tokens did NOT buy — measured:**
+
+- Not headline correctness: both arms end verified on the hidden packs wherever they
+  finish at all, and first-pass correctness tied in Experiment 1.
+- Not judged code quality: the frozen four-axis judge scored Experiment 1 a dead tie
+  (50/60 both arms) and scored Experiment 2 **against** the process arm (52:47 —
+  partly a real penalty: the process arm failed to deliver one task on budget).
+- Not convention compliance on a capable engine: the deterministic checklist
+  (tenant scoping, cross-module imports, i18n, console noise, time-bombs) came back
+  **identical** for both arms of Experiment 2, and the naive arm even opted its module
+  into the repository's design-system lint on its own.
+
+**What they DID buy — measured, not asserted:**
+
+- **The work reads its own history.** In the maintenance phase — six tasks handed to
+  fresh sessions with no memory, on code written days earlier — the process arm
+  consulted git history in 6 of 6 tasks (14 times) and pulled the tickets and pull
+  requests of the original work 25 times. The naive arm did that **once, ever**
+  (0 ticket reads). That is the pre-registered mechanism check for the claim
+  "a later stranger is cheaper because intent is reconstructible": the stranger
+  demonstrably reconstructs from the trail. The one consistent judge signal in the
+  whole benchmark points the same way: repo-convention fidelity, +1 for the process
+  arm in Experiment 1, three repetitions out of three.
+- **Review happens before a human sees the pull request.** Every process-arm task
+  carries a machine self-review gate before anything reaches a reviewer, at a
+  measured ~2% of the arm's cost. Whatever one thinks of the other 98%, this is the
+  part aimed squarely at review friction — the top complaint in the developer-slop
+  literature — and it is priced, not hand-waved.
+- **The trail survives its authors.** On 28 August the entire results package of this
+  benchmark — report, logbook, scripts, four unpushed commits — was destroyed by a
+  recycled scratch directory. There was no backup. It was rebuilt in one day to the
+  cent, entirely from the process's own exhaust: append-only ledgers, review-agent
+  transcripts, edits that carry their anchoring context. `RECOVERY-NOTE.md` and
+  logbook entry 27 document it. We did not plan that demonstration, and we would not
+  have chosen it, but it is the strongest evidence in this repository for what the
+  overhead actually purchases: the work stops being hostage to any single copy,
+  machine, or author.
+
+**The honest synthesis.** If your unit of account is one developer shipping one task,
+the naive engine wins on price and ties on quality: buy that. The process prices in a
+different unit — problems solved **once per organization** instead of once per person,
+intent that survives the session that had it, review that happens before a human pays
+attention, and work that can be reconstructed when its only copy burns. None of that
+shows up in a per-task price column, and all of it is what this repository's own
+records — including our failures — keep measuring.
 
 ## Design in one paragraph
 

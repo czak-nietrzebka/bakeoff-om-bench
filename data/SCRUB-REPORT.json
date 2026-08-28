@@ -1,7 +1,7 @@
 {
   "_what_this_is": "What was removed from the files in this repository before publication, and the evidence that nothing was left behind. This edition was regenerated as the LAST step of the build over the FINAL bytes of every published file, so every hash below is the hash of the file as shipped. data/README.md, section 'What was removed before publication', says what each removal costs a reader.",
   "_two_builds_read_this_first": "This report has two provenances and they are not interchangeable. The HASHES, the FILE LIST and the CONTENT CHECKS under `content_checks_re_run_at_republication` were re-derived over the final bytes; any reader can reproduce the hashes with `shasum -a 256`. The SCRUB FINDINGS - the field policy, the pattern scrubber, the explicit secret list and the comparison against the source records - come from the run-host pass at 2026-08-27T07:35:01Z and were NOT re-run, because the secret list and the source records never left the run host. 12 files were edited after that pass; they are named under `republication` and marked file by file rather than being handed the older verdict.",
-  "generated_at_utc": "2026-08-28T08:36:07Z",
+  "generated_at_utc": "2026-08-28T09:33:27Z",
   "generated_by": "regenerated over final bytes at republication",
   "run_host_scrub_pass_at_utc": "2026-08-27T07:35:01Z",
   "scope": {
@@ -644,7 +644,7 @@
     },
     {
       "file": "README.md",
-      "sha256_published": "2a7184fa388d185eb63b2874c6b45ca025403476fd0f48e91be3a2b0cbbaf8d2",
+      "sha256_published": "7ca0191d22adfb968524c1373c1b5cf18b75f59960f5821cdebeef92299009df",
       "sha256_at_run_host_pass": null,
       "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
