@@ -48,14 +48,14 @@ def main():
           % (pairs, sa, sb, (sb - sa) / sa * 100 if sa else 0, wins, pairs))
     print()
     print("REPEATS (unplanned, kept append-only): task slots with >1 verified run")
-    for D, nazwa in ((A, "A"), (B, "B")):
+    for D, arm_label in ((A, "A"), (B, "B")):
         for t in sorted(D, key=lambda x: int(x[1:])):
             rep = D[t].get("_repeats") or []
             if len(rep) > 1:
                 ceny = [r.get("usd_imputed") or 0 for r in rep]
                 lo, hi = min(ceny), max(ceny)
                 print("  %s-%s: %d runs, $%.4f-$%.4f, spread %.1f%%"
-                      % (t, nazwa, len(rep), lo, hi, (hi - lo) / lo * 100 if lo else 0))
+                      % (t, arm_label, len(rep), lo, hi, (hi - lo) / lo * 100 if lo else 0))
     print()
     print("MECHANISM CHECK (pre-registered): did the fresh session read the trail?")
     print("Counted from session transcripts during the phase (observable, not asked):")

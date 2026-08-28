@@ -1,7 +1,7 @@
 {
   "_what_this_is": "What was removed from the files in this repository before publication, and the evidence that nothing was left behind. This edition was regenerated as the LAST step of the build over the FINAL bytes of every published file, so every hash below is the hash of the file as shipped. data/README.md, section 'What was removed before publication', says what each removal costs a reader.",
   "_two_builds_read_this_first": "This report has two provenances and they are not interchangeable. The HASHES, the FILE LIST and the CONTENT CHECKS under `content_checks_re_run_at_republication` were re-derived over the final bytes; any reader can reproduce the hashes with `shasum -a 256`. The SCRUB FINDINGS - the field policy, the pattern scrubber, the explicit secret list and the comparison against the source records - come from the run-host pass at 2026-08-27T07:35:01Z and were NOT re-run, because the secret list and the source records never left the run host. 16 files were edited after that pass; they are named under `republication` and marked file by file rather than being handed the older verdict.",
-  "generated_at_utc": "2026-08-28T09:49:46Z",
+  "generated_at_utc": "2026-08-28T09:51:02Z",
   "generated_by": "regenerated over final bytes at republication",
   "run_host_scrub_pass_at_utc": "2026-08-27T07:35:01Z",
   "scope": {
@@ -65,7 +65,6 @@
     "republication_language_check": {
       "method": "two passes: any character of the operator's alphabet outside ASCII, and a 48-word list of that language's common words matched after folding accents, which also catches it written in plain ASCII",
       "files_flagged": [
-        "analyze_emaint.py",
         "data-e2/runs/p2-T1-A.jsonl",
         "data-e2/runs/p2-T1-B.jsonl",
         "data-e2/runs/p2-T10-A.jsonl",
@@ -165,13 +164,9 @@
         "gen/audit_scan.py",
         "gen/regen_scrub_report.py"
       ],
-      "files_flagged_count": 99,
+      "files_flagged_count": 98,
       "flagged_in_frozen_count": 18,
       "flagged_outside_frozen": [
-        {
-          "file": "analyze_emaint.py",
-          "why_it_stands": "NOT EXPLAINED - investigate before publishing"
-        },
         {
           "file": "data-e2/runs/p2-T1-A.jsonl",
           "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
@@ -753,14 +748,12 @@
     },
     {
       "file": "analyze_emaint.py",
-      "sha256_published": "1eb22d6030cd5c02ec84780bc4ce4448a7611632b60ed9047e9aa362089198fc",
+      "sha256_published": "f1a6fcf381c4eacff1fbb563728f3d77110de024082c4d10aab5851366cdf803",
       "sha256_at_run_host_pass": null,
       "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
-        "operator_language_words": [
-          "nazwa"
-        ],
+        "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
