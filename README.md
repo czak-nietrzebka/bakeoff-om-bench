@@ -106,6 +106,27 @@ in both experiments.** We publish the measurements.
 engineered to make AI agents productive — the strongest publicly available baseline we
 know of. Nothing in this benchmark measures Open Mercato itself; both arms work *on* it.
 
+### Exactly what was under test
+
+Stated here so that no reader has to reconstruct it from the phase protocols.
+
+| | |
+|---|---|
+| repository | [`open-mercato/open-mercato`](https://github.com/open-mercato/open-mercato) |
+| revision | `15ffbe30cec417ae1acc1f609e4278e6fb11d9b0` (the records store it abbreviated, `15ffbe30ce`), authored 2026-08-25T05:50:52Z — about eight hours before this repository's pre-registration commit |
+| where that revision is recorded | the `sha_om` field, defined in [`data/README.md`](data/README.md) as "commit of the arena repository". Every published **run-level** record carries it — 130 of 130 across all three phases, one distinct value, none missing. (Journal and judge records are a different record type and do not carry it.) |
+| how to check that yourself | `find data data-e2 data-emaint -path '*/runs/*' -name '*.jsonl' -exec cat {} + \| python3 -c "import json,sys,collections; r=[json.loads(l) for l in sys.stdin if l.strip()]; print(len(r), collections.Counter(x.get('sha_om') for x in r))"` |
+| task set | the twelve frozen specs in [`frozen/scenario/`](frozen/scenario/), hashed in `frozen/MANIFEST.sha256` before any run |
+| when | Experiment 1 runs from `2026-08-26T08:52:35` to `2026-08-27T12:46:44` as recorded in `data/runs/p1-*.jsonl`. Those strings carry no offset; the runner's zone was UTC+02:00 throughout the series (`data/README.md`, field dictionary). The later phases carry their own windows in their own records. |
+| what was **not** evaluated | Open Mercato itself — not its quality, performance, security or fitness. It is the surface both arms worked on, and it was identical for both. No result in this repository is a statement about it. |
+
+Open Mercato is an independent open-source project, used here under its own public licence.
+This benchmark was not commissioned, funded or endorsed by it; the design, execution and
+adjudication are the ones recorded in this repository and are entirely the authors'. The
+name appears only to identify the code that was worked on. The project spells itself
+**Open Mercato**; the abbreviation `om` in this repository's name and in the `sha_om` field
+is ours, not theirs.
+
 ## What the overhead buys — measured, both directions
 
 The 2026 backlash against AI-generated code has a specific shape: reviewers drowning
