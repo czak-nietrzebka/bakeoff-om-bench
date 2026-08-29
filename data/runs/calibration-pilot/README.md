@@ -1,4 +1,5 @@
-PILOT-KALIBRACJA (2026-08-25, kwit #5404) — rekordy i journal pary 1 z pilota.
-Przeniesione 2026-08-26 08:57 PRZED domknieciem pierwszego headline-rekordu,
-zeby seria headline RUN-1 (kwit #5454, start 08:56) pisala czysty namespace p1-*.
-Zawartosc NIETKNIETA (append-only); journal zawiera tez 1 wpis spawn T1-A headline 08:56.
+CALIBRATION PILOT (2026-08-25) - the records and journal of pair 1 from the pilot.
+Moved here 2026-08-26 08:57, BEFORE the first headline record was closed, so that the
+headline series RUN-1 (started 08:56) would write a clean p1-* namespace.
+The contents are UNTOUCHED (append-only); the journal also holds 1 spawn entry for the
+headline T1-A at 08:56.

@@ -1,8 +1,29 @@
 #!/usr/bin/env python3
-"""Independent grep pass over the publication package. Wider than the regen check."""
+"""Independent grep pass over the publication package. Wider than the regen check.
+
+    python3 gen/audit_scan.py [ROOT] [--json]
+
+Exit 0 = no disqualifying hit, 1 = at least one secret shape or internal-identity hit,
+2 = the internal-identity pass could not run (see below).
+
+Four classes are reported. Three of them a reader can re-run and judge: operator-language
+(diacritics and a folded word list), absolute filesystem paths, and secret shapes.
+
+The fourth — internal identity: host names, agent names, ticket and client names that must
+never appear in a public package — needs a list of those names, and publishing that list
+would itself be the disclosure it exists to prevent. So the list is NOT in this file. It is
+read from `gen/internal-terms.txt` (or $BENCH_INTERNAL_TERMS), one term per line, `#` for
+comments; that file is not published.
+
+When the term list is absent this pass reports `NOT RUN` and the exit code is 2. That is
+deliberate: a check that cannot run must say so, because a silent skip is indistinguishable
+from a pass, and this class of check is exactly where a silent pass does the damage.
+"""
 import os, re, sys, unicodedata, collections
 
-ROOT = sys.argv[1]
+argv = [a for a in sys.argv[1:] if not a.startswith("--")]
+AS_JSON = "--json" in sys.argv[1:]
+ROOT = argv[0] if argv else "."
 
 PL_DIA = set("ąćęłńóśźżĄĆĘŁŃÓŚŹŻ")
 PL_WORDS = """jest sie oraz przez zeby tylko wszystkie zostal zostaly bylo byla jako czyli
@@ -39,16 +60,34 @@ SECRETS = [("provider-key", re.compile(r"\bsk-[A-Za-z0-9_\-]{16,}")),
            ("basic-url-cred", re.compile(r"https?://[^\s/@\"']+:[^\s/@\"']+@")),
            ]
 
-INTERNAL = ["czak-lee", "czaklee", "kwit", "kwity", "krowa", "krowy", "azymut", "bolec",
-            "whip", "meeseeks", "korvo", "mulder", "forgejo", "hetzner", "itm8",
-            "czak-mesh", "czak-v2", "wafel", "wafle", "cukierek", "landrynka", "kutas",
-            "lore", "prot", "czlek", "czleki", "mdc", "renfield", "nietrzebka",
-            "wellysa", "credipass", "optimo", "entaro", "medak", "dorfl", "borewicz",
-            "czakins", "sdlc", "openbao", "sierota", "obstawka", "zagroda",
-            "piotr", "czesiek", "cze@", "telegram", "orchestrator", "channel_gateway",
-            "task-queue", "meta_handler", "bakeoff", "ext-workspaces", "gex44",
-            "claude-pool", "protocol_runtime", "_TOOL_IMPLS", "czak_"]
-INT_RX = re.compile(r"(%s)" % "|".join(re.escape(w) for w in INTERNAL), re.I)
+TERMS_FILE = os.environ.get(
+    "BENCH_INTERNAL_TERMS",
+    os.path.join(os.path.dirname(os.path.abspath(__file__)), "internal-terms.txt"))
+
+
+def load_internal_terms(path):
+    """The identity term list, or None when it is not in this checkout.
+
+    None is a THIRD state and is reported as such. It is never folded into "no hits":
+    the earlier edition of this scanner carried the terms inline, which both published
+    them and buried the real hits among the package's own vocabulary — `bakeoff` and
+    `prot` (a substring of "protocol") matched on nearly every file, so the four lines
+    that mattered scrolled past inside 110 that did not.
+    """
+    try:
+        with open(path, encoding="utf-8") as fh:
+            terms = [ln.strip() for ln in fh]
+    except OSError:
+        return None
+    return [t for t in terms if t and not t.startswith("#")]
+
+
+INTERNAL = load_internal_terms(TERMS_FILE)
+# Word-bounded on purpose. The inline list this replaced matched substrings, so "explore"
+# reported as `lore` and "protocol" as `prot`; the noise was most of the report.
+INT_RX = re.compile(
+    r"(?<![A-Za-z0-9])(%s)(?![A-Za-z0-9])" % "|".join(re.escape(w) for w in INTERNAL),
+    re.I) if INTERNAL else None
 
 
 def fold(t):
@@ -62,7 +101,10 @@ def files():
         for n in sorted(fs):
             if n.startswith("._"):
                 continue
-            yield os.path.relpath(os.path.join(base, n), ROOT).replace(os.sep, "/")
+            p = os.path.join(base, n)
+            if os.path.abspath(p) == os.path.abspath(TERMS_FILE):
+                continue  # the term list is not published and must not report itself
+            yield os.path.relpath(p, ROOT).replace(os.sep, "/")
 
 
 agg = collections.defaultdict(lambda: collections.defaultdict(collections.Counter))
@@ -83,10 +125,24 @@ for rel in files():
     for name, rx in SECRETS:
         for m in rx.finditer(t):
             agg["secret:" + name][rel][m.group(0)[:24]] += 1
-    for m in INT_RX.finditer(t):
-        agg["internal"][rel][m.group(0).lower()] += 1
+    if INT_RX is not None:
+        for m in INT_RX.finditer(t):
+            agg["internal"][rel][m.group(0).lower()] += 1
 
-for cls in sorted(agg):
-    print("\n########## %s ##########" % cls)
-    for rel in sorted(agg[cls]):
-        print("  %-55s %s" % (rel, dict(agg[cls][rel].most_common(12))))
+if AS_JSON:
+    import json
+    out = {cls: {rel: dict(c) for rel, c in files_.items()} for cls, files_ in agg.items()}
+    out["_internal_pass"] = "ran" if INT_RX is not None else "NOT RUN: %s absent" % TERMS_FILE
+    print(json.dumps(out, sort_keys=True, indent=2))
+else:
+    for cls in sorted(agg):
+        print("\n########## %s ##########" % cls)
+        for rel in sorted(agg[cls]):
+            print("  %-55s %s" % (rel, dict(agg[cls][rel].most_common(12))))
+    if INT_RX is None:
+        print("\n########## internal ##########")
+        print("  NOT RUN — term list absent (%s). This is not a pass." % TERMS_FILE)
+
+if INT_RX is None:
+    sys.exit(2)
+sys.exit(1 if (agg.get("internal") or any(c.startswith("secret:") for c in agg)) else 0)

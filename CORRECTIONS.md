@@ -75,3 +75,100 @@ eighty false ones on the first run.
 Three of the four corrections above would have been caught by it. C3 is caught by the
 artifact check specifically, which exists because a missing hash record reads exactly
 like a typo and is not one.
+
+---
+
+## 2026-08-29 (second pass) — what the package said it had removed, and had not
+
+State before this pass: commit `3434bb0`.
+
+Found while verifying the push above, by running the package's own leak scrubber
+(`gen/audit_scan.py`) — which had been in the tree, and firing, since publication. The
+check added in the first pass reported `clean` over the same tree, because it ran neither
+the scrubber nor the manifests. A gate that does not run the checks the package already
+owns is not a gate.
+
+### C5 — the host name was declared scrubbed and was not
+
+`SCRUB-REPORT.json` → `layers[0]` says "the host name replaced with a marker", and
+`data/README.md` said the `host` field was "replaced with `[scrubbed:host]`". Neither was
+true of the published bytes: **130 records in 80 files** carried the run host's real short
+name, and no marker was ever written. The field-count table alongside those claims says 42
+files, which is not the number of files that carry the field.
+
+**The value is now the marker `run-host` in every record that has the field.** The key is
+kept, line counts and key sets are unchanged, and no numeric, timestamp, verdict or gate
+field was touched.
+
+### C6 — internal names in free text the recovery had re-fetched untranslated
+
+The 2026-08-28 recovery re-fetched records and archive READMEs with their original
+operator-language wording, which the lost copy had carried in English. That wording named
+internal systems, an unrelated production agent of the operator's, and internal ticket
+numbers. Rewritten in English, with internal names replaced by what they are: five `notes`
+values, all **219** `nie_umiem_zmierzyc[].powod` values, one journal repository path, four
+archive READMEs, and the two E2 documents — now `e2/RUNNER-NOTES.md` and
+`e2/SYMMETRY-E2.md`.
+
+`data/README.md` had already claimed the `powod` values were rewritten in English. They
+were not, until this pass. That field is the package's third state — the place a record
+says *why* a number could not be measured — so leaving it unreadable to an English reader
+defeated the point of having it.
+
+### C7 — the scan fired, and nothing could read it
+
+`gen/audit_scan.py` had the host name and the rest on its internal-term list and reported
+them on every run. Its `internal` section held **110 entries**, almost all of them the package's own
+vocabulary matched as substrings — `prot` inside "protocol", `lore` inside "explore",
+`bakeoff` in the project's own name. The four lines that mattered scrolled past inside a
+hundred that did not.
+
+Worse, that list was itself published: about fifty internal names, including client names,
+sitting in a public file as the price of running the check. **The list is no longer in the
+scanner.** It is read from an unpublished file; matching is word-bounded; and when the list
+is absent the scan reports `NOT RUN` and exits 2 rather than reporting nothing found. The
+reader-runnable passes — operator-language, absolute paths, secret shapes — are unchanged
+and still in the published file.
+
+### C8 — the accounting fields were present by name and empty in substance
+
+- `known_residue` held `{"note": "(recovered) see RECOVERY-NOTE.md"}`, and
+  `RECOVERY-NOTE.md` says nothing about residue. **It is now computed** from the published
+  bytes and states what remains, including what this correction did not fix.
+- `agreement_with_the_run_host_check` read "The run-host check flagged **0** files, all
+  under frozen/. This check flags the same **18**." One number was computed from a list the
+  recovery had returned empty; the other was typed. **The generator no longer claims an
+  agreement it cannot compute**, and says the run-host list did not survive.
+- `verified_against_source` asserted that no run record had been edited. That was true when
+  written and is not true now. **Restated**, with what changed and what still holds.
+
+### C9 — a second manifest with no accounting page
+
+`e2/MANIFEST-E2.sha256` hash-commits three files; one of them, `codex_agent.py`, is not
+published. A reader running `shasum -c` got `FAILED open or read` and had nothing to read
+about it. This is the same defect as C3, one experiment over. **`e2/WITHHELD.md` now
+exists**, names the file, states why it is withheld and carries the hash it must match.
+
+The manifest also carried five lines of prose in the operator's language. `shasum -c` skips
+anything it cannot parse **without a word of complaint**, so that text was invisible to the
+very command the documents tell the reader to run. The comments are now in English and
+point at `e2/WITHHELD.md`; the three hash lines are byte-identical and still verify.
+
+### What is now checked automatically
+
+`check_package.py` additionally: verifies every line of both manifests and requires that
+anything which does not verify be named — literally or by a pattern — in that manifest's
+accounting page; reports any manifest line that `shasum` would silently skip; parses every
+line of every published record file; and runs `gen/audit_scan.py`, failing on a secret shape
+or an internal name that is not in a written, reasoned allowlist, and reporting the
+`NOT RUN` state as a third outcome rather than as a pass.
+
+Every defect in this pass would have been caught by it.
+
+### What this pass did not do
+
+Git history is not rewritten. Commits before this one still carry the host name and the
+untranslated notes, and the term list is still in the history of `gen/audit_scan.py`. That
+was a deliberate choice: the run records are the evidence this package exists to publish,
+and rewriting their history to chase bytes that have already been public costs more than it
+buys. It is written here rather than left to be discovered.

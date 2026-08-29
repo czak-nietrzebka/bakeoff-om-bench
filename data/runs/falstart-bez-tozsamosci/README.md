@@ -1,12 +1,12 @@
-FALSTART POWTORKI RAMIENIA B (2026-08-26 ~15:1x) — ZERO POMIARU, nie wyniki.
+FALSE START OF THE ARM-B RERUN (2026-08-26, ~15:1x) - ZERO MEASUREMENT, not results.
 
-Kazda iteracja konczyla sie natychmiast: whip nie mogl flipnac kwitu na
-`status/in-progress`, bo czak `lee-bakeoff` NIE MIAL wlasnej tozsamosci forge
-(konto bota nie istnieje) i spadal na shared-PAT, ktory tego dnia zostal
-uniewazniony. Efekt: sesja nigdy nie wstala, brama widziala brak PR-a,
-`dnf_check` domykal run po 5 pustych obrotach. $0.0 = zero tokenow = zero pracy.
+Every iteration ended immediately: the dispatcher could not flip the work ticket to
+`status/in-progress`, because the arm-B agent HAD NO FORGE IDENTITY OF ITS OWN (its bot
+account did not exist) and fell back to a shared access token that had been revoked that
+day. The effect: the session never started, the gate saw no PR, and `dnf_check` closed the
+run after 5 empty cycles. $0.0 = zero tokens = zero work.
 
-Naprawa: store `czak-lee-bakeoff` z tozsamoscia rodzica (`czak-lee`) — subczak
-firmowany przez Lee zamiast shared-PAT admina (zgodnie z czak-v2#5389).
+Fix: a credential store for the arm-B agent carrying its parent agent's identity - a
+sub-agent vouched for by its parent instead of an administrator's shared token.
 
-Rekordy zachowane jako slad, NIE licza sie do zadnej statystyki.
+The records are kept as a trace. They count towards no statistic.

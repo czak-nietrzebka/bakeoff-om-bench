@@ -1,0 +1,9 @@
+# The internal-identity term list used by gen/audit_scan.py. It is deliberately not
+# published: a list of the names that must never appear here would itself be the
+# disclosure the check exists to prevent. Without it the check reports NOT RUN and exits
+# 2 — a stated third state, never a silent pass. See the docstring in gen/audit_scan.py.
+gen/internal-terms.txt
+
+# macOS resource forks
+._*
+.DS_Store

@@ -1,2 +1,2 @@
 {"ts": 1787649867.8300967, "step": "provision", "phase": "attempt", "run_id": "", "payload": {"akt": "migrate"}}
-{"ts": 1787649920.8298712, "step": "provision", "phase": "done", "run_id": "", "payload": {"akt": "migrate", "czas_s": 53.0, "repo": "czak-mesh/bakeoff-om"}}
+{"ts": 1787649920.8298712, "step": "provision", "phase": "done", "run_id": "", "payload": {"akt": "migrate", "czas_s": 53.0, "repo": "arena-org/bakeoff-om"}}

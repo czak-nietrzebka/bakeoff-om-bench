@@ -1,10 +1,8 @@
 da7e21ae2cc524b134ecbb34108500b613dfb18b53319e30d23311a8708cfc39  PROTOCOL-E2.md
 7b774f288468c6136458ae1ee204425dbf801a3a076078ae728ddb55a2b5881a  codex_agent.py
 a16d7edd877d1efe8851699f0b5519e53ad9c7ed57f22821f51e0bec5b460147  pricing-e2.json
-# exec_e2.py (runner) celowo POZA manifestem — jak exec_real w E1
-# refreeze E2-A1: imputacja per-request z rolloutu (pilot zlapal +40% bias)
-# refreeze E2-A2: sandbox off + klasyfikator po typie eventu
-# refreeze E2-A2b: A2 zostal pierwotnie WGRANY POD ZLA SCIEZKE (/tmp/codex_agent.py
-#   zamiast /tmp/bo_codex_agent.py) i proba 5 pilota jechala STARYM silnikiem —
-#   $ w piach, wykryte po polityce sandboxa w meta sesji; kontrola sum md5
-#   na obu koncach dolozona do procedury startu
+# exec_e2.py (the runner) is deliberately OUTSIDE this manifest, as exec_real was in E1:
+#   it is the harness, not the frozen material.
+# codex_agent.py is listed here but is NOT published — see e2/WITHHELD.md for what it is,
+#   why it is withheld, and the hash it must match when it is released.
+# The refreeze history of this manifest (E2-A1, E2-A2, E2-A2b) is in e2/WITHHELD.md too.

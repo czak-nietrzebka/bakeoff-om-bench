@@ -1,24 +1,27 @@
 {
   "_what_this_is": "What was removed from the files in this repository before publication, and the evidence that nothing was left behind. This edition was regenerated as the LAST step of the build over the FINAL bytes of every published file, so every hash below is the hash of the file as shipped. data/README.md, section 'What was removed before publication', says what each removal costs a reader.",
-  "_two_builds_read_this_first": "This report has two provenances and they are not interchangeable. The HASHES, the FILE LIST and the CONTENT CHECKS under `content_checks_re_run_at_republication` were re-derived over the final bytes; any reader can reproduce the hashes with `shasum -a 256`. The SCRUB FINDINGS - the field policy, the pattern scrubber, the explicit secret list and the comparison against the source records - come from the run-host pass at 2026-08-27T07:35:01Z and were NOT re-run, because the secret list and the source records never left the run host. 16 files were edited after that pass; they are named under `republication` and marked file by file rather than being handed the older verdict.",
-  "generated_at_utc": "2026-08-28T09:51:02Z",
+  "_two_builds_read_this_first": "This report has two provenances and they are not interchangeable. The HASHES, the FILE LIST and the CONTENT CHECKS under `content_checks_re_run_at_republication` were re-derived over the final bytes; any reader can reproduce the hashes with `shasum -a 256`. The SCRUB FINDINGS - the field policy, the pattern scrubber, the explicit secret list and the comparison against the source records - come from the run-host pass at 2026-08-27T07:35:01Z and were NOT re-run, because the secret list and the source records never left the run host. 107 files were edited after that pass; they are named under `republication` and marked file by file rather than being handed the older verdict.",
+  "generated_at_utc": "2026-08-29T13:36:27Z",
   "generated_by": "regenerated over final bytes at republication",
   "run_host_scrub_pass_at_utc": "2026-08-27T07:35:01Z",
   "scope": {
     "root": "the whole published repository, not just data/",
-    "files_in_repository": 148,
-    "files_hashed": 147,
+    "files_in_repository": 153,
+    "files_hashed": 152,
     "arithmetic": "files_in_repository = files_hashed + 1; the one not hashed is this report, which is written last and cannot hash itself.",
     "excluded": [
       ".git/",
       "macOS resource forks",
-      "this file itself"
+      "this file itself",
+      "gen/internal-terms.txt"
     ],
     "note": "(recovered) scope note re-created during the 2026-08-28 rebuild — the original did not survive; see RECOVERY-NOTE.md"
   },
   "republication": {
     "_what_happened": "Publication was halted and files were corrected after the run-host scrub pass. The corrections: the three archive directories under data/runs/ renamed out of the operator's language into English; data/usage_summary.py made read-only unless --write is passed, because the documented command rewrote data/usage-summary.json and so broke this package's own hash chain; the arm-B burdened archive stated as the four records it holds rather than five; frozen/WITHHELD.md given a file-by-file accounting of the 32 withheld paths; and the prose in the documents those changes touch.",
     "files_edited_after_the_run_host_pass": [
+      ".gitignore",
+      "CORRECTIONS.md",
       "LOGBOOK.md",
       "README.md",
       "REPORT-E2.md",
@@ -26,28 +29,109 @@
       "REPORT.md",
       "analyze_e2.py",
       "analyze_emaint.py",
+      "check_package.py",
+      "data-e2/runs/p2-T1-A.jsonl",
+      "data-e2/runs/p2-T1-B.jsonl",
+      "data-e2/runs/p2-T10-A.jsonl",
+      "data-e2/runs/p2-T10-B.jsonl",
+      "data-e2/runs/p2-T11-A.jsonl",
+      "data-e2/runs/p2-T11-B.jsonl",
+      "data-e2/runs/p2-T12-A.jsonl",
+      "data-e2/runs/p2-T12-B.jsonl",
+      "data-e2/runs/p2-T2-A.jsonl",
+      "data-e2/runs/p2-T2-B.jsonl",
+      "data-e2/runs/p2-T3-A.jsonl",
+      "data-e2/runs/p2-T3-B.jsonl",
+      "data-e2/runs/p2-T4-A.jsonl",
+      "data-e2/runs/p2-T4-B.jsonl",
+      "data-e2/runs/p2-T5-A.jsonl",
+      "data-e2/runs/p2-T5-B.jsonl",
+      "data-e2/runs/p2-T6-A.jsonl",
+      "data-e2/runs/p2-T6-B.jsonl",
+      "data-e2/runs/p2-T7-A.jsonl",
+      "data-e2/runs/p2-T7-B.jsonl",
+      "data-e2/runs/p2-T8-A.jsonl",
+      "data-e2/runs/p2-T8-B.jsonl",
+      "data-e2/runs/p2-T9-A.jsonl",
+      "data-e2/runs/p2-T9-B.jsonl",
+      "data-e2/runs/pilot-kalibracja-e2/p2-T1-A.jsonl",
+      "data-e2/runs/pilot-kalibracja-e2/p2-T1-B.jsonl",
+      "data-emaint/runs/em-M1-A.jsonl",
+      "data-emaint/runs/em-M1-B.jsonl",
+      "data-emaint/runs/em-M2-A.jsonl",
+      "data-emaint/runs/em-M2-B.jsonl",
+      "data-emaint/runs/em-M3-A.jsonl",
+      "data-emaint/runs/em-M3-B.jsonl",
+      "data-emaint/runs/em-M4-A.jsonl",
+      "data-emaint/runs/em-M4-B.jsonl",
       "data-emaint/runs/em-M5-A.jsonl",
+      "data-emaint/runs/em-M5-B.jsonl",
       "data-emaint/runs/em-M6-A.jsonl",
+      "data-emaint/runs/em-M6-B.jsonl",
       "data/README.md",
+      "data/journal/p0.jsonl",
+      "data/journal/pilot-kalibracja/README.md",
       "data/runs/burdened-node22/README.md",
-      "data/usage-summary.json",
-      "data/usage_summary.py",
-      "frozen/AMENDMENTS.md",
-      "frozen/WITHHELD.md",
-      "gen/regen_scrub_report.py"
-    ],
-    "files_edited_count": 16,
-    "files_whose_bytes_the_run_host_oracle_saw": 131,
-    "renamed_with_identical_bytes": [
       "data/runs/burdened-node22/p1-T1-B.jsonl",
       "data/runs/burdened-node22/p1-T2-B.jsonl",
       "data/runs/burdened-node22/p1-T3-B.jsonl",
       "data/runs/burdened-node22/p1-T4-B.jsonl",
       "data/runs/calibration-pilot/README.md",
       "data/runs/calibration-pilot/p1-T1-A.jsonl",
-      "data/runs/calibration-pilot/p1-T1-B.jsonl"
+      "data/runs/calibration-pilot/p1-T1-B.jsonl",
+      "data/runs/falstart-bez-tozsamosci/README.md",
+      "data/runs/falstart-bez-tozsamosci/p1-T1-B.jsonl",
+      "data/runs/falstart-bez-tozsamosci/p1-T10-B.jsonl",
+      "data/runs/falstart-bez-tozsamosci/p1-T11-B.jsonl",
+      "data/runs/falstart-bez-tozsamosci/p1-T12-B.jsonl",
+      "data/runs/falstart-bez-tozsamosci/p1-T2-B.jsonl",
+      "data/runs/falstart-bez-tozsamosci/p1-T3-B.jsonl",
+      "data/runs/falstart-bez-tozsamosci/p1-T4-B.jsonl",
+      "data/runs/falstart-bez-tozsamosci/p1-T5-B.jsonl",
+      "data/runs/falstart-bez-tozsamosci/p1-T6-B.jsonl",
+      "data/runs/falstart-bez-tozsamosci/p1-T7-B.jsonl",
+      "data/runs/falstart-bez-tozsamosci/p1-T8-B.jsonl",
+      "data/runs/falstart-bez-tozsamosci/p1-T9-B.jsonl",
+      "data/runs/p1-T1-A.jsonl",
+      "data/runs/p1-T1-B.jsonl",
+      "data/runs/p1-T10-A.jsonl",
+      "data/runs/p1-T10-B.jsonl",
+      "data/runs/p1-T11-A.jsonl",
+      "data/runs/p1-T11-B.jsonl",
+      "data/runs/p1-T12-A.jsonl",
+      "data/runs/p1-T12-B.jsonl",
+      "data/runs/p1-T2-A.jsonl",
+      "data/runs/p1-T2-B.jsonl",
+      "data/runs/p1-T3-A.jsonl",
+      "data/runs/p1-T3-B.jsonl",
+      "data/runs/p1-T4-A.jsonl",
+      "data/runs/p1-T4-B.jsonl",
+      "data/runs/p1-T5-A.jsonl",
+      "data/runs/p1-T5-B.jsonl",
+      "data/runs/p1-T6-A.jsonl",
+      "data/runs/p1-T6-B.jsonl",
+      "data/runs/p1-T7-A.jsonl",
+      "data/runs/p1-T7-B.jsonl",
+      "data/runs/p1-T8-A.jsonl",
+      "data/runs/p1-T8-B.jsonl",
+      "data/runs/p1-T9-A.jsonl",
+      "data/runs/p1-T9-B.jsonl",
+      "data/usage-summary.json",
+      "data/usage_summary.py",
+      "e2/MANIFEST-E2.sha256",
+      "e2/RUNNER-NOTES.md",
+      "e2/SYMMETRY-E2.md",
+      "e2/WITHHELD.md",
+      "emaint/WITHHELD.md",
+      "frozen/AMENDMENTS.md",
+      "frozen/WITHHELD.md",
+      "gen/audit_scan.py",
+      "gen/regen_scrub_report.py"
     ],
-    "renamed_with_identical_bytes_count": 7,
+    "files_edited_count": 107,
+    "files_whose_bytes_the_run_host_oracle_saw": 45,
+    "renamed_with_identical_bytes": [],
+    "renamed_with_identical_bytes_count": 0,
     "_what_the_rename_did_not_do": "Every file listed above moved when its archive directory was renamed, and each hashes to exactly what it hashed before the move. That is the evidence for the claim in data/README.md that only the directory names changed. The one file inside a renamed directory whose bytes did change is that directory's README, edited on purpose and listed among the edited files. The names the directories carried before the rename are not reprinted here: they were in the operator's language, and putting them back into the package would undo the point of renaming them.",
     "re_run_at_republication": [
       "SHA-256 of every published file, over final bytes",
@@ -67,34 +151,12 @@
       "files_flagged": [
         "data-e2/runs/p2-T1-A.jsonl",
         "data-e2/runs/p2-T1-B.jsonl",
-        "data-e2/runs/p2-T10-A.jsonl",
-        "data-e2/runs/p2-T10-B.jsonl",
-        "data-e2/runs/p2-T11-A.jsonl",
-        "data-e2/runs/p2-T11-B.jsonl",
-        "data-e2/runs/p2-T12-A.jsonl",
-        "data-e2/runs/p2-T12-B.jsonl",
-        "data-e2/runs/p2-T2-A.jsonl",
-        "data-e2/runs/p2-T2-B.jsonl",
-        "data-e2/runs/p2-T3-A.jsonl",
-        "data-e2/runs/p2-T3-B.jsonl",
-        "data-e2/runs/p2-T4-A.jsonl",
-        "data-e2/runs/p2-T4-B.jsonl",
-        "data-e2/runs/p2-T5-A.jsonl",
         "data-e2/runs/p2-T5-B.jsonl",
-        "data-e2/runs/p2-T6-A.jsonl",
-        "data-e2/runs/p2-T6-B.jsonl",
-        "data-e2/runs/p2-T7-A.jsonl",
-        "data-e2/runs/p2-T7-B.jsonl",
-        "data-e2/runs/p2-T8-A.jsonl",
-        "data-e2/runs/p2-T8-B.jsonl",
-        "data-e2/runs/p2-T9-A.jsonl",
-        "data-e2/runs/p2-T9-B.jsonl",
         "data-e2/runs/pilot-kalibracja-e2/p2-T1-A.jsonl",
         "data-e2/runs/pilot-kalibracja-e2/p2-T1-B.jsonl",
         "data-emaint/runs/em-M1-A.jsonl",
         "data-emaint/runs/em-M1-B.jsonl",
         "data-emaint/runs/em-M2-A.jsonl",
-        "data-emaint/runs/em-M2-B.jsonl",
         "data-emaint/runs/em-M3-B.jsonl",
         "data-emaint/runs/em-M4-A.jsonl",
         "data-emaint/runs/em-M4-B.jsonl",
@@ -105,16 +167,12 @@
         "data/README.md",
         "data/journal/p1.jsonl",
         "data/journal/p2.jsonl",
-        "data/journal/pilot-kalibracja/README.md",
         "data/judge/e1-judge.jsonl",
         "data/judge/e2-judge.jsonl",
         "data/judge/emaint-judge.jsonl",
-        "data/runs/burdened-node22/README.md",
         "data/runs/burdened-node22/p1-T1-B.jsonl",
-        "data/runs/calibration-pilot/README.md",
         "data/runs/calibration-pilot/p1-T1-A.jsonl",
         "data/runs/calibration-pilot/p1-T1-B.jsonl",
-        "data/runs/falstart-bez-tozsamosci/README.md",
         "data/runs/p1-T1-A.jsonl",
         "data/runs/p1-T10-A.jsonl",
         "data/runs/p1-T11-A.jsonl",
@@ -126,10 +184,6 @@
         "data/runs/p1-T6-A.jsonl",
         "data/runs/p1-T7-A.jsonl",
         "data/runs/p1-T8-A.jsonl",
-        "data/runs/p1-T9-B.jsonl",
-        "e2/MANIFEST-E2.sha256",
-        "e2/NOTATKI-RUNNERA.md",
-        "e2/SYMETRIA-E2.md",
         "e2/pricing-e2.json",
         "emaint/specs/M1-scoring.md",
         "emaint/specs/M1-spec.md",
@@ -164,7 +218,7 @@
         "gen/audit_scan.py",
         "gen/regen_scrub_report.py"
       ],
-      "files_flagged_count": 98,
+      "files_flagged_count": 68,
       "flagged_in_frozen_count": 18,
       "flagged_outside_frozen": [
         {
@@ -176,91 +230,7 @@
           "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
         },
         {
-          "file": "data-e2/runs/p2-T10-A.jsonl",
-          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
-        },
-        {
-          "file": "data-e2/runs/p2-T10-B.jsonl",
-          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
-        },
-        {
-          "file": "data-e2/runs/p2-T11-A.jsonl",
-          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
-        },
-        {
-          "file": "data-e2/runs/p2-T11-B.jsonl",
-          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
-        },
-        {
-          "file": "data-e2/runs/p2-T12-A.jsonl",
-          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
-        },
-        {
-          "file": "data-e2/runs/p2-T12-B.jsonl",
-          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
-        },
-        {
-          "file": "data-e2/runs/p2-T2-A.jsonl",
-          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
-        },
-        {
-          "file": "data-e2/runs/p2-T2-B.jsonl",
-          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
-        },
-        {
-          "file": "data-e2/runs/p2-T3-A.jsonl",
-          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
-        },
-        {
-          "file": "data-e2/runs/p2-T3-B.jsonl",
-          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
-        },
-        {
-          "file": "data-e2/runs/p2-T4-A.jsonl",
-          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
-        },
-        {
-          "file": "data-e2/runs/p2-T4-B.jsonl",
-          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
-        },
-        {
-          "file": "data-e2/runs/p2-T5-A.jsonl",
-          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
-        },
-        {
           "file": "data-e2/runs/p2-T5-B.jsonl",
-          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
-        },
-        {
-          "file": "data-e2/runs/p2-T6-A.jsonl",
-          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
-        },
-        {
-          "file": "data-e2/runs/p2-T6-B.jsonl",
-          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
-        },
-        {
-          "file": "data-e2/runs/p2-T7-A.jsonl",
-          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
-        },
-        {
-          "file": "data-e2/runs/p2-T7-B.jsonl",
-          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
-        },
-        {
-          "file": "data-e2/runs/p2-T8-A.jsonl",
-          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
-        },
-        {
-          "file": "data-e2/runs/p2-T8-B.jsonl",
-          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
-        },
-        {
-          "file": "data-e2/runs/p2-T9-A.jsonl",
-          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
-        },
-        {
-          "file": "data-e2/runs/p2-T9-B.jsonl",
           "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
         },
         {
@@ -281,10 +251,6 @@
         },
         {
           "file": "data-emaint/runs/em-M2-A.jsonl",
-          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
-        },
-        {
-          "file": "data-emaint/runs/em-M2-B.jsonl",
           "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
         },
         {
@@ -328,10 +294,6 @@
           "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
         },
         {
-          "file": "data/journal/pilot-kalibracja/README.md",
-          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
-        },
-        {
           "file": "data/judge/e1-judge.jsonl",
           "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
         },
@@ -344,15 +306,7 @@
           "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
         },
         {
-          "file": "data/runs/burdened-node22/README.md",
-          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
-        },
-        {
           "file": "data/runs/burdened-node22/p1-T1-B.jsonl",
-          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
-        },
-        {
-          "file": "data/runs/calibration-pilot/README.md",
           "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
         },
         {
@@ -362,10 +316,6 @@
         {
           "file": "data/runs/calibration-pilot/p1-T1-B.jsonl",
           "why_it_stands": "the record's own `dnf_reason` value, glossed in data/README.md's field dictionary"
-        },
-        {
-          "file": "data/runs/falstart-bez-tozsamosci/README.md",
-          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
         },
         {
           "file": "data/runs/p1-T1-A.jsonl",
@@ -409,22 +359,6 @@
         },
         {
           "file": "data/runs/p1-T8-A.jsonl",
-          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
-        },
-        {
-          "file": "data/runs/p1-T9-B.jsonl",
-          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
-        },
-        {
-          "file": "e2/MANIFEST-E2.sha256",
-          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
-        },
-        {
-          "file": "e2/NOTATKI-RUNNERA.md",
-          "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
-        },
-        {
-          "file": "e2/SYMETRIA-E2.md",
           "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
         },
         {
@@ -488,15 +422,14 @@
           "why_it_stands": "re-fetched from the run host during the 2026-08-28 recovery; carries the original operator-language note the lost copy had translated into English - numeric fields are the ledger's own and analyze.py reproduces the published table from them (RECOVERY-NOTE.md)"
         }
       ],
-      "agreement_with_the_run_host_check": "The run-host check flagged 0 files, all under frozen/. This check flags the same 18, and the diacritics pass alone would have found only 14 of them - which is why the word list exists. Every frozen file flagged is hash-committed in frozen/MANIFEST.sha256 and cannot be translated without breaking its manifest line."
+      "agreement_with_the_run_host_check": "The run-host check's own file list did NOT survive the 2026-08-28 recovery - what came back is an empty seed, so there is no number here to agree or disagree with, and none is claimed. (An earlier edition of this generator printed that empty list as '0 files, all under frozen/' in the same sentence that asserted 18: one number was computed, the other was typed.) What THIS check measures: 18 files flagged under frozen/, of which the diacritics pass alone would have found 14 - which is why the word list exists. Every frozen file flagged is hash-committed in frozen/MANIFEST.sha256 and cannot be translated without breaking its manifest line."
     },
     "republication_absolute_path_check": {
       "files_flagged": [
-        "data/runs/burdened-node22/README.md",
         "gen/audit_scan.py",
         "gen/regen_scrub_report.py"
       ],
-      "files_flagged_count": 3
+      "files_flagged_count": 2
     },
     "republication_secret_shape_check": {
       "files_flagged": [],
@@ -530,10 +463,33 @@
     "files_clean": 50,
     "files_the_scrubber_had_to_change": [],
     "interpretation": "The scrubber changed zero bytes, so the files were already clean when they reached it: the oracle is confirming a property of the published bytes rather than describing a last-minute rewrite. The published files were then verified byte-identical to the ones that passed.",
-    "_scope_note": "This is the run-host pass at 2026-08-27T07:35:01Z. It checked 50 files as they stood then. 16 of those files have since been edited; for them the result below does NOT describe the published bytes, and each is marked in `files`."
+    "_scope_note": "This is the run-host pass at 2026-08-27T07:35:01Z. It checked 50 files as they stood then. 107 of those files have since been edited; for them the result below does NOT describe the published bytes, and each is marked in `files`."
   },
   "known_residue": {
-    "note": "(recovered) see RECOVERY-NOTE.md"
+    "_what_this_is": "Everything this package knows it still carries, written down so a reader does not have to discover it. Until 2026-08-29 this field held the string '(recovered) see RECOVERY-NOTE.md', and RECOVERY-NOTE.md said nothing about residue: the accounting existed by name and was empty in substance. That is the same defect as a manifest with no WITHHELD page, and it is what let the item below stand.",
+    "host_field": {
+      "published_values": {
+        "run-host": 130
+      },
+      "records_carrying_the_field": 130,
+      "files_carrying_the_field": 80,
+      "what_happened": "`layers[0]` says the host name was replaced with a marker. For these records it was not: they carried the run host's real short name, and `fields_scrubbed_file_counts.host` (a run-host figure, kept below as it was) counts fewer files than actually carry the field. On 2026-08-29 the value was replaced with the marker `run-host` in every record that has the field. No other field was touched; line counts and key sets are unchanged.",
+      "still_true": "Git history is not rewritten, so commits before 2026-08-29 still carry the original value. That was a deliberate choice: the run records are the evidence this package exists to publish, and rewriting their history costs more than the name is worth."
+    },
+    "operator_language": {
+      "files_flagged": 68,
+      "under_frozen": 18,
+      "outside_frozen": 50,
+      "why_the_frozen_ones_stand": "They are hash-committed in frozen/MANIFEST.sha256. Translating one breaks its manifest line, which is the property the pre-registration is for.",
+      "why_the_others_stand": "They are run records and journals re-fetched from the run host in the 2026-08-28 recovery, carrying free-text notes in the operator's language. Every note that named an internal host, agent, client or ticket was rewritten in English on 2026-08-29; what remains is language, not identity - including the values of the `nie_umiem_zmierzyc.powod` field, whose KEY is deliberately left alone because renaming it would break the key-set claim above."
+    },
+    "internal_identity": {
+      "checked_by": "gen/audit_scan.py, consumed by check_package.py",
+      "not_in_this_report": "The identity pass needs a list of the names that must never appear here, and publishing that list would be the disclosure it prevents. The list is not published; without it the scan reports NOT RUN and exits 2, which check_package.py surfaces as a third state rather than as a pass.",
+      "declared_allowed": {
+        "README.md": "`czak-nietrzebka` - the GitHub account that owns this repository, unavoidable and already public."
+      }
+    }
   },
   "language_check": {
     "files_flagged": [],
@@ -548,7 +504,8 @@
     "payload.tool_use_id": 1,
     "session_ids": 15,
     "sha_czak": 42,
-    "sha_skills": 1
+    "sha_skills": 1,
+    "_scope_note": "The run-host pass at 2026-08-27T07:35:01Z, kept as it was recorded. It is NOT a description of the published bytes: `host` says 42 files while 80 files carry the field. See `known_residue.host_field`."
   },
   "verified_against_source": {
     "_what_this_is": "A field-by-field comparison of every published record against the record the instrument wrote, run at publication time. The source records are not published, so this is an assertion with a stated method rather than something a reader can re-run; the method is simple enough to audit if the source is ever disclosed.",
@@ -608,7 +565,7 @@
       "phase"
     ],
     "conclusion": "No field was added or removed anywhere. Only the seven fields declared above differ, and no number, timestamp, verdict or gate result differs at all.",
-    "_scope_note": "Run on the run host at 2026-08-27T07:35:01Z against the records the instrument wrote. Not re-run at republication, and unaffected by the republication edits: no run record was edited, and every record file under data/runs/ hashes to what it hashed at that pass."
+    "_scope_note": "Run on the run host at 2026-08-27T07:35:01Z against the records the instrument wrote. Not re-run since. It described the published bytes until 2026-08-29, when run records WERE edited for the first time: the `host` value replaced with a marker in every record carrying the field, and five free-text `notes` values rewritten in English. Both fields are already in `fields_that_differ_anywhere`, so the comparison's conclusion - that no number, timestamp, verdict or gate result differs from the source - still holds; but the hashes of those record files are no longer the ones this pass saw, and each is marked in `files`. Nothing else in any record was touched: the edit replaced two VALUES and added, removed and renamed no key and no line. That every record still parses is checked by check_package.py on every run."
   },
   "pseudonyms": {
     "sessions": 25,
@@ -617,6 +574,34 @@
     "note": "The mapping is one-way and is not published. Pseudonyms are stable across every file, so identity and change over time stay readable."
   },
   "files": [
+    {
+      "file": ".gitignore",
+      "sha256_published": "f8fe35355832e2cf7ab8186a2ecc00e74e0fc31199f8ec13f92a0047ce586e7c",
+      "sha256_at_run_host_pass": null,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
+    },
+    {
+      "file": "CORRECTIONS.md",
+      "sha256_published": "bb6fe7ad62001c6637a6ec200ce9cbec2d3f13b74de299b7c3e2e07e53b7c8cd",
+      "sha256_at_run_host_pass": null,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
+    },
     {
       "file": "LICENSE",
       "sha256_published": "9acb2dc57ca96e6a9d6d6b2c624367434e2661397efdf0adcce6e35e7bc94a27",
@@ -634,7 +619,7 @@
     },
     {
       "file": "LOGBOOK.md",
-      "sha256_published": "4798bc0c623189aceff45e6c3faef57678c0c94057d8eb243b113248d243ecc8",
+      "sha256_published": "c6d31405fdbea1acc54de3d3954258b8fef2f6cc1614b39523b2fb512685d6a0",
       "sha256_at_run_host_pass": null,
       "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
@@ -648,7 +633,7 @@
     },
     {
       "file": "README.md",
-      "sha256_published": "58933beb582a9f19cd51ea420df8c8ef8f81aae4c4643ad1d6401d4e20f7d321",
+      "sha256_published": "d6cbbc98652c4c80c448515654006e81158ee3964327c14a59667e00cdf63b92",
       "sha256_at_run_host_pass": null,
       "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
@@ -677,7 +662,7 @@
     },
     {
       "file": "REPORT-E2.md",
-      "sha256_published": "07d0358d70646edfdc184067ef31e842888d99882f599f7ea44c9400661d0c31",
+      "sha256_published": "0d1b8f29f23a99946637a90b2e20ced587ab0e3e6f44b3275a5113498d7525df",
       "sha256_at_run_host_pass": null,
       "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
@@ -705,7 +690,7 @@
     },
     {
       "file": "REPORT.md",
-      "sha256_published": "64870ed25ba5cdd0c844ac6a2ce0d396d11cef36f8016754e931b089de96222b",
+      "sha256_published": "77b0b20296cb515120fc86a1408384c9d598e907a2f682d4c4c47dc30d0b8fe9",
       "sha256_at_run_host_pass": null,
       "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
@@ -761,448 +746,371 @@
       "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
+      "file": "check_package.py",
+      "sha256_published": "0be294dd09062388fefedafcdb4b6236d0485f885a6cf24b99da11c56c5921fc",
+      "sha256_at_run_host_pass": null,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
+    },
+    {
       "file": "data-e2/runs/p2-T1-A.jsonl",
-      "sha256_published": "f1f89fd1c04085a0b1ae7e6c05cf978bba0473528b45bc741254dc0af1a2aefa",
+      "sha256_published": "1c8083dc504f4aadb01a1ef016bcc00c8c7b7aabdf2a946dd52b2145ebf55f7a",
       "sha256_at_run_host_pass": "f1f89fd1c04085a0b1ae7e6c05cf978bba0473528b45bc741254dc0af1a2aefa",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [
-          "bylo",
           "nie"
         ],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data-e2/runs/p2-T1-B.jsonl",
-      "sha256_published": "edb834fea6bed41bd69872d8bbc299fa7ff955539c83f9c29ee6c47f5e4f06eb",
+      "sha256_published": "94a4f661d210e44afa786b225f34a48e7ce3f4af85cc6acc382e25d65e0963c2",
       "sha256_at_run_host_pass": "edb834fea6bed41bd69872d8bbc299fa7ff955539c83f9c29ee6c47f5e4f06eb",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [
-          "bylo",
           "jako",
           "nie"
         ],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data-e2/runs/p2-T10-A.jsonl",
-      "sha256_published": "a0c38c98c3a13c2745d1cc88f63c6d282e6b2120461cf32fe2aa67f252fbc35f",
+      "sha256_published": "49a5343b02311575007ed64fa5e47a672a3008505936b4a30e053c9e6c5097f9",
       "sha256_at_run_host_pass": "a0c38c98c3a13c2745d1cc88f63c6d282e6b2120461cf32fe2aa67f252fbc35f",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
-        "operator_language_words": [
-          "bylo",
-          "nie"
-        ],
+        "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data-e2/runs/p2-T10-B.jsonl",
-      "sha256_published": "90758cb6438b1f7c38bcfec682607d9c0421592c38cd384444e41a8e27cf3045",
+      "sha256_published": "af1db797ec5caab5fd2da67b1494fd660485c055859ba0fae1349e00cfc1ed16",
       "sha256_at_run_host_pass": "90758cb6438b1f7c38bcfec682607d9c0421592c38cd384444e41a8e27cf3045",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
-        "operator_language_words": [
-          "bylo",
-          "nie"
-        ],
+        "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data-e2/runs/p2-T11-A.jsonl",
-      "sha256_published": "37d00ef9a9594f8fd1bc571827f04e33fb1602600e505d8c5d41c35985635298",
+      "sha256_published": "3e2d48101316081ccf2dba61036b76248e467bbc75073d3b2ee321f9c650d14a",
       "sha256_at_run_host_pass": "37d00ef9a9594f8fd1bc571827f04e33fb1602600e505d8c5d41c35985635298",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
-        "operator_language_words": [
-          "bylo",
-          "nie"
-        ],
+        "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data-e2/runs/p2-T11-B.jsonl",
-      "sha256_published": "615c369167c93bdb203e3bb6820df4ae26c3a5dab6542fa90864ed7e969142e9",
+      "sha256_published": "c2f56d81fbd147cc257ab53b81a116d824edaf39fa803eb1736150c9662d49b1",
       "sha256_at_run_host_pass": "615c369167c93bdb203e3bb6820df4ae26c3a5dab6542fa90864ed7e969142e9",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
-        "operator_language_words": [
-          "bylo",
-          "nie"
-        ],
+        "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data-e2/runs/p2-T12-A.jsonl",
-      "sha256_published": "3bf83206a6dd5a1e9b0172c23b19ed7609f0bccde0ccc0428575863ed25efa7b",
+      "sha256_published": "8e58cbb76a74fb9fbcc620e0b054e21c7df30fab009fb33dcf7e9f4df49a3deb",
       "sha256_at_run_host_pass": "3bf83206a6dd5a1e9b0172c23b19ed7609f0bccde0ccc0428575863ed25efa7b",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
-        "operator_language_words": [
-          "bylo",
-          "nie"
-        ],
+        "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data-e2/runs/p2-T12-B.jsonl",
-      "sha256_published": "32f1224eb96c7cd29a526ac7dbaf94d05ed48e441ff2eb8c6991901bfbf447ad",
+      "sha256_published": "9e0905444644aa65e38021180e2e252aaa919de7012079a6c201eb01f7a220e6",
       "sha256_at_run_host_pass": "32f1224eb96c7cd29a526ac7dbaf94d05ed48e441ff2eb8c6991901bfbf447ad",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
-        "operator_language_words": [
-          "bylo",
-          "nie"
-        ],
+        "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data-e2/runs/p2-T2-A.jsonl",
-      "sha256_published": "d6ddd365dfe4d6572f547a5ab4a8bd626ec194786868295f939b2f88f65ec14a",
+      "sha256_published": "23b0c417a44b76161015a023e1ecbb59e822454164c5f6464f9d161b605047bd",
       "sha256_at_run_host_pass": "d6ddd365dfe4d6572f547a5ab4a8bd626ec194786868295f939b2f88f65ec14a",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
-        "operator_language_words": [
-          "bylo",
-          "nie"
-        ],
+        "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data-e2/runs/p2-T2-B.jsonl",
-      "sha256_published": "bb44fc2b982713d676d42602caaa48abdac5400503da83273a2bd7735941ba40",
+      "sha256_published": "91e44b7aa87f1ad4c4bd71989fd72d772045aa6923c8ac92e788833fe0d100e8",
       "sha256_at_run_host_pass": "bb44fc2b982713d676d42602caaa48abdac5400503da83273a2bd7735941ba40",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
-        "operator_language_words": [
-          "bylo",
-          "nie"
-        ],
+        "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data-e2/runs/p2-T3-A.jsonl",
-      "sha256_published": "8b6f3034f2d304909d466efa136a16e06ea5ef82eb85d90d54d4efb49b0c3a5b",
+      "sha256_published": "53dd877b2914a30b42b0232036d3eae1adc9a370a13ce5375da34d43e5afae23",
       "sha256_at_run_host_pass": "8b6f3034f2d304909d466efa136a16e06ea5ef82eb85d90d54d4efb49b0c3a5b",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
-        "operator_language_words": [
-          "bylo",
-          "nie"
-        ],
+        "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data-e2/runs/p2-T3-B.jsonl",
-      "sha256_published": "d5ffd6b4f2459ad97a09e9267a177fcae8db2a50c40db40391b964d9bd9c444e",
+      "sha256_published": "98ba8dbc492776f6dd2aca470f80ce00ea2c31070f29daa157d752f1f17c0a4a",
       "sha256_at_run_host_pass": "d5ffd6b4f2459ad97a09e9267a177fcae8db2a50c40db40391b964d9bd9c444e",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
-        "operator_language_words": [
-          "bylo",
-          "nie"
-        ],
+        "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data-e2/runs/p2-T4-A.jsonl",
-      "sha256_published": "b19c9aee7651eeb6f726141faca81156a89d43b637fe4b1788574c3f78a6dfa4",
+      "sha256_published": "8f78d43975c11ec93eb9c49900552e985a87d25a105553692cc818a1bd4f8e43",
       "sha256_at_run_host_pass": "b19c9aee7651eeb6f726141faca81156a89d43b637fe4b1788574c3f78a6dfa4",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
-        "operator_language_words": [
-          "bylo",
-          "nie"
-        ],
+        "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data-e2/runs/p2-T4-B.jsonl",
-      "sha256_published": "2ad577c3cf732d42e9591e8e84898f6f19849965c791f8f5eb437f49a0954042",
+      "sha256_published": "2d78f82366b75e8958ca6de2cd4514527432b5e13a89a75627fd2a0697158f3b",
       "sha256_at_run_host_pass": "2ad577c3cf732d42e9591e8e84898f6f19849965c791f8f5eb437f49a0954042",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
-        "operator_language_words": [
-          "bylo",
-          "nie"
-        ],
+        "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data-e2/runs/p2-T5-A.jsonl",
-      "sha256_published": "fb11cf36cb32431034c381bee34b594457ae223e8ea55de37125faa792592931",
+      "sha256_published": "97d170b454e7ffe54e1cdeac527e462f291038e49910b3cb03e53fa6cb55f88f",
       "sha256_at_run_host_pass": "fb11cf36cb32431034c381bee34b594457ae223e8ea55de37125faa792592931",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
-        "operator_language_words": [
-          "bylo",
-          "nie"
-        ],
+        "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data-e2/runs/p2-T5-B.jsonl",
-      "sha256_published": "90ecf6c0086051fe05b05761300b98c8b09a5de10b0a7710ce55ce96368cb92c",
+      "sha256_published": "707285b3a83a2faacf1efbd8aec985c7d2b1d0296f78f92ccd975b1f542089fc",
       "sha256_at_run_host_pass": "90ecf6c0086051fe05b05761300b98c8b09a5de10b0a7710ce55ce96368cb92c",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [
-          "bylo",
           "dla",
           "nie"
         ],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data-e2/runs/p2-T6-A.jsonl",
-      "sha256_published": "b6d7c4c32b96f4f74b186cc919d4045efa90e87a906a790e6f243f8bc65ecc50",
+      "sha256_published": "41e65e5d76fbee94b5deb0c397a4bb829e6ef31bbab8770bf4aa25c23623dcdb",
       "sha256_at_run_host_pass": "b6d7c4c32b96f4f74b186cc919d4045efa90e87a906a790e6f243f8bc65ecc50",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
-        "operator_language_words": [
-          "bylo",
-          "nie"
-        ],
+        "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data-e2/runs/p2-T6-B.jsonl",
-      "sha256_published": "3834870175d3306957164bd73efca2eb68dcde8e84b12029e847b96f99613dca",
+      "sha256_published": "db42b6fd6aa293e948b30b2cd0a2576b930cc7514ffa18986f952181d3c007fe",
       "sha256_at_run_host_pass": "3834870175d3306957164bd73efca2eb68dcde8e84b12029e847b96f99613dca",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
-        "operator_language_words": [
-          "bylo",
-          "nie"
-        ],
+        "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data-e2/runs/p2-T7-A.jsonl",
-      "sha256_published": "1cb3db120b2849b4c9c2d2abec89c8430e0f883b0b1711da8fa5961ab0678ec9",
+      "sha256_published": "0870c51b834a6f9fb17a36130b6409ca12d5fe5144f3d093ccdaf25d8e36a2b6",
       "sha256_at_run_host_pass": "1cb3db120b2849b4c9c2d2abec89c8430e0f883b0b1711da8fa5961ab0678ec9",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
-        "operator_language_words": [
-          "bylo",
-          "nie"
-        ],
+        "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data-e2/runs/p2-T7-B.jsonl",
-      "sha256_published": "9d810c554f7d954909c4203e36b73966a2c9a2ffceec5f352ea522c42e56cbeb",
+      "sha256_published": "0039d9a3f5484aab5feef77ed646ce051ca459bb7dc3cc0a34b261083e5e68ca",
       "sha256_at_run_host_pass": "9d810c554f7d954909c4203e36b73966a2c9a2ffceec5f352ea522c42e56cbeb",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
-        "operator_language_words": [
-          "bylo",
-          "nie"
-        ],
+        "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data-e2/runs/p2-T8-A.jsonl",
-      "sha256_published": "cb3172f10729e4571429c8e648351e6187fbdeb7b69917bf7b4ee85fc36420fa",
+      "sha256_published": "35d75a081a68cb3b18b2d518b7276815e2c2299a0221beba61f08a1b0a0afe02",
       "sha256_at_run_host_pass": "cb3172f10729e4571429c8e648351e6187fbdeb7b69917bf7b4ee85fc36420fa",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
-        "operator_language_words": [
-          "bylo",
-          "nie"
-        ],
+        "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data-e2/runs/p2-T8-B.jsonl",
-      "sha256_published": "c8777521003895f7dc7494a0cfec41a1cb54989cb4ad0cc34aa58e98af85f5e2",
+      "sha256_published": "4624e6ee9a6b3af108c5d95112ce801083ee474ff5c2a1f8a023c6ed5aa46ba4",
       "sha256_at_run_host_pass": "c8777521003895f7dc7494a0cfec41a1cb54989cb4ad0cc34aa58e98af85f5e2",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
-        "operator_language_words": [
-          "bylo",
-          "nie"
-        ],
+        "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data-e2/runs/p2-T9-A.jsonl",
-      "sha256_published": "0348c39de16c0fe4a1555aa186dfecd7ab23acb6dc4d80e3ecf69f1fb1b2c43b",
+      "sha256_published": "378e32f96b109fe56913876c9da9f0871cecd585e53495f8b6e4dc65fc63d172",
       "sha256_at_run_host_pass": "0348c39de16c0fe4a1555aa186dfecd7ab23acb6dc4d80e3ecf69f1fb1b2c43b",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
-        "operator_language_words": [
-          "bylo",
-          "nie"
-        ],
+        "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data-e2/runs/p2-T9-B.jsonl",
-      "sha256_published": "57e7f8da18f045cea99327102778b6f54c8e8db524626070a9d63a5eb5ffc846",
+      "sha256_published": "28f2f284fc3a4a4a06831ac0495a307b5ec3fd329f8cd38d884fe9f2eeae50c4",
       "sha256_at_run_host_pass": "57e7f8da18f045cea99327102778b6f54c8e8db524626070a9d63a5eb5ffc846",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
-        "operator_language_words": [
-          "bylo",
-          "nie"
-        ],
+        "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data-e2/runs/pilot-kalibracja-e2/p2-T1-A.jsonl",
-      "sha256_published": "d63ab7b9b566147b0a506f82138664f4fb0291832d0c1b85e6cbc230d5b24992",
+      "sha256_published": "0f41f0bffe95775be576e85f410d8a577130d8ea1cdf7e71ba8b3c6f496a7f08",
       "sha256_at_run_host_pass": "d63ab7b9b566147b0a506f82138664f4fb0291832d0c1b85e6cbc230d5b24992",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [
-          "bylo",
           "nie",
           "sie",
           "wiec"
@@ -1210,48 +1118,39 @@
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data-e2/runs/pilot-kalibracja-e2/p2-T1-B.jsonl",
-      "sha256_published": "00f318a3b7d767346c9c6a55870a7b4e9fcb8858eb1f9258d437074e48fa8304",
+      "sha256_published": "847a2719c1dd0886fca5d8d8a0cd6263d72d8ab4ac71672051c79d18cb1674f5",
       "sha256_at_run_host_pass": "00f318a3b7d767346c9c6a55870a7b4e9fcb8858eb1f9258d437074e48fa8304",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [
-          "bylo",
-          "jako",
           "jeden",
-          "jest",
           "nie",
-          "sie",
-          "tego",
           "wiec",
-          "wymaga",
-          "zadania"
+          "wymaga"
         ],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data-emaint/runs/em-M1-A.jsonl",
-      "sha256_published": "36b809f1256a27a256ae73c77b3baeef51143189463b5c328c76dc100b1828da",
+      "sha256_published": "75d178697e643709615481708b5c08d2456c9c50a0e3b7549aa39684296ba391",
       "sha256_at_run_host_pass": "36b809f1256a27a256ae73c77b3baeef51143189463b5c328c76dc100b1828da",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [
           "dla",
           "jest",
           "liczba",
-          "nie",
           "przez",
           "sie",
           "tego",
@@ -1263,20 +1162,18 @@
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data-emaint/runs/em-M1-B.jsonl",
-      "sha256_published": "65139dfdaddbd88e324abccc6c9a766acac75096ce3333cc8e6a036ead06ab0d",
+      "sha256_published": "b618e4318ce3a31e4f8ee606f6e09fc3382ba28a343712833f3fba3dc63a956d",
       "sha256_at_run_host_pass": "65139dfdaddbd88e324abccc6c9a766acac75096ce3333cc8e6a036ead06ab0d",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [
           "jest",
-          "nie",
           "sie",
           "wiec",
           "wynik",
@@ -1286,15 +1183,14 @@
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data-emaint/runs/em-M2-A.jsonl",
-      "sha256_published": "4c4d1093dc58e85c3ac353e5d5212a5e692461c1646769ae12523361e06df0a0",
+      "sha256_published": "2c87f35d5ac9ffa0bd84e9226697441d1ee593cdce2b78b14f8d5f99f3b2fa15",
       "sha256_at_run_host_pass": "4c4d1093dc58e85c3ac353e5d5212a5e692461c1646769ae12523361e06df0a0",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [
@@ -1309,50 +1205,42 @@
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data-emaint/runs/em-M2-B.jsonl",
-      "sha256_published": "2b002cf82d034c1b6c86b9bb2b3642eb134a29076bb64970707fd73d5871916f",
+      "sha256_published": "9d354c9da521982e8fee1333a668043cace193c30d346fddfa87db203023ec32",
       "sha256_at_run_host_pass": "2b002cf82d034c1b6c86b9bb2b3642eb134a29076bb64970707fd73d5871916f",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
-      "content_checks_re_run_at_republication": {
-        "operator_language_diacritics": [],
-        "operator_language_words": [
-          "jest",
-          "ktorego",
-          "sie",
-          "tego"
-        ],
-        "absolute_paths": [],
-        "secret_shapes": []
-      },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
-    },
-    {
-      "file": "data-emaint/runs/em-M3-A.jsonl",
-      "sha256_published": "2e81b68363ad07f4a455456e915aa85c282f2b1f446188aa640a1c754fa8d2a7",
-      "sha256_at_run_host_pass": "2e81b68363ad07f4a455456e915aa85c282f2b1f446188aa640a1c754fa8d2a7",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
+    },
+    {
+      "file": "data-emaint/runs/em-M3-A.jsonl",
+      "sha256_published": "ca439366c10ee0274150db185eb1a81242d44c3a6b8afa35896d54d45c59c0d0",
+      "sha256_at_run_host_pass": "2e81b68363ad07f4a455456e915aa85c282f2b1f446188aa640a1c754fa8d2a7",
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data-emaint/runs/em-M3-B.jsonl",
-      "sha256_published": "becd72e3fd6ce3bec8d2c52b7523e967cabf2c503b94e5115ba68e640583a7df",
+      "sha256_published": "0c57a707890607ff3b4c3af94f73bbb860a865402480af9b23677138727c2a3b",
       "sha256_at_run_host_pass": "becd72e3fd6ce3bec8d2c52b7523e967cabf2c503b94e5115ba68e640583a7df",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [
@@ -1363,15 +1251,14 @@
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data-emaint/runs/em-M4-A.jsonl",
-      "sha256_published": "cec460d10808be77f712c7fa043320191e0a3bec898346558be6a40120730ce8",
+      "sha256_published": "463418f77584559eca50159b326389537ff363e42449dbe6f7a6ed1eb7d1a159",
       "sha256_at_run_host_pass": "cec460d10808be77f712c7fa043320191e0a3bec898346558be6a40120730ce8",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [
@@ -1381,15 +1268,14 @@
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data-emaint/runs/em-M4-B.jsonl",
-      "sha256_published": "fe0e8c95292673b6470bd30ea6493d225c3c22d840839c07e8d6b1757f2de71b",
+      "sha256_published": "b291a9f06ae059d3e953d7551caccd2b2681c7a73662de0cef3c7081899f3d88",
       "sha256_at_run_host_pass": "fe0e8c95292673b6470bd30ea6493d225c3c22d840839c07e8d6b1757f2de71b",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [
@@ -1401,13 +1287,12 @@
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data-emaint/runs/em-M5-A.jsonl",
-      "sha256_published": "db944812add1a57c9fa4bd43bc18217934e82b6838fd7af22f4da3bda43cbc18",
+      "sha256_published": "d8163f01910970a9cde13838e3a3a57d86bc9319827a026a0e141ec8e305683a",
       "sha256_at_run_host_pass": "8cfc31e4589292aa8f80a9dcaacf920c37ed9537ba90d834865ad8ed0c8c51a4",
       "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
@@ -1427,9 +1312,9 @@
     },
     {
       "file": "data-emaint/runs/em-M5-B.jsonl",
-      "sha256_published": "0437864e457d0dcd9a1cc01abb0215abf1d4bb30d3b14b273c63f9eab6e6ef00",
+      "sha256_published": "58822efeedcc147124db031f192b2383ea679aa9e08c6e1c672ee29dcedd0bda",
       "sha256_at_run_host_pass": "0437864e457d0dcd9a1cc01abb0215abf1d4bb30d3b14b273c63f9eab6e6ef00",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [
@@ -1440,13 +1325,12 @@
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data-emaint/runs/em-M6-A.jsonl",
-      "sha256_published": "20d18373507960bb76f5b87bbb189601f766b43751a482cac2fd2cd508bc453e",
+      "sha256_published": "eaebc4096b8967f6692140f79a7203a788a1f0a2e8bad32ea0c0bc3945e06c32",
       "sha256_at_run_host_pass": "d072c3a1f274f330ae4af5c6fd23ac8a3da0880d955c0e30a19b30f0d0b3e7e4",
       "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
@@ -1464,9 +1348,9 @@
     },
     {
       "file": "data-emaint/runs/em-M6-B.jsonl",
-      "sha256_published": "57fa7b9607c8c0c4e393578e3c5c6d2f76253234a9ad16df0f374cbe7e0a7bf9",
+      "sha256_published": "62b8bcc495c78b6c9cd847f4356f2b08e2163a425a1a2291502fdfa817115cf8",
       "sha256_at_run_host_pass": "57fa7b9607c8c0c4e393578e3c5c6d2f76253234a9ad16df0f374cbe7e0a7bf9",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [
@@ -1477,13 +1361,12 @@
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/README.md",
-      "sha256_published": "b0b45aab4bf3526478d5685031859e9cc184cb8ee09eb038a0d5367c412e7bbe",
+      "sha256_published": "2a0c0f0bf41b31127e162efb549739ba7b5f6909fd2eb983ea08d6d034d80e46",
       "sha256_at_run_host_pass": null,
       "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
@@ -1499,18 +1382,17 @@
     },
     {
       "file": "data/journal/p0.jsonl",
-      "sha256_published": "93ef1edc8caa9e879173dc3d7658b9854f91fa2f775d257c84a56440dcfe022a",
+      "sha256_published": "1310e2df3100823c7cdc4e3c6daa4ff6cfb2c173242b57dcc7a97ced9b490453",
       "sha256_at_run_host_pass": "93ef1edc8caa9e879173dc3d7658b9854f91fa2f775d257c84a56440dcfe022a",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/journal/p1.jsonl",
@@ -1552,20 +1434,17 @@
     },
     {
       "file": "data/journal/pilot-kalibracja/README.md",
-      "sha256_published": "5844607522e86cc642ef0500e0d4571bbe62f4b4316e0594dce1132b37ac3ba3",
+      "sha256_published": "2c31a1775a1fca917d08da28f4dbf3c3c609e3b1360cce9555c36cee555f101e",
       "sha256_at_run_host_pass": "5844607522e86cc642ef0500e0d4571bbe62f4b4316e0594dce1132b37ac3ba3",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
-        "operator_language_words": [
-          "zeby"
-        ],
+        "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/journal/pilot-kalibracja/p1.jsonl",
@@ -1691,24 +1570,13 @@
     },
     {
       "file": "data/runs/burdened-node22/README.md",
-      "sha256_published": "8610da018c62936afacec63e6d9aea0d1f4b79128b1462b79f3518a5293506df",
+      "sha256_published": "2204c3c705cc213edca9a41cb31ec0c100a971a7123115e85f9462bda3924248",
       "sha256_at_run_host_pass": null,
       "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
-        "operator_language_words": [
-          "bylo",
-          "czyli",
-          "dla",
-          "gdy",
-          "jest",
-          "nawet",
-          "nie",
-          "wiec"
-        ],
-        "absolute_paths": [
-          "/home/"
-        ],
+        "operator_language_words": [],
+        "absolute_paths": [],
         "secret_shapes": []
       },
       "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
@@ -1716,93 +1584,82 @@
     },
     {
       "file": "data/runs/burdened-node22/p1-T1-B.jsonl",
-      "sha256_published": "98e5532cf6467d3fa3485aff8ea5f1424aaba5acce19c46225cd3ae0266116c5",
+      "sha256_published": "fd20b342ddb65566e25a78471f08e35284707d1619c15e58001dbd9e744a08c3",
       "sha256_at_run_host_pass": "98e5532cf6467d3fa3485aff8ea5f1424aaba5acce19c46225cd3ae0266116c5",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [
-          "byla",
-          "dla",
           "liczba",
-          "nie",
-          "przez",
           "wiec"
         ],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/burdened-node22/p1-T2-B.jsonl",
-      "sha256_published": "30ab49efc11ce22b044da3575258baf4b76af1dcc1c9bc128674ac2469f75228",
+      "sha256_published": "df9da3d304bb016732f87fc6b799e0ae15f37ef689e9200d46690675cffd4f12",
       "sha256_at_run_host_pass": "30ab49efc11ce22b044da3575258baf4b76af1dcc1c9bc128674ac2469f75228",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/burdened-node22/p1-T3-B.jsonl",
-      "sha256_published": "9c138ee058ea32ba53c56428ce4ff9365e626084e9e996c9721f4406600f3b93",
+      "sha256_published": "e23d4be263604c488e945b0320d293bf51cb5a97c2ddfd56990fa2e0bb196a2f",
       "sha256_at_run_host_pass": "9c138ee058ea32ba53c56428ce4ff9365e626084e9e996c9721f4406600f3b93",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/burdened-node22/p1-T4-B.jsonl",
-      "sha256_published": "334a8c62f6812b000d68b8cfca0f82f2c5f695a0c8b12523542327421e78c1d8",
+      "sha256_published": "0e1524f5e3bc55d034a5dce4d7612487e0af58fa4b562a43e8c2cc6bbbe45c9f",
       "sha256_at_run_host_pass": "334a8c62f6812b000d68b8cfca0f82f2c5f695a0c8b12523542327421e78c1d8",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/calibration-pilot/README.md",
-      "sha256_published": "5844607522e86cc642ef0500e0d4571bbe62f4b4316e0594dce1132b37ac3ba3",
+      "sha256_published": "2c31a1775a1fca917d08da28f4dbf3c3c609e3b1360cce9555c36cee555f101e",
       "sha256_at_run_host_pass": "5844607522e86cc642ef0500e0d4571bbe62f4b4316e0594dce1132b37ac3ba3",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
-        "operator_language_words": [
-          "zeby"
-        ],
+        "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/calibration-pilot/p1-T1-A.jsonl",
-      "sha256_published": "e84ee5e53f7ec6c365aae68e6925b3ad1921837bc39f035e91149503c3432f74",
+      "sha256_published": "ffe533079d5532244af15579aabd9ed82f5e89cca84233e4d7d2af36fd27b7a6",
       "sha256_at_run_host_pass": "e84ee5e53f7ec6c365aae68e6925b3ad1921837bc39f035e91149503c3432f74",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [
@@ -1814,237 +1671,212 @@
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/calibration-pilot/p1-T1-B.jsonl",
-      "sha256_published": "dfb2fd7823fd5e78960a62652794ccc6ae41a7a5fa5fc67b7e13544148dad9df",
+      "sha256_published": "f0aa53feab1f9ef8c6f07f20fe9bd7feeb40cd8b64de91eeb2361470080718cc",
       "sha256_at_run_host_pass": "dfb2fd7823fd5e78960a62652794ccc6ae41a7a5fa5fc67b7e13544148dad9df",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [
-          "jeden",
-          "przez"
+          "jeden"
         ],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/falstart-bez-tozsamosci/README.md",
-      "sha256_published": "609d1abcc3c249781e9c244e7b1c519409df82adb463c03bc2a74ead131d7925",
+      "sha256_published": "01071d156bc0ecf91aee7234b99d3b564951faf8f20da07413795cf571249054",
       "sha256_at_run_host_pass": "609d1abcc3c249781e9c244e7b1c519409df82adb463c03bc2a74ead131d7925",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
-        "operator_language_words": [
-          "brak",
-          "jako",
-          "ktory",
-          "nie",
-          "przez",
-          "sie",
-          "tego",
-          "zostal"
-        ],
+        "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/falstart-bez-tozsamosci/p1-T1-B.jsonl",
-      "sha256_published": "c5a45f88bec5b91c82fe47c0192c69d9c8b61871a82afe2d3ed17b809f3980fe",
+      "sha256_published": "08934331162f7860e9af459c8401f247b64f23a0c56bff9f7a0047e4eca36384",
       "sha256_at_run_host_pass": "c5a45f88bec5b91c82fe47c0192c69d9c8b61871a82afe2d3ed17b809f3980fe",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/falstart-bez-tozsamosci/p1-T10-B.jsonl",
-      "sha256_published": "c82cbf5a14af7cfd6ac653ee42638f7c1b091c2e490a69de6048c82412e5cb4f",
+      "sha256_published": "e33e976cff05db32be3545c921fa662a57e7187739b909097d8875a6e5f554cd",
       "sha256_at_run_host_pass": "c82cbf5a14af7cfd6ac653ee42638f7c1b091c2e490a69de6048c82412e5cb4f",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/falstart-bez-tozsamosci/p1-T11-B.jsonl",
-      "sha256_published": "7b195f63ef292647c38fd994bfc2f8d1b27a03f39e9812e57569a0d5aaf186f5",
+      "sha256_published": "27887cc46498e7a7f6ba075793e3ebe630b2e0dcaa0282f05fb0d6e0479a296c",
       "sha256_at_run_host_pass": "7b195f63ef292647c38fd994bfc2f8d1b27a03f39e9812e57569a0d5aaf186f5",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/falstart-bez-tozsamosci/p1-T12-B.jsonl",
-      "sha256_published": "1a491f0a9e5e0f5dec25604700ab76456a2e7034216cca76a6a53b7d34735430",
+      "sha256_published": "923e0b41d1e7cd31d09b8c88c1f854f1ce07af1bb3b9d9601778365f647c0fb3",
       "sha256_at_run_host_pass": "1a491f0a9e5e0f5dec25604700ab76456a2e7034216cca76a6a53b7d34735430",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/falstart-bez-tozsamosci/p1-T2-B.jsonl",
-      "sha256_published": "d86d2864d9bde6c3064cb7ceac5049df5aad7c2d65c2a785e94d137e668ca858",
+      "sha256_published": "d23a8a2bcd09eecf55e4f1996d7fad18beebf49b38fba0da9c77466244088cc1",
       "sha256_at_run_host_pass": "d86d2864d9bde6c3064cb7ceac5049df5aad7c2d65c2a785e94d137e668ca858",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/falstart-bez-tozsamosci/p1-T3-B.jsonl",
-      "sha256_published": "8bfa72242d00097069adc5a2beb60d03093830bf71418bd97efcd8a38812fe01",
+      "sha256_published": "5834bb34403dc54131f5a0412ce0f90c1e138ce6985ac4f03167d5132d147ea0",
       "sha256_at_run_host_pass": "8bfa72242d00097069adc5a2beb60d03093830bf71418bd97efcd8a38812fe01",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/falstart-bez-tozsamosci/p1-T4-B.jsonl",
-      "sha256_published": "b1283ab35fde77e16586b3066ac3cf790af7be59b80de66550ad0ace74be9fe2",
+      "sha256_published": "01a5ed34730b41e1dc6dc529b25104906f9206e8b0404f5a09769e6280a22636",
       "sha256_at_run_host_pass": "b1283ab35fde77e16586b3066ac3cf790af7be59b80de66550ad0ace74be9fe2",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/falstart-bez-tozsamosci/p1-T5-B.jsonl",
-      "sha256_published": "cc6a3a3fccccf5a1a7f593ec7ad296b5ebbcc5a9e002607abdc14d82b9676dab",
+      "sha256_published": "9112d4cc6f77262469eaf11a8f425b54f630d11295c7c4f9f81289187ac185fd",
       "sha256_at_run_host_pass": "cc6a3a3fccccf5a1a7f593ec7ad296b5ebbcc5a9e002607abdc14d82b9676dab",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/falstart-bez-tozsamosci/p1-T6-B.jsonl",
-      "sha256_published": "fadf2ac9d2c7a6c450e5efb43bb04b068b0534ed2ff89979bc8f90be7858fd29",
+      "sha256_published": "0dc86261ff6d988347b88b7680b0ec6994cc4a52ef31d30ffebe68e71cf0673a",
       "sha256_at_run_host_pass": "fadf2ac9d2c7a6c450e5efb43bb04b068b0534ed2ff89979bc8f90be7858fd29",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/falstart-bez-tozsamosci/p1-T7-B.jsonl",
-      "sha256_published": "0436d477560dca1f290ebe6023358a9f4817bbbe8ea9ad114b9ef8929a9a5f9c",
+      "sha256_published": "f1e9f77d14cf0ea225693c736b37630696afa5d977e9798daa2f0aca95e5d6ce",
       "sha256_at_run_host_pass": "0436d477560dca1f290ebe6023358a9f4817bbbe8ea9ad114b9ef8929a9a5f9c",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/falstart-bez-tozsamosci/p1-T8-B.jsonl",
-      "sha256_published": "4c5654543da28dbc4211fb99e1a7ccf6094b89087f9d42b785268cae5cb93a55",
+      "sha256_published": "8c97c59fcdde8a07678f29bc3d52e2ed510d680e65811bebf84eaba552c51cc0",
       "sha256_at_run_host_pass": "4c5654543da28dbc4211fb99e1a7ccf6094b89087f9d42b785268cae5cb93a55",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/falstart-bez-tozsamosci/p1-T9-B.jsonl",
-      "sha256_published": "41ccee283d215e6c47f3908777673499ee5c702f0182ba9695f7cbd5cf136b1d",
+      "sha256_published": "62c8227a952b9c35a2ffecf29b1d2e059308e5be4bb52e2cd0fdf7dcf4c0a304",
       "sha256_at_run_host_pass": "41ccee283d215e6c47f3908777673499ee5c702f0182ba9695f7cbd5cf136b1d",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/p1-T1-A.jsonl",
-      "sha256_published": "60da8d3dc9de40607e0d6557fcf3a64f9ad847783c6c50008d663b1291dbcccb",
+      "sha256_published": "2204c262e3d81cd26a086f394c531f0cc152f72dd7293c8c4dbdfdd15543453b",
       "sha256_at_run_host_pass": "60da8d3dc9de40607e0d6557fcf3a64f9ad847783c6c50008d663b1291dbcccb",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [
@@ -2054,30 +1886,28 @@
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/p1-T1-B.jsonl",
-      "sha256_published": "86ce91a952ff90e474fb5014c715549693663854555cc80a705ad396da204d4b",
+      "sha256_published": "026ff6d9015ac16b113239d38a0b2dd9ba75a859f2fc706cfceef05468ab6682",
       "sha256_at_run_host_pass": "86ce91a952ff90e474fb5014c715549693663854555cc80a705ad396da204d4b",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/p1-T10-A.jsonl",
-      "sha256_published": "45f4012bb0ffbc0d02ca4a26025e4fb624a146b9ddc0fdb979bf8888f9b33849",
+      "sha256_published": "62fe36f447f79c95050e366efcb206cab3f4964f133bdf2fdd5e0a56ea0c857e",
       "sha256_at_run_host_pass": "45f4012bb0ffbc0d02ca4a26025e4fb624a146b9ddc0fdb979bf8888f9b33849",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [
@@ -2087,30 +1917,28 @@
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/p1-T10-B.jsonl",
-      "sha256_published": "54a6cef13c7f784115403ea7f81781be8d683e1a9ee39a03c2a391f01229098d",
+      "sha256_published": "adcd1f1cd3eb60dabbb8aaa763a71a3533c834611ba7c966020a2dd154acb31d",
       "sha256_at_run_host_pass": "54a6cef13c7f784115403ea7f81781be8d683e1a9ee39a03c2a391f01229098d",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/p1-T11-A.jsonl",
-      "sha256_published": "149f996c2a74bfcd592bc1beeed395dec7f2f129f3c94873038cb40103cf58d3",
+      "sha256_published": "80e035af1c0268637acfeb09d6556382ac6fa6d06201b08f680ad4da187fd2e8",
       "sha256_at_run_host_pass": "149f996c2a74bfcd592bc1beeed395dec7f2f129f3c94873038cb40103cf58d3",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [
@@ -2120,30 +1948,28 @@
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/p1-T11-B.jsonl",
-      "sha256_published": "6b98ade2728ec4333f75e1b21c465ded3810e3cd88d6ad40ac00734ee6a65c1a",
+      "sha256_published": "2267a31ddc2f3af0d2112e99720382d3019fb097788461944787155427104fc7",
       "sha256_at_run_host_pass": "6b98ade2728ec4333f75e1b21c465ded3810e3cd88d6ad40ac00734ee6a65c1a",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/p1-T12-A.jsonl",
-      "sha256_published": "fcdca541f0caf57cdb5d1d19da00f6db380dd311c044ef1cfacc7748032f7b7e",
+      "sha256_published": "16160b7f3eacba3d98bbe422ede36aaf9a1b272335652011a2a1ceda4769cc09",
       "sha256_at_run_host_pass": "fcdca541f0caf57cdb5d1d19da00f6db380dd311c044ef1cfacc7748032f7b7e",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [
@@ -2153,30 +1979,28 @@
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/p1-T12-B.jsonl",
-      "sha256_published": "9ab7c153aba8b466590fb18ab736d504840ca4a585c88088ac8ddae8e2e4bd89",
+      "sha256_published": "358ca9385645c965ca8a7af80b2a670628e06113793b7626c03b9d28761acc1e",
       "sha256_at_run_host_pass": "9ab7c153aba8b466590fb18ab736d504840ca4a585c88088ac8ddae8e2e4bd89",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/p1-T2-A.jsonl",
-      "sha256_published": "e59763e8bfee26b08063adf31837caf586df7cc91fbf3bf46e18cd37ee699091",
+      "sha256_published": "1e3ff122d2d20957ba7235f7aa1a747fd391893dc328544ec609719da262e587",
       "sha256_at_run_host_pass": "e59763e8bfee26b08063adf31837caf586df7cc91fbf3bf46e18cd37ee699091",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [
@@ -2186,30 +2010,28 @@
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/p1-T2-B.jsonl",
-      "sha256_published": "f06db20dbee214392365c2f9f0839709fc4340983b2b5e2016ba3f182069a67f",
+      "sha256_published": "720395f972456581dd6486c312b78698b1689432ff151f8f773e213f38d59a93",
       "sha256_at_run_host_pass": "f06db20dbee214392365c2f9f0839709fc4340983b2b5e2016ba3f182069a67f",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/p1-T3-A.jsonl",
-      "sha256_published": "ec460b5f5bfa28e96d31086b5a29630e0c6fd0f5a58c6d3e10ac23845277e093",
+      "sha256_published": "5048fbdbc8c311eb33e955440a91253cfab755fc4b8be32d62a96f1ac021f031",
       "sha256_at_run_host_pass": "ec460b5f5bfa28e96d31086b5a29630e0c6fd0f5a58c6d3e10ac23845277e093",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [
@@ -2219,30 +2041,28 @@
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/p1-T3-B.jsonl",
-      "sha256_published": "71d34afa250bb97adb6ced88141e3548cb15d4caebb181e152c9ef3b609d4aa4",
+      "sha256_published": "ff4870d03b5aa0052e52125122f57331d6e6f222d96e44079417eb4139fca4b1",
       "sha256_at_run_host_pass": "71d34afa250bb97adb6ced88141e3548cb15d4caebb181e152c9ef3b609d4aa4",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/p1-T4-A.jsonl",
-      "sha256_published": "88b1f7264ed7325408cc6df40aef5200967c6a3e44cb40327c7d8d2345cf045e",
+      "sha256_published": "5296a63e67bf2c1322bda3bc59cbd734fd76573e0fa323b9f61666f3e1b410e0",
       "sha256_at_run_host_pass": "88b1f7264ed7325408cc6df40aef5200967c6a3e44cb40327c7d8d2345cf045e",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [
@@ -2252,30 +2072,28 @@
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/p1-T4-B.jsonl",
-      "sha256_published": "05f609643a89dc9f6b1ea1195991b3ad10c4bbd45c881c1e11fdf196f45253b0",
+      "sha256_published": "a8fb49137c28b8be4c6b702e865fb81a36391590b9a49190729f08d511c2487e",
       "sha256_at_run_host_pass": "05f609643a89dc9f6b1ea1195991b3ad10c4bbd45c881c1e11fdf196f45253b0",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/p1-T5-A.jsonl",
-      "sha256_published": "00dfa6de95ee565bda5183a8e2f79307bd24213ff9ad16e29747bbc2c6a26b1d",
+      "sha256_published": "5101f563c13a54fe5071a1a13e74bee517d1822a6db52c0543b8e9ec607d0834",
       "sha256_at_run_host_pass": "00dfa6de95ee565bda5183a8e2f79307bd24213ff9ad16e29747bbc2c6a26b1d",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [
@@ -2285,30 +2103,28 @@
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/p1-T5-B.jsonl",
-      "sha256_published": "ecc0856107d121e6c8d6d8630d74e4b4c624102c041f4bbbcaa43a95d9adf31d",
+      "sha256_published": "c8513e6c3c2ef9d3d5de0ced2086dd51588bcb3abdd169835e3000a4544126c9",
       "sha256_at_run_host_pass": "ecc0856107d121e6c8d6d8630d74e4b4c624102c041f4bbbcaa43a95d9adf31d",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/p1-T6-A.jsonl",
-      "sha256_published": "018cb72f7b05cd94b9ca696f8d5ecfe6cabe4e1dfe8ee64a186e47301e0e4210",
+      "sha256_published": "a7bbb0c90708c09c87098c6a8616fca880b28315e37fb61f98212ed4207730e7",
       "sha256_at_run_host_pass": "018cb72f7b05cd94b9ca696f8d5ecfe6cabe4e1dfe8ee64a186e47301e0e4210",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [
@@ -2318,30 +2134,28 @@
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/p1-T6-B.jsonl",
-      "sha256_published": "1ccd8780a2542396c0f8c4f5e97a6849e2cd293c30e562fb9c2d5ea6f4c793bc",
+      "sha256_published": "3a42a20d1f72d410f84cb9e0cbf873fed0e959de5db428807cca5e952d47c51b",
       "sha256_at_run_host_pass": "1ccd8780a2542396c0f8c4f5e97a6849e2cd293c30e562fb9c2d5ea6f4c793bc",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/p1-T7-A.jsonl",
-      "sha256_published": "f9007903273e3940bcfb8b3d642c72e20c07b61033d6365aca7e4c58c2ad78e9",
+      "sha256_published": "d501adaf713e21b90b5db3c67243adff1d4951a15df52585e2582b500d08d934",
       "sha256_at_run_host_pass": "f9007903273e3940bcfb8b3d642c72e20c07b61033d6365aca7e4c58c2ad78e9",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [
@@ -2351,30 +2165,28 @@
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/p1-T7-B.jsonl",
-      "sha256_published": "bba962b29ebb33aeb58d6c6f97687037bc2ec95983d8b161188ecb3d181c3afe",
+      "sha256_published": "75ba4b3f0efaf4d08fa49598f67bf3d696440a45b56d53dca4a79be01d6fd605",
       "sha256_at_run_host_pass": "bba962b29ebb33aeb58d6c6f97687037bc2ec95983d8b161188ecb3d181c3afe",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/p1-T8-A.jsonl",
-      "sha256_published": "a0a30ce398c38b5c93c00baf7f061239d6330ab996e8ec1dc62b824a1d9e94c1",
+      "sha256_published": "0d8beaaa56076b062c5b65d81203934df314ed186ebd1bcd303019d1c7dc8348",
       "sha256_at_run_host_pass": "a0a30ce398c38b5c93c00baf7f061239d6330ab996e8ec1dc62b824a1d9e94c1",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [
@@ -2384,57 +2196,50 @@
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/p1-T8-B.jsonl",
-      "sha256_published": "ec4b0d629af8c4468d36a211dd5dc7f45f914facfc86cb37776d099e795c3497",
+      "sha256_published": "b872a67159812be9eeb16528585cc52d46137118d3f96b5ad4655841ca40ea4a",
       "sha256_at_run_host_pass": "ec4b0d629af8c4468d36a211dd5dc7f45f914facfc86cb37776d099e795c3497",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/p1-T9-A.jsonl",
-      "sha256_published": "e4111f65df3f28c668345c8e53031fd9bf82638f62f74e7bb9831262a3ab88b2",
+      "sha256_published": "93074ac498d0d9d51e840df817932f2482d81008a62364a3899496ee0ae30565",
       "sha256_at_run_host_pass": "e4111f65df3f28c668345c8e53031fd9bf82638f62f74e7bb9831262a3ab88b2",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
         "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/runs/p1-T9-B.jsonl",
-      "sha256_published": "167fbcb3d6b674a15c02a5e4d106544b061a6e71d8dd40971c6da50ad5e4e042",
+      "sha256_published": "928ba078aca35b23028ca9c283e214b1efa3481637dd18c22b8b2d78fbe4e610",
       "sha256_at_run_host_pass": "167fbcb3d6b674a15c02a5e4d106544b061a6e71d8dd40971c6da50ad5e4e042",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
-        "operator_language_words": [
-          "byla",
-          "nie"
-        ],
+        "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "data/usage-summary.json",
@@ -2481,42 +2286,17 @@
     },
     {
       "file": "e2/MANIFEST-E2.sha256",
-      "sha256_published": "e57d70e21c14731c535f370c52a4f37cd953d49074fe259ed3a7f0cd0314155c",
+      "sha256_published": "1d20a0933607ce5df4ee7df0b8e42b3718c731e149c95173e379cfa0a28c6459",
       "sha256_at_run_host_pass": "e57d70e21c14731c535f370c52a4f37cd953d49074fe259ed3a7f0cd0314155c",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
-        "operator_language_words": [
-          "zostal"
-        ],
+        "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
-    },
-    {
-      "file": "e2/NOTATKI-RUNNERA.md",
-      "sha256_published": "69788fc391874a9401cbdc9e54acb8ac6708edf1b79e511fe7c86b878c2dc22d",
-      "sha256_at_run_host_pass": "69788fc391874a9401cbdc9e54acb8ac6708edf1b79e511fe7c86b878c2dc22d",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
-      "content_checks_re_run_at_republication": {
-        "operator_language_diacritics": [],
-        "operator_language_words": [
-          "jesli",
-          "jest",
-          "moze",
-          "musi",
-          "nie",
-          "sie"
-        ],
-        "absolute_paths": [],
-        "secret_shapes": []
-      },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "e2/PROTOCOL-E2.md",
@@ -2534,23 +2314,46 @@
       "pattern_scrubber_changed_bytes": null
     },
     {
-      "file": "e2/SYMETRIA-E2.md",
-      "sha256_published": "f87ba5a8dc99791887f91a1b201bb3b03dcb32de421dcce02200f2a8e5e257e6",
-      "sha256_at_run_host_pass": "f87ba5a8dc99791887f91a1b201bb3b03dcb32de421dcce02200f2a8e5e257e6",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "file": "e2/RUNNER-NOTES.md",
+      "sha256_published": "8b732c08904fc6a109a4b88a98c2be63762fe1ea461a0dac39f929b060c38152",
+      "sha256_at_run_host_pass": null,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [],
-        "operator_language_words": [
-          "nie",
-          "przez",
-          "tego"
-        ],
+        "operator_language_words": [],
         "absolute_paths": [],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
+    },
+    {
+      "file": "e2/SYMMETRY-E2.md",
+      "sha256_published": "aeeb715e87c47091e1d2458362dc4e4526bf7f191fccac6537d0ccd7b1796f66",
+      "sha256_at_run_host_pass": null,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
+    },
+    {
+      "file": "e2/WITHHELD.md",
+      "sha256_published": "70b1879604447f91345b1f0595d5c109cbd89a4ba1bc1c00148a317e112f611a",
+      "sha256_at_run_host_pass": null,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "e2/pricing-e2.json",
@@ -2588,6 +2391,20 @@
       "verify_zero_matches": [],
       "oracle_clean": null,
       "pattern_scrubber_changed_bytes": null
+    },
+    {
+      "file": "emaint/WITHHELD.md",
+      "sha256_published": "00d049e09868afd7b57c4f88685f9f3c861b7bff99e9d9fa551acfcf07b131dc",
+      "sha256_at_run_host_pass": null,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
+      "content_checks_re_run_at_republication": {
+        "operator_language_diacritics": [],
+        "operator_language_words": [],
+        "absolute_paths": [],
+        "secret_shapes": []
+      },
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "emaint/specs/M1-scoring.md",
@@ -3090,7 +2907,7 @@
     },
     {
       "file": "frozen/AMENDMENTS.md",
-      "sha256_published": "0c47f276c7a83da2a48bda7e8ba2fe62608d40afd9b18ed49621134750cfc939",
+      "sha256_published": "05ccad6e8b126156556474123b6927e6a809609d6ec160d57bceedc70163a1cc",
       "sha256_at_run_host_pass": null,
       "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
@@ -3765,9 +3582,9 @@
     },
     {
       "file": "gen/audit_scan.py",
-      "sha256_published": "53886b857a0dd4bb919e125792cef3ae215c8ce799f3bbfd6f6fc4f3f668c85c",
+      "sha256_published": "134251978a72d449ff8219de0264f1b74011b5838701a54b6c5989c3d2597dfd",
       "sha256_at_run_host_pass": "53886b857a0dd4bb919e125792cef3ae215c8ce799f3bbfd6f6fc4f3f668c85c",
-      "bytes_are_the_ones_the_run_host_oracle_saw": true,
+      "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
         "operator_language_diacritics": [
           "Ó",
@@ -3848,13 +3665,12 @@
         ],
         "secret_shapes": []
       },
-      "verify_zero_matches": [],
-      "oracle_clean": null,
-      "pattern_scrubber_changed_bytes": null
+      "oracle_clean": "NOT RE-RUN over these bytes - see `republication`",
+      "pattern_scrubber_changed_bytes": "NOT RE-RUN over these bytes - see `republication`"
     },
     {
       "file": "gen/regen_scrub_report.py",
-      "sha256_published": "755ff42581842650271147541c4e890eb99f504f7fd0cfd46f2d3fc7e49c7eca",
+      "sha256_published": "bf570f8f11a1caa2023c468d0148fc56878c1d961fd83dbbce2382576a1f2f84",
       "sha256_at_run_host_pass": "12dca18b229e97a3643d5a62b0567e0805253408612609f95f272b9d41304c4b",
       "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {

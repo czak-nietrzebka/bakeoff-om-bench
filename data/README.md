@@ -11,20 +11,27 @@ change what you conclude.
 ```
 data/
 ├─ README.md                  this file
-├─ journal-p1.jsonl           append-only event log of the whole series
 ├─ usage-summary.json         per-run usage, computed from runs/ — never typed by hand
-├─ usage_summary.py           the script that computes it (stdlib only, no arguments)
+├─ usage_summary.py           the script that computes it (stdlib only; --write to rewrite)
 ├─ SCRUB-REPORT.json          what was removed before publication, and the check that it was
+├─ journal/
+│  ├─ p0.jsonl p1.jsonl p2.jsonl   append-only event log, one file per pair
+│  └─ pilot-kalibracja/       the calibration pilot's own journal + README
+├─ judge/
+│  └─ e1-judge.jsonl e2-judge.jsonl emaint-judge.jsonl   the adjudications
 └─ runs/
    ├─ p1-T<n>-A.jsonl         arm A — naive baseline (12 files)
    ├─ p1-T<n>-B.jsonl         arm B — agent with process (12 files)
-   ├─ pilot-kalibracja/       ARCHIVE — calibration pilot        + README + its own journal
-   ├─ obciazone-a5/           ARCHIVE — runs burdened by confound A5 + README
+   ├─ calibration-pilot/      ARCHIVE — calibration pilot            + README
+   ├─ burdened-node22/        ARCHIVE — runs burdened by confound A5 + README
    └─ falstart-bez-tozsamosci/ ARCHIVE — false start, zero measurement + README
 ```
 
-The archive directory names are the original ones from the run host and were deliberately
-not renamed; each carries a README in English explaining why its records do not count.
+Each archive directory carries a README in English explaining why its records do not count.
+Two of the directory names were translated out of the operator's language at republication;
+`falstart-bez-tozsamosci` and `journal/pilot-kalibracja` were not. The inconsistency is left
+standing rather than papered over: renaming them now would change paths that this package's
+own file lists and hashes already name.
 
 ---
 
@@ -174,11 +181,11 @@ reproducibility for everyone downstream.
 
 | field | what happened | what you lose |
 |---|---|---|
-| `host` | replaced with `[scrubbed:host]` | the machine's name. All runs were on one host, so no comparison depends on it |
+| `host` | replaced with the marker `run-host` on 2026-08-29 — **this row was wrong until then**: it claimed a marker that was never written, and the records carried the machine's real short name in all 130 of them. See `SCRUB-REPORT.json` → `known_residue.host_field` | the machine's name. All runs were on one host, so no comparison depends on it |
 | `session_ids` | each identifier replaced with a stable pseudonym; **list length preserved** | you cannot join to the session transcripts, which are not published. You can still see how many sessions a run took, and that some took none |
 | `sha_czak` | each distinct revision replaced with a stable pseudonym | the revision hash of a private tree. You can still see when the instrument changed mid-series |
 | `tool_use_id`, `spawn.uuid` (journal) | replaced / pseudonymised | as above |
-| `notes`, `nie_umiem_zmierzyc[].powod`, one `sha_skills` value | rewritten in English, with internal tool and ticket names replaced by what they are (`the scheduler`, `the task ticket`, `unrelated workloads on the same account`) | the original Polish wording. The substance — what happened, what was measured, what was fixed — is unchanged, and every number quoted inside a note is untouched |
+| `notes`, `nie_umiem_zmierzyc[].powod`, one `sha_skills` value | rewritten in English, with internal tool and ticket names replaced by what they are (`the dispatcher`, `the work ticket`, `an unrelated production agent on the same account`). Not all of it was: the 2026-08-28 recovery re-fetched these records with their original wording, and the rewrite was **completed on 2026-08-29** — five `notes` and all 219 `powod` values | the original Polish wording. The substance — what happened, what was measured, what was fixed — is unchanged, and every number quoted inside a note is untouched |
 
 **Every numeric, structural and outcome field is byte-for-byte what the instrument wrote.**
 No token count, cost, timestamp, verdict, disposition or gate result was touched.

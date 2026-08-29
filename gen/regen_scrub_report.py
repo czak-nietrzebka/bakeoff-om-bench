@@ -15,6 +15,7 @@ Idempotent: the run-host baseline hash of each file is persisted in the report, 
 re-running this script never launders an edited file back into "the oracle saw these
 bytes".
 """
+import collections
 import datetime as dt
 import hashlib
 import json
@@ -23,7 +24,7 @@ import re
 import sys
 import unicodedata
 
-ROOT = sys.argv[1]
+ROOT = sys.argv[1] if len(sys.argv) > 1 else "."
 SELF = "data/SCRUB-REPORT.json"
 RUN_HOST_PASS = "2026-08-27T07:35:01Z"
 
@@ -95,6 +96,11 @@ def sha256(path):
     return h.hexdigest()
 
 
+# Present in a working checkout, absent from the published package. This report describes
+# what is published, so an unpublished file must not appear in its file list or its counts.
+UNPUBLISHED = {"gen/internal-terms.txt"}
+
+
 def walk():
     out = []
     for base, dirs, files in os.walk(ROOT):
@@ -102,7 +108,10 @@ def walk():
         for n in files:
             if n.startswith("._"):
                 continue
-            out.append(os.path.relpath(os.path.join(base, n), ROOT).replace(os.sep, "/"))
+            rel = os.path.relpath(os.path.join(base, n), ROOT).replace(os.sep, "/")
+            if rel in UNPUBLISHED:
+                continue
+            out.append(rel)
     return sorted(out)
 
 
@@ -193,6 +202,26 @@ def main():
     lang_frozen = [f for f in lang if f.startswith("frozen/")]
     lang_other = [f for f in lang if not f.startswith("frozen/")]
 
+    # The `host` field, surveyed over the published bytes rather than described from
+    # memory. `fields_scrubbed_file_counts` below is a run-host figure and says what that
+    # pass changed; this says what the published records actually carry today.
+    host_values, host_records, host_files = collections.Counter(), 0, set()
+    for rel in files:
+        if not rel.endswith(".jsonl"):
+            continue
+        for line in open(os.path.join(ROOT, rel), encoding="utf-8", errors="replace"):
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                rec = json.loads(line)
+            except ValueError:
+                continue
+            if isinstance(rec, dict) and "host" in rec:
+                host_values[str(rec["host"])] += 1
+                host_records += 1
+                host_files.add(rel)
+
     out = {
         "_what_this_is":
             "What was removed from the files in this repository before publication, and "
@@ -220,7 +249,8 @@ def main():
             "files_hashed": len(files),
             "arithmetic": "files_in_repository = files_hashed + 1; the one not hashed is "
                           "this report, which is written last and cannot hash itself.",
-            "excluded": [".git/", "macOS resource forks", "this file itself"],
+            "excluded": [".git/", "macOS resource forks", "this file itself"]
+                        + sorted(UNPUBLISHED),
             "note": prev["scope"]["note"],
         },
         "republication": {
@@ -283,13 +313,17 @@ def main():
                         f, "NOT EXPLAINED - investigate before publishing")}
                     for f in lang_other],
                 "agreement_with_the_run_host_check":
-                    "The run-host check flagged %d files, all under frozen/. This check "
-                    "flags the same %d, and the diacritics pass alone would have found "
-                    "only %d of them - which is why the word list exists. Every frozen "
-                    "file flagged is hash-committed in frozen/MANIFEST.sha256 and cannot "
-                    "be translated without breaking its manifest line."
-                    % (len(prev["language_check"]["files_flagged"]), len(lang_frozen),
-                       len(flagged("operator_language_diacritics"))),
+                    "The run-host check's own file list did NOT survive the 2026-08-28 "
+                    "recovery - what came back is an empty seed, so there is no number "
+                    "here to agree or disagree with, and none is claimed. (An earlier "
+                    "edition of this generator printed that empty list as '0 files, all "
+                    "under frozen/' in the same sentence that asserted 18: one number was "
+                    "computed, the other was typed.) What THIS check measures: %d files "
+                    "flagged under frozen/, of which the diacritics pass alone would have "
+                    "found %d - which is why the word list exists. Every frozen file "
+                    "flagged is hash-committed in frozen/MANIFEST.sha256 and cannot be "
+                    "translated without breaking its manifest line."
+                    % (len(lang_frozen), len(flagged("operator_language_diacritics"))),
             },
             "republication_absolute_path_check": {
                 "files_flagged": flagged("absolute_paths"),
@@ -307,17 +341,83 @@ def main():
             "of those files have since been edited; for them the result below does NOT "
             "describe the published bytes, and each is marked in `files`."
             % (RUN_HOST_PASS, prev["oracle"]["files_checked"], len(changed)))),
-        "known_residue": prev["known_residue"],
+        "known_residue": {
+            "_what_this_is":
+                "Everything this package knows it still carries, written down so a reader "
+                "does not have to discover it. Until 2026-08-29 this field held the string "
+                "'(recovered) see RECOVERY-NOTE.md', and RECOVERY-NOTE.md said nothing "
+                "about residue: the accounting existed by name and was empty in substance. "
+                "That is the same defect as a manifest with no WITHHELD page, and it is "
+                "what let the item below stand.",
+            "host_field": {
+                "published_values": dict(host_values),
+                "records_carrying_the_field": host_records,
+                "files_carrying_the_field": len(host_files),
+                "what_happened":
+                    "`layers[0]` says the host name was replaced with a marker. For these "
+                    "records it was not: they carried the run host's real short name, and "
+                    "`fields_scrubbed_file_counts.host` (a run-host figure, kept below as "
+                    "it was) counts fewer files than actually carry the field. On "
+                    "2026-08-29 the value was replaced with the marker `run-host` in every "
+                    "record that has the field. No other field was touched; line counts "
+                    "and key sets are unchanged.",
+                "still_true":
+                    "Git history is not rewritten, so commits before 2026-08-29 still "
+                    "carry the original value. That was a deliberate choice: the run "
+                    "records are the evidence this package exists to publish, and "
+                    "rewriting their history costs more than the name is worth.",
+            },
+            "operator_language": {
+                "files_flagged": len(lang),
+                "under_frozen": len(lang_frozen),
+                "outside_frozen": len(lang_other),
+                "why_the_frozen_ones_stand":
+                    "They are hash-committed in frozen/MANIFEST.sha256. Translating one "
+                    "breaks its manifest line, which is the property the pre-registration "
+                    "is for.",
+                "why_the_others_stand":
+                    "They are run records and journals re-fetched from the run host in the "
+                    "2026-08-28 recovery, carrying free-text notes in the operator's "
+                    "language. Every note that named an internal host, agent, client or "
+                    "ticket was rewritten in English on 2026-08-29; what remains is "
+                    "language, not identity - including the values of the "
+                    "`nie_umiem_zmierzyc.powod` field, whose KEY is deliberately left "
+                    "alone because renaming it would break the key-set claim above.",
+            },
+            "internal_identity": {
+                "checked_by": "gen/audit_scan.py, consumed by check_package.py",
+                "not_in_this_report":
+                    "The identity pass needs a list of the names that must never appear "
+                    "here, and publishing that list would be the disclosure it prevents. "
+                    "The list is not published; without it the scan reports NOT RUN and "
+                    "exits 2, which check_package.py surfaces as a third state rather than "
+                    "as a pass.",
+                "declared_allowed": {
+                    "README.md": "`czak-nietrzebka` - the GitHub account that owns this "
+                                 "repository, unavoidable and already public."},
+            },
+        },
         "language_check": dict(prev["language_check"], _scope_note=(
             "The run-host pass. Every file it flagged is unchanged since, so this result "
             "still describes the published bytes. See `republication."
             "republication_language_check` for the check re-run over the whole package.")),
-        "fields_scrubbed_file_counts": prev["fields_scrubbed_file_counts"],
+        "fields_scrubbed_file_counts": dict(prev["fields_scrubbed_file_counts"], _scope_note=(
+            "The run-host pass at %s, kept as it was recorded. It is NOT a description of "
+            "the published bytes: `host` says 42 files while %d files carry the field. "
+            "See `known_residue.host_field`." % (RUN_HOST_PASS, len(host_files)))),
         "verified_against_source": dict(prev["verified_against_source"], _scope_note=(
             "Run on the run host at %s against the records the instrument wrote. Not "
-            "re-run at republication, and unaffected by the republication edits: no run "
-            "record was edited, and every record file under data/runs/ hashes to what it "
-            "hashed at that pass." % RUN_HOST_PASS)),
+            "re-run since. It described the published bytes until 2026-08-29, when run "
+            "records WERE edited for the first time: the `host` value replaced with a "
+            "marker in every record carrying the field, and five free-text `notes` values "
+            "rewritten in English. Both fields are already in `fields_that_differ_"
+            "anywhere`, so the comparison's conclusion - that no number, timestamp, "
+            "verdict or gate result differs from the source - still holds; but the hashes "
+            "of those record files are no longer the ones this pass saw, and each is "
+            "marked in `files`. Nothing else in any record was touched: the edit replaced "
+            "two VALUES and added, removed and renamed no key and no line. That every "
+            "record still parses is checked by check_package.py on every run."
+            % RUN_HOST_PASS)),
         "pseudonyms": prev["pseudonyms"],
         "files": rows,
         "self": {
