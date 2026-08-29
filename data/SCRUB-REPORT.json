@@ -1,7 +1,7 @@
 {
   "_what_this_is": "What was removed from the files in this repository before publication, and the evidence that nothing was left behind. This edition was regenerated as the LAST step of the build over the FINAL bytes of every published file, so every hash below is the hash of the file as shipped. data/README.md, section 'What was removed before publication', says what each removal costs a reader.",
   "_two_builds_read_this_first": "This report has two provenances and they are not interchangeable. The HASHES, the FILE LIST and the CONTENT CHECKS under `content_checks_re_run_at_republication` were re-derived over the final bytes; any reader can reproduce the hashes with `shasum -a 256`. The SCRUB FINDINGS - the field policy, the pattern scrubber, the explicit secret list and the comparison against the source records - come from the run-host pass at 2026-08-27T07:35:01Z and were NOT re-run, because the secret list and the source records never left the run host. 107 files were edited after that pass; they are named under `republication` and marked file by file rather than being handed the older verdict.",
-  "generated_at_utc": "2026-08-29T13:36:27Z",
+  "generated_at_utc": "2026-08-29T13:39:17Z",
   "generated_by": "regenerated over final bytes at republication",
   "run_host_scrub_pass_at_utc": "2026-08-27T07:35:01Z",
   "scope": {
@@ -590,7 +590,7 @@
     },
     {
       "file": "CORRECTIONS.md",
-      "sha256_published": "bb6fe7ad62001c6637a6ec200ce9cbec2d3f13b74de299b7c3e2e07e53b7c8cd",
+      "sha256_published": "f7c954d2f8e0bbd28f01f70501e5c795e81f8ef4c0a91595b052ee5a2a9dad1d",
       "sha256_at_run_host_pass": null,
       "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {
@@ -747,7 +747,7 @@
     },
     {
       "file": "check_package.py",
-      "sha256_published": "0be294dd09062388fefedafcdb4b6236d0485f885a6cf24b99da11c56c5921fc",
+      "sha256_published": "950268644ff298312b52ada673e9d86dd5a47f11713d5a7239d519831621aaf5",
       "sha256_at_run_host_pass": null,
       "bytes_are_the_ones_the_run_host_oracle_saw": false,
       "content_checks_re_run_at_republication": {

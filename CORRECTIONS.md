@@ -161,9 +161,13 @@ anything which does not verify be named — literally or by a pattern — in tha
 accounting page; reports any manifest line that `shasum` would silently skip; parses every
 line of every published record file; and runs `gen/audit_scan.py`, failing on a secret shape
 or an internal name that is not in a written, reasoned allowlist, and reporting the
-`NOT RUN` state as a third outcome rather than as a pass.
+`NOT RUN` state as a third outcome rather than as a pass — under its own exit code (2), so
+that a reader's clone, which cannot run that one pass, does not read as a defective package.
 
-Every defect in this pass would have been caught by it.
+Every defect in this pass would have been caught by it. Ten mutations were tested; each is
+caught and the clean tree exits 0. One of them found a hole in the first version of the
+manifest rule: an accounting page that merely *named* a file also excused a real hash
+failure on it, so a changed file now needs a written decision rather than a mention.
 
 ### What this pass did not do
 

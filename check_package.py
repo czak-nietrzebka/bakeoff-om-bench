@@ -11,7 +11,12 @@ Two failures shipped in this package and neither was caught by anything:
 Both are the same class: prose asserting something the tree does not support. A reader
 cannot tell the difference between a citation to a file and a citation to an intention.
 
-    python3 check_package.py          # exit 0 = clean, 1 = findings
+    python3 check_package.py          # 0 = clean, 1 = findings, 2 = a pass could not run
+
+Exit 2 is not a failure of the package. One pass — the internal-identity scan — needs
+a term list that is deliberately not published, so a reader's clone reports it as NOT
+RUN. That is stated separately from findings, because folding the two together would
+make every clone look defective and teach the reader to ignore the exit code.
 
 Stdlib only. Run it before publishing anything from this repository.
 """
@@ -319,16 +324,30 @@ def check_records() -> list[str]:
     return findings
 
 
+NOT_RUN = "NOT RUN"
+
+
 def main() -> int:
     findings = (check_anchors() + check_paths() + check_headlines()
                 + check_manifests() + check_records() + check_scrub())
-    if not findings:
+    # A pass that could not run is not a finding about the package; it is a finding about
+    # this check. Reporting the two under one exit code would make every reader's clone
+    # look defective, and would train them to ignore the number that matters.
+    could_not_run = [f for f in findings if NOT_RUN in f]
+    real = [f for f in findings if NOT_RUN not in f]
+
+    if real:
+        print("package check: %d finding(s)\n" % len(real))
+        for f in real:
+            print("  " + f)
+    else:
         print("package check: clean (%d markdown files)" % len(markdown_files()))
-        return 0
-    print("package check: %d finding(s)\n" % len(findings))
-    for f in findings:
-        print("  " + f)
-    return 1
+    if could_not_run:
+        print("\ncould not run (%d) — not a pass, and not a finding about the package:"
+              % len(could_not_run))
+        for f in could_not_run:
+            print("  " + f)
+    return 1 if real else (2 if could_not_run else 0)
 
 
 if __name__ == "__main__":
