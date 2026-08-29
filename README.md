@@ -3,7 +3,7 @@
 **Status: ALL THREE PHASES HAVE RUN — build (Experiment 1, Claude Sonnet), maintenance
 (E-MAINT, same model), and a second model family (Experiment 2, GPT-5.6 Sol via Codex).
 Results for all three are in this repository.** On cost the process arm ties the first
-build phase (−3.0%, inside the noise band), loses maintenance (+52%), and loses the
+build phase (−3.0%, inside the noise band), loses maintenance (+47.8%), and loses the
 second build badly (+136%, cheaper in 0 of 11 pairs) — the process overhead is roughly
 constant in tokens, so the more efficient the engine, the worse it prices. What the
 overhead measurably buys is a different question, answered further down; the honest
@@ -27,6 +27,7 @@ commit that predates every run — see *[Checking the pre-registration](#checkin
 | The size-class, half/load, effort and per-run cuts | [`derived.py`](derived.py) — `python3 derived.py data/` |
 | Every protocol amendment made during and after the series, in order, with its direction | [`frozen/AMENDMENTS.md`](frozen/AMENDMENTS.md) |
 | What is still withheld from `frozen/`, why, and how to check it when it is released | [`frozen/WITHHELD.md`](frozen/WITHHELD.md) |
+| Corrections made to this package after publication, with what was wrong and how it was found | [`CORRECTIONS.md`](CORRECTIONS.md) |
 | **The maintenance phase, pre-registered before its first result** — design, baselines, verdict rules, stop rules, and the five defects its control step caught | [`emaint/PROTOCOL.md`](emaint/PROTOCOL.md) |
 | The six maintenance task texts and their scoring rules, published now; packs and answer keys held under hash until results | [`emaint/specs/`](emaint/specs/), [`emaint/WITHHELD.md`](emaint/WITHHELD.md) |
 | The declared differences between the arms (published as a redaction, not byte-identical to its frozen original) | [`frozen/symmetry-table.md`](frozen/symmetry-table.md) |

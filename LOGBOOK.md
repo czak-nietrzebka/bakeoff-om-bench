@@ -326,7 +326,7 @@ stayed a guess, and we did not want a guess in the report.
 **There is no fifth archived record, and the reason is a gap, not a tidy-up.** The sequence
 was cut while its T5 attempt was still running. A run record is written when a slot closes;
 that slot never closed. What survives is in the published journal
-(`data/journal-p1.jsonl`): a session spawned at 14:10, ran about thirty-one minutes, passed
+(`data/journal/p1.jsonl`): a session spawned at 14:10, ran about thirty-one minutes, passed
 its first gate, took the T5 requirements change, entered a second iteration — and the events
 end mid-gate with nothing closing them. **That attempt's compute is in no total in this
 package**, the $13.88 archive figure included. We are stating the hole rather than writing

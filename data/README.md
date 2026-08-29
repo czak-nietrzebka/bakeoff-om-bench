@@ -54,7 +54,7 @@ than rework, and finally a verified run. That whole path is the record.
 Because of this, **do not sum a file — sum the last line of each file.** `usage_summary.py`
 does exactly that, and nothing else.
 
-`journal-p1.jsonl` is a flat event stream for the whole series, ordered by time, one event
+`journal/p1.jsonl` is a flat event stream for the whole series, ordered by time, one event
 per line: session spawns, session ends, validation-gate attempts and results, gate feedback
 handed back to an arm, and the four deliveries of the mid-series requirements change. Join
 it to the records on `run_id`.

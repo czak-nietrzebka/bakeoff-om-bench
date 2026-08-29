@@ -10,7 +10,7 @@ tokens, so the cheaper the engine, the worse it prices.**
 Pre-registration: `e2/PROTOCOL-E2.md`, committed before any run, with every declared
 difference from Experiment 1 (engine pin, per-request accounting, no stateful
 containers, one shared account, working-token metric, price table). Amendments made
-during calibration: `e2/AMENDMENTS-E2.md`. Raw records: `data-e2/runs/`, one JSONL per
+during calibration: `LOGBOOK.md`. Raw records: `data-e2/runs/`, one JSONL per
 task-arm, append-only, with per-request token usage embedded. Recompute the table:
 
     python3 analyze_e2.py data-e2
@@ -66,7 +66,7 @@ check and in the main README's "what the overhead buys" section.
   clean pair (ticket hijacking across experiments, a sandbox that mounted `.git`
   read-only making commits impossible, an error classifier that matched the
   substring "limit" inside a repository module name, a deployment path typo, a +40%
-  cost-imputation bias). All are in `e2/AMENDMENTS-E2.md` and the logbook; none of
+  cost-imputation bias). All are in `LOGBOOK.md`; none of
   the burned attempts entered the series, and their costs are booked as voids in
   the pilot records.
 - Arms ran serially overnight on an otherwise idle host; wall-clock comparisons

@@ -207,7 +207,7 @@ as hash-committed evidence — unlike the specs, packs and rate card, which do h
 
 **2. A5 says "T1-T5"; four records are archived, not five.** `data/runs/obciazone-a5/`
 holds arm B's loaded T1, T2, T3 and T4. There is no archived record for a fifth. The
-published journal shows why, and it is checkable: `data/journal-p1.jsonl` carries a T5-B
+published journal shows why, and it is checkable: `data/journal/p1.jsonl` carries a T5-B
 attempt that spawned a session, ran for about thirty-one minutes, passed its first gate and
 started a second iteration — and then stops mid-gate, with no closing event, at the point
 the confound was found and the sequence was cut. The runner writes a run record when a slot

@@ -504,7 +504,7 @@ reconnaissance activity was near-identical on both sides (26 versus 23 calls), s
 **Four** of arm B's runs from that sequence are archived as loaded, not deleted, in
 `runs/burdened-node22/`: T1, T2, T3 and T4. There is no fifth. The sequence was cut during
 its T5 attempt, and the runner writes a run record only when a slot closes, so that slot
-never produced one. Its only trace is in `data/journal-p1.jsonl`, which is published: a
+never produced one. Its only trace is in `data/journal/p1.jsonl`, which is published: a
 session spawned, ran about thirty-one minutes, passed its first gate, entered a second
 iteration, and the events stop mid-gate with nothing closing them. **The compute that
 attempt spent is therefore in no total anywhere in this package, including the $13.88
