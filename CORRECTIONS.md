@@ -6,6 +6,22 @@ here.
 
 State before these corrections: commit `45de467`.
 
+## Who finds these
+
+Every entry below was found on our side — by the producer, running checks against its own
+published package — and not one of them by a reader or an outside reviewer. That is worth
+stating plainly, because it cuts both ways. It means the defects were not sat on: each one is
+here, with what was wrong, how it was found, and which direction the error leaned. It also
+means this package has not yet survived a hostile read by anyone who did not build it, and a
+producer auditing itself is the weakest form of audit there is. Independent attestation is
+listed as pending on the experiment page for that reason, and this log is not a substitute
+for it.
+
+Where a limitation cannot be fixed, it is written next to the number it limits rather than
+tucked into a footnote. The four mechanism counts are the clearest case: they are transcribed
+from session transcripts that are not published, nothing here recomputes them, and both the
+report and the analysis script now say so at the point where the numbers appear — see `C10`.
+
 ---
 
 ## 2026-08-29 — package self-audit
