@@ -61,8 +61,12 @@ def main():
     print("Counted from session transcripts during the phase (observable, not asked):")
     print("  arm A: git-history reads 1 (one task, once); ticket/PR reads 0")
     print("  arm B: git-history reads 14 (6 of 6 tasks); ticket/PR reads 25 (6 of 6)")
-    print("The transcripts themselves are not published (see data/README.md); the")
-    print("counting method and per-task rows are in the run ticket and the logbook.")
+    print("Those four numbers are TRANSCRIBED, not computed. The two lines above are")
+    print("literals in this script; no record in data-emaint carries a read count, so")
+    print("nothing here recomputes them. The transcripts are not published (see")
+    print("data/README.md), the finest published grain is the arm-level table in")
+    print("REPORT-EMAINT.md, and the package contains no per-task rows. Everything")
+    print("else this script prints IS computed from the published records.")
 
 
 if __name__ == "__main__":

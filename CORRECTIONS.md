@@ -176,3 +176,38 @@ untranslated notes, and the term list is still in the history of `gen/audit_scan
 was a deliberate choice: the run records are the evidence this package exists to publish,
 and rewriting their history to chase bytes that have already been public costs more than it
 buys. It is written here rather than left to be discovered.
+
+---
+
+## 2026-08-30 — a pointer to accountability that was not there
+
+Found while an outside party was checking whether the mechanism figures could be
+reproduced from the published package. They cannot, which the report already said in
+one place — and the analysis script said the opposite in another.
+
+### C10 — the script sent readers to records that do not exist here
+
+`analyze_emaint.py` printed, immediately under the four mechanism counts, that "the
+counting method and per-task rows are in the run ticket and the logbook."
+
+Neither is in this package. The phrase "run ticket" appears in no published file; that
+ticket is internal and was never part of the release. `LOGBOOK.md` contains no mechanism
+rows. The finest published grain is the arm-level table in `REPORT-EMAINT.md` — two arms,
+two columns, four numbers.
+
+The counts themselves were never computed. They are literal `print` statements in the
+script, transcribed from session transcripts that the protocol withholds, and no record
+in `data-emaint` carries a read-count field at all. `REPORT-EMAINT.md` did say "measured
+from session transcripts", so the package was not concealing their origin — but a reader
+running the script saw them printed beside figures it genuinely computes, under a line
+promising a level of detail that does not exist.
+
+**Corrected in both places.** The script now states that those four numbers are
+transcribed rather than computed, that nothing here recomputes them, and that everything
+else it prints does come from the published records. The report states the same beside
+the table.
+
+This one is worth naming for what it is. A field or a sentence that *looks* like
+accountability is worse than its absence: a missing rationale is visible, while a
+present-but-empty one is checked off and passed over. That is the same defect as C8,
+found again in a different shape.

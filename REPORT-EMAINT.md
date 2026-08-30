@@ -54,6 +54,14 @@ Measured from session transcripts (counted, not asked):
 | arm A (naive) | 1 (one task, once) | 0 |
 | arm B (process) | 14 — in 6 of 6 tasks | 25 — in 6 of 6 tasks |
 
+Those four numbers carry different evidential weight from every cost figure in this
+report, and it is worth saying so where they are stated rather than in a footnote. The
+costs are computed from the published records and anyone can recompute them. These
+counts are **transcribed**: they are literals in `analyze_emaint.py`, no record in
+`data-emaint` carries a read-count field, and the package publishes this arm-level
+table and nothing finer — no per-task rows, and no definition of what was counted as
+one read. A reader can check what is claimed here. A reader cannot recount it.
+
 The stranger demonstrably reconstructs from the trail. What the trail did **not**
 do in this phase is make the stranger cheaper — the reconstruction happened *on
 top of* the process's fixed overhead, not instead of it. The honest reading: the
